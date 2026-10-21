@@ -16,6 +16,7 @@ export const LettersScreen: React.FC = () => {
   const [copiedMoon, setCopiedMoon] = useState<boolean>(false);
   const [daysTo21, setDaysTo21] = useState<number>(365);
   const [lockWobble, setLockWobble] = useState<boolean>(false);
+  const [activeLightbox, setActiveLightbox] = useState<{ title: string; images: string[] } | null>(null);
 
   // Live countdown to 30.10.2027 for 21st birthday envelope
   useEffect(() => {
@@ -311,6 +312,29 @@ export const LettersScreen: React.FC = () => {
                         </div>
                       )}
 
+                      {/* See Original WhatsApp Screenshot Button */}
+                      {(letter as any).images && (letter as any).images.length > 0 && (
+                        <div
+                          className="pt-2 flex items-center gap-2 flex-wrap"
+                          onClick={e => e.stopPropagation()}
+                        >
+                          <button
+                            onClick={() => {
+                              soundService.vibrate([20]);
+                              soundService.playClickTone('tap');
+                              setActiveLightbox({
+                                title: letter.title,
+                                images: (letter as any).images || []
+                              });
+                            }}
+                            className="px-3 py-1.5 rounded-lg bg-[#2B1B3D]/10 hover:bg-[#2B1B3D]/20 text-[#2B1B3D] border border-[#2B1B3D]/20 flex items-center gap-1.5 transition-transform active:scale-95 shadow-sm text-xs font-sans font-semibold cursor-pointer"
+                          >
+                            <Icon name="camera" size={13} className="text-[#8C6D37]" />
+                            <span>See original note ({((letter as any).images || []).length} {((letter as any).images || []).length > 1 ? 'parts' : 'page'})</span>
+                          </button>
+                        </div>
+                      )}
+
                       {/* Swayam Signature */}
                       <div className="pt-3 flex items-end justify-between border-t border-[#E8DFC8]/60 mt-3">
                         <div>
@@ -367,6 +391,58 @@ export const LettersScreen: React.FC = () => {
             <Icon name="arrow_forward" size={16} />
           </button>
         </section>
+
+        {/* Lightbox Modal for Original WhatsApp Note Screenshots */}
+        {activeLightbox && (
+          <div
+            className="fixed inset-0 z-50 bg-[#0d071a]/95 backdrop-blur-md flex flex-col items-center justify-between p-4 overflow-y-auto"
+            onClick={() => setActiveLightbox(null)}
+          >
+            <div className="w-full max-w-lg flex items-center justify-between py-2 text-primary-fixed border-b border-primary/20 shrink-0">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="text-secondary text-sm">✦</span>
+                <h3 className="font-serif text-sm sm:text-base font-semibold truncate text-on-surface">
+                  {activeLightbox.title}
+                </h3>
+              </div>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveLightbox(null);
+                }}
+                className="p-1.5 rounded-full bg-surface-container-highest hover:bg-surface-container-high text-on-surface transition-colors cursor-pointer text-xs flex items-center gap-1.5 px-3 border border-outline-variant/30 shrink-0"
+              >
+                <span>Close</span>
+                <span className="font-bold text-sm leading-none">✕</span>
+              </button>
+            </div>
+
+            <div
+              className="w-full max-w-md my-auto py-4 flex flex-col gap-4 items-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {activeLightbox.images.map((imgSrc, idx) => (
+                <div key={idx} className="w-full rounded-2xl overflow-hidden shadow-2xl border border-primary/30 bg-surface-container-lowest flex flex-col">
+                  {activeLightbox.images.length > 1 && (
+                    <div className="bg-surface-container-high px-3 py-1.5 text-xs text-primary font-sans font-semibold border-b border-outline-variant/20 flex items-center justify-between">
+                      <span>Part {idx + 1} of {activeLightbox.images.length}</span>
+                      <span className="text-[10px] text-on-surface-variant uppercase tracking-wider">Original Note</span>
+                    </div>
+                  )}
+                  <img
+                    src={imgSrc}
+                    alt={`${activeLightbox.title} Part ${idx + 1}`}
+                    className="w-full h-auto object-contain max-h-[75vh]"
+                    loading="eager"
+                  />
+                </div>
+              ))}
+              <p className="text-on-surface-variant text-xs font-sans text-center">
+                Pinch to zoom or scroll • Verbatim handwritten notes from Swayam
+              </p>
+            </div>
+          </div>
+        )}
       </div>
     </Shell>
   );

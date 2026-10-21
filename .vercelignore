@@ -1,0 +1,12 @@
+# Vercel deployment ignore rules
+/Pics
+/media-source
+/screenshots
+/tests
+/scratch
+*.traineddata
+scratch_ocr_results.json
+live_audit_report.json
+media_scan_raw.json
+scripts/check_live_site.cjs
+scripts/test_live_site_playwright.cjs

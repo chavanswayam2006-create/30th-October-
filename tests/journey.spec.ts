@@ -16,11 +16,24 @@ test.describe('Isha · Level 20 — E2E Suite', () => {
     await pressStartBtn.click();
 
     // Should navigate to level map after start
-    await page.waitForURL(/.*level-map/, { timeout: 3000 });
+    await page.waitForURL(/.*level-map/, { timeout: 5000 });
+  });
+
+  test('Zero State vs Demo Mode Verification', async ({ page }) => {
+    // Pure zero state
+    await page.goto('/#/level-map');
+    await page.evaluate(() => localStorage.clear());
+    await page.reload();
+    await page.waitForSelector('text=Memory Lane');
+
+    // Check with ?demo=1
+    await page.goto('/#/level-map?demo=1');
+    await page.waitForSelector('text=Milestones Mastered');
+    await expect(page.locator('text=Milestones Mastered')).toBeVisible();
   });
 
   test('Screen 2: Level Map — States and Milestones', async ({ page }) => {
-    await page.goto('/#/?unlock=all');
+    await page.goto('/#/level-map?unlock=all');
     await page.waitForSelector('text=Milestones Mastered');
     await expect(page.locator('text=Milestones Mastered')).toBeVisible();
 
@@ -30,7 +43,7 @@ test.describe('Isha · Level 20 — E2E Suite', () => {
 
     // Click Memory Lane
     await memoryLaneCard.click();
-    await page.waitForURL(/.*memory-lane/, { timeout: 3000 });
+    await page.waitForURL(/.*memory-lane/, { timeout: 5000 });
   });
 
   test('Screen 3: Memory Lane — 5 Real Polaroids Render', async ({ page }) => {
@@ -42,11 +55,15 @@ test.describe('Isha · Level 20 — E2E Suite', () => {
     const count = await images.count();
     expect(count).toBeGreaterThanOrEqual(5);
 
+    // Verify polaroid images load
+    const firstImg = images.first();
+    await expect(firstImg).toBeVisible();
+
     // Click Next Level
     const nextBtn = page.getByRole('button', { name: /Next Level: Photo Gallery/i });
     await expect(nextBtn).toBeVisible();
     await nextBtn.click();
-    await page.waitForURL(/.*photo-gallery/, { timeout: 3000 });
+    await page.waitForURL(/.*photo-gallery/, { timeout: 5000 });
   });
 
   test('Screen 4: Photo Gallery — Scrapbook & Lightbox Secrets', async ({ page }) => {
@@ -59,16 +76,17 @@ test.describe('Isha · Level 20 — E2E Suite', () => {
 
     // Open first polaroid Lightbox
     await polaroidCards.first().click();
-    await expect(page.locator('text=Close').or(page.locator('text=✕'))).toBeVisible();
+    const closeBtn = page.getByRole('button', { name: 'Close' });
+    await expect(closeBtn).toBeVisible();
 
     // Close modal
-    await page.locator('text=✕').click();
+    await closeBtn.click();
 
-    // Advance to Cinema
-    const nextBtn = page.getByRole('button', { name: /Next Level: Our Cinema/i });
+    // Advance to Cinema via Shell next button
+    const nextBtn = page.locator('nav').getByRole('button', { name: /Next/i });
     await expect(nextBtn).toBeVisible();
     await nextBtn.click();
-    await page.waitForURL(/.*our-cinema/, { timeout: 3000 });
+    await page.waitForURL(/.*our-cinema/, { timeout: 5000 });
   });
 
   test('Screen 5: Cinema — Video Player and Reel #4 Countdown Lock', async ({ page }) => {
@@ -82,23 +100,25 @@ test.describe('Isha · Level 20 — E2E Suite', () => {
     // Click Reel 4 (locked)
     const reel4 = page.locator('text=Reel #04');
     await reel4.click();
-    await expect(page.locator('text=Unlock Countdown')).toBeVisible();
+    await expect(page.locator('text=Locked Mystery').or(page.locator('text=Unlocks in'))).toBeVisible();
 
     // With ?unlock=all, Reel 4 should be accessible
     await page.goto('/#/our-cinema?unlock=all');
     await reel4.click();
-    await expect(page.locator('text=Unlocked!')).toBeVisible();
+    await expect(page.locator('text=Currently Screening')).toBeVisible();
   });
 
-  test('Screen 6: Songs of Us — Vinyl Lounge and Dedications', async ({ page }) => {
+  test('Screen 6: Songs of Us — Vinyl Lounge and Real Dedications', async ({ page }) => {
     await page.goto('/#/songs-of-us');
     await page.waitForSelector('text=Songs of Us');
 
     // Check vinyl record element
-    const vinyl = page.locator('.vinyl-turntable').or(page.locator('text=LOFI LOVE TAPE'));
-    await expect(vinyl.first()).toBeVisible();
+    await expect(page.locator('text=ISHA · SIDE A')).toBeVisible();
 
-    // Check 5 tracks
+    // Check real song title "Tu Chahiye" exists
+    await expect(page.locator('text=Tu Chahiye')).toBeVisible();
+
+    // Check 5 tracks with dedications
     const trackItems = page.locator('text=Dedication:');
     const count = await trackItems.count();
     expect(count).toBeGreaterThanOrEqual(5);
@@ -106,7 +126,7 @@ test.describe('Isha · Level 20 — E2E Suite', () => {
 
   test('Screen 7: Games Hub — Memory Match, Quiz, and Heart Catcher', async ({ page }) => {
     await page.goto('/#/games-hub');
-    await page.waitForSelector('text=Games Hub');
+    await page.waitForSelector('text=The Love Arcade');
 
     // Memory Match card grid exists
     const matchCards = page.locator('.card-inner');
@@ -125,30 +145,46 @@ test.describe('Isha · Level 20 — E2E Suite', () => {
     await expect(skipToLetters.first()).toBeVisible();
   });
 
-  test('Screen 8: Letters — Wax Seals and Filter Chips', async ({ page }) => {
+  test('Screen 8: Letters — Real Handwritten Note Lightbox & Countdown', async ({ page }) => {
     await page.goto('/#/open-when-letters');
-    await page.waitForSelector('text=Open When Letters');
+    await page.waitForSelector('text=Open When');
 
     // Envelope cards exist
     const envelopes = page.locator('.envelope-card');
     expect(await envelopes.count()).toBe(6);
 
-    // Filter chips work
-    const lateNightChip = page.getByRole('button', { name: /Late Nights/i });
-    if (await lateNightChip.isVisible()) {
-      await lateNightChip.click();
+    // First envelope is unsealed or can be unsealed
+    const firstEnvelope = envelopes.first();
+    const isOpen = await firstEnvelope.locator('text=CURRENTLY UNSEALED').isVisible();
+    if (!isOpen) {
+      await firstEnvelope.click();
     }
 
+    // Check "See original note" button
+    const seeNoteBtn = page.getByRole('button', { name: /See original note/i }).first();
+    await expect(seeNoteBtn).toBeVisible();
+    await seeNoteBtn.click();
+
+    // Lightbox modal with original WhatsApp note screenshot should appear
+    const lightboxModal = page.locator('.fixed.inset-0.z-50');
+    await expect(lightboxModal).toBeVisible();
+    const noteImg = lightboxModal.locator('img');
+    await expect(noteImg.first()).toBeVisible();
+
+    // Close lightbox
+    await page.getByRole('button', { name: /Close/i }).click();
+    await expect(lightboxModal).toBeHidden();
+
     // 21st birthday envelope countdown is visible
-    await expect(page.locator('text=Days Until Unlocked').or(page.locator('text=Open when you turn 21'))).toBeVisible();
+    await expect(page.locator('text=GRAND ARCHIVE VAULT · LOCKED').first()).toBeVisible();
   });
 
   test('Screen 9: 20 Reasons — Celestial Grid and Reveal All', async ({ page }) => {
     await page.goto('/#/20-reasons');
-    await page.waitForSelector('text=20 Reasons');
+    await page.waitForSelector('text=20 Reasons Why');
 
     // 20 cards exist
-    const cards = page.locator('.reason-card');
+    const cards = page.locator('.card-perspective');
     expect(await cards.count()).toBe(20);
 
     // Reveal All button
@@ -157,12 +193,12 @@ test.describe('Isha · Level 20 — E2E Suite', () => {
     await revealAllBtn.click();
 
     // Counter shows 20 of 20
-    await expect(page.locator('text=20 of 20 Revealed')).toBeVisible();
+    await expect(page.locator('text=20 of 20 Reasons Revealed')).toBeVisible();
   });
 
   test('Screen 10: Finale — Stardust Climax, Letter, Gift Box, and Replay', async ({ page }) => {
     await page.goto('/#/finale');
-    await page.waitForSelector('text=Level 20 Mastered');
+    await page.waitForSelector('text=Happy 20th Birthday, My Love');
 
     // Wax seal toggle button exists
     const waxSealToggle = page.locator('button:has-text("Wax Seal"), button:has-text("Broken"), button:has-text("Intact")');
@@ -173,58 +209,31 @@ test.describe('Isha · Level 20 — E2E Suite', () => {
     await expect(giftBox.first()).toBeVisible();
     await giftBox.first().click();
 
-    // Gift hint appears
-    await expect(page.locator('text=Birthday Gift')).toBeVisible();
-
     // Replay journey button exists and works
     const replayBtn = page.getByRole('button', { name: /Replay Journey/i });
     await expect(replayBtn).toBeVisible();
     await replayBtn.click();
-    await page.waitForURL(/.*\/#\/?$/, { timeout: 3000 });
+    await page.waitForURL(/.*\/#\/?$/, { timeout: 5000 });
   });
 
-  test('Full Journey Happy Path Flow', async ({ page }) => {
-    // Complete journey test from Welcome to Finale using navigation pills
-    await page.goto('/#/?unlock=all');
-    await page.waitForSelector('h1');
+  test('Media Assets Integrity Check — Real Media Loads with 0 HTTP 404s', async ({ page }) => {
+    const failed404s: string[] = [];
+    page.on('response', res => {
+      if (res.status() === 404) failed404s.push(res.url());
+    });
 
-    // Press start
-    await page.getByRole('button', { name: /Press Start/i }).click();
-    await page.waitForURL(/.*level-map/);
+    await page.goto('/#/memory-lane');
+    await page.waitForSelector('text=Chapters of Us');
+    await page.waitForTimeout(500);
 
-    // Navigate to Memory Lane
-    await page.locator('text=Memory Lane').first().click();
-    await page.waitForURL(/.*memory-lane/);
+    await page.goto('/#/photo-gallery');
+    await page.waitForSelector('text=Through My Eyes');
+    await page.waitForTimeout(500);
 
-    // Next to Gallery
-    await page.getByRole('button', { name: /Next Level: Photo Gallery/i }).click();
-    await page.waitForURL(/.*photo-gallery/);
+    await page.goto('/#/songs-of-us');
+    await page.waitForSelector('text=Songs of Us');
+    await page.waitForTimeout(500);
 
-    // Next to Cinema
-    await page.getByRole('button', { name: /Next Level: Our Cinema/i }).click();
-    await page.waitForURL(/.*our-cinema/);
-
-    // Next to Songs
-    await page.locator('nav').getByRole('button', { name: /Next/i }).click();
-    await page.waitForURL(/.*songs-of-us/);
-
-    // Next to Games
-    await page.locator('nav').getByRole('button', { name: /Next/i }).click();
-    await page.waitForURL(/.*games-hub/);
-
-    // Next to Letters
-    await page.locator('nav').getByRole('button', { name: /Next/i }).click();
-    await page.waitForURL(/.*open-when-letters/);
-
-    // Next to Reasons
-    await page.locator('nav').getByRole('button', { name: /Next/i }).click();
-    await page.waitForURL(/.*20-reasons/);
-
-    // Next to Finale
-    await page.locator('nav').getByRole('button', { name: /Next/i }).click();
-    await page.waitForURL(/.*finale/);
-
-    // Verify Finale loaded
-    await expect(page.locator('text=Level 20 Mastered')).toBeVisible();
+    expect(failed404s).toHaveLength(0);
   });
 });

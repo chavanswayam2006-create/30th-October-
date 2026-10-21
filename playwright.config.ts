@@ -9,6 +9,10 @@ export default defineConfig({
   reporter: 'list',
   use: {
     baseURL: 'http://localhost:4173',
+    channel: 'chrome',
+    launchOptions: {
+      executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+    },
     trace: 'on-first-retry',
   },
   projects: [

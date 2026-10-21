@@ -31,7 +31,23 @@ export interface UserProgress {
 const STORAGE_KEY = 'isha20:v1';
 
 const defaultProgress: UserProgress = {
-  masteredLevels: [1, 2], // Level 1 & 2 mastered initially as shown in Stitch, or 0
+  masteredLevels: [],
+  currentLevel: 1,
+  gameRecords: {
+    memoryMatch: { bestMoves: 0, completed: false },
+    trivia: { score: 0, completed: false, answers: {} },
+    heartCatcher: { bestScore: 0, completed: false }
+  },
+  openedLetters: [],
+  revealedReasons: [],
+  watchedReels: [],
+  isMuted: false,
+  sfxEnabled: true,
+  hasStarted: false
+};
+
+const demoProgress: UserProgress = {
+  masteredLevels: [1, 2],
   currentLevel: 3,
   gameRecords: {
     memoryMatch: { bestMoves: 12, completed: false },
@@ -43,8 +59,18 @@ const defaultProgress: UserProgress = {
   watchedReels: ['reel-1'],
   isMuted: false,
   sfxEnabled: true,
-  hasStarted: false
+  hasStarted: true
 };
+
+export function isDemoMode(): boolean {
+  try {
+    const search = window.location.search || '';
+    const hash = window.location.hash || '';
+    return search.includes('demo=1') || hash.includes('demo=1');
+  } catch {
+    return false;
+  }
+}
 
 export function isUnlockAll(): boolean {
   try {
@@ -76,6 +102,9 @@ export function getNow(): Date {
 
 export function loadProgress(): UserProgress {
   try {
+    if (isDemoMode()) {
+      return demoProgress;
+    }
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return defaultProgress;
     const parsed = JSON.parse(raw);

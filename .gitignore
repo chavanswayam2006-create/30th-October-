@@ -24,29 +24,35 @@ dist-ssr/
 *.sln
 *.sw?
 
-# -------------------------------------------------------------
-# PRIVATE PERSONAL MEDIA & VIDEO/PHOTO ASSETS (NEVER ON GITHUB)
-# -------------------------------------------------------------
-# Raw source directories
+# ------------------------------------------------------------------
+# PRIVATE PERSONAL SOURCE ARCHIVE (STRICTLY KEPT OUT OF GITHUB)
+# ------------------------------------------------------------------
 /Pics/
 Pics/
 /media-source/
 media-source/
-
-# Public media files (photos, videos, audio, extracted stills)
-/public/media/
-public/media/
-public/media/photos/
-public/media/videos/
-public/media/audio/
-public/media/extracted_stills/
-
-# Design reference screenshots & assets
+screenshots/
 stitch_isha_level_20_birthday_adventure/**/*.png
 stitch_isha_level_20_birthday_adventure/**/*.webp
 stitch_isha_level_20_birthday_adventure/**/*.jpg
 
-# Global media file extensions (foolproof safeguard)
+# Temporary scratch & analysis artifacts
+eng.traineddata
+scratch_ocr_results.json
+live_audit_report.json
+media_scan_raw.json
+scan_media.cjs
+analyze_videos.cjs
+scripts/extract_all_photos.cjs
+scripts/populate_photos.cjs
+scripts/check_live_site.cjs
+scripts/test_live_site_playwright.cjs
+scripts/probe_songs.cjs
+
+# Exclude extracted stills intermediate directory (raw video dumps)
+public/media/extracted_stills/
+
+# Exclude general media extensions globally
 *.mp4
 *.mov
 *.avi
@@ -65,9 +71,21 @@ stitch_isha_level_20_birthday_adventure/**/*.jpg
 *.m4a
 *.ogg
 
-# Local media analysis & temporary scratch files
-media_scan_raw.json
-scan_media.cjs
-analyze_videos.cjs
-scripts/extract_all_photos.cjs
-scripts/populate_photos.cjs
+# ------------------------------------------------------------------
+# OPTIMIZED PRODUCTION MEDIA (REQUIRED FOR VERCEL LIVE SITE)
+# ------------------------------------------------------------------
+# Explicit un-ignore so Vercel deployment contains all required assets
+!public/
+!public/media/
+!public/media/photos/
+!public/media/photos/**
+!public/media/photos/*
+!public/media/videos/
+!public/media/videos/**
+!public/media/videos/*
+!public/media/audio/
+!public/media/audio/**
+!public/media/audio/*
+!public/media/letters/
+!public/media/letters/**
+!public/media/letters/*

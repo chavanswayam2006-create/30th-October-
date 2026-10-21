@@ -105,39 +105,39 @@
     "milestones": [
       {
         "id": 1,
-        "title": "The Day We Met",
-        "date": "14 FEB 2023",
-        "quote": "“You spilled your coffee, looked mortified, and I immediately knew I was in trouble.”",
-        "note": "Remember this clumsiness?",
+        "title": "The First Chapter",
+        "date": "Where It Began",
+        "quote": "“The day our paths crossed and my whole world started changing.”",
+        "note": "Where our story began",
         "photoSlot": "memory-1",
         "todoHint": "TODO(real): Personalize your actual first meeting date and story"
       },
       {
         "id": 2,
-        "title": "Our First Official Date",
-        "date": "03 MAR 2023",
-        "quote": "“Three hours felt like twelve seconds. You ordered dessert first.”",
-        "note": "Best dessert decision ever ♥",
+        "title": "Our First Date",
+        "date": "Early Days",
+        "quote": "“Talking for hours without ever looking at the clock.”",
+        "note": "Unforgettable smiles ♥",
         "photoSlot": "memory-2",
         "todoHint": "TODO(real): Personalize your actual first date details"
       },
       {
         "id": 3,
-        "title": "Late Night Arcade Victory",
-        "date": "22 JUL 2023",
-        "quote": "“You screamed when you won the giant plush bear on the third try.”",
-        "note": "Still sitting proudly on your bed ✨",
+        "title": "Late Night Talks",
+        "date": "Cozy Hours",
+        "quote": "“Staying up late, talking about everything and nothing at all.”",
+        "note": "Always my favorite hours ✨",
         "photoSlot": "memory-3",
         "todoHint": "TODO(real): Personalize this milestone memory"
       },
       {
         "id": 4,
-        "title": "The Midnight Roadtrip",
-        "date": "18 NOV 2023",
-        "quote": "“Foggy windshields, singing off-key to old songs, watching the horizon wake up.”",
-        "note": "That 4 AM sunrise together 🌅",
+        "title": "Our Adventures",
+        "date": "Everyday Magic",
+        "quote": "“Every drive, every little trip, every laugh along the way.”",
+        "note": "Making memories together 🌅",
         "photoSlot": "memory-4",
-        "todoHint": "TODO(real): Personalize this roadtrip/trip memory"
+        "todoHint": "TODO(real): Personalize this trip/drive memory"
       },
       {
         "id": 5,
@@ -158,60 +158,60 @@
     "polaroids": [
       {
         "id": 1,
-        "title": "Golden Hour in Florence",
-        "caption": "“You outshone the sunset”",
-        "dateLocation": "October Memory · 18:42",
-        "secretNote": "You outshone the sunset. The entire sky turned peach and gold, but I couldn’t stop staring at the glow on your cheekbones.",
-        "moodChip": "Tuscany Glow",
+        "title": "Stolen Moments",
+        "caption": "“My favorite smile in the world”",
+        "dateLocation": "Candid Spark",
+        "secretNote": "The kind of candid smile that brightens up my whole week.",
+        "moodChip": "Pure Joy",
         "photoSlot": "gallery-1",
         "todoHint": "TODO(real): Add your real photo and caption here"
       },
       {
         "id": 2,
-        "title": "3 AM Pizza Runs",
-        "caption": "“You ate 4 slices and claimed you weren’t hungry”",
-        "dateLocation": "Late Night Quest · 03:14 AM",
-        "secretNote": "You ate 4 whole slices and loudly swore you weren’t even hungry. Grease on our fingers, giggling in the neon light waiting for our cab.",
-        "moodChip": "Late Night Quest",
+        "title": "Late Night Talks",
+        "caption": "“Time always flies when I'm with you”",
+        "dateLocation": "Midnight Hours",
+        "secretNote": "Never running out of things to talk, tease, or laugh about.",
+        "moodChip": "Late Night",
         "photoSlot": "gallery-2",
         "todoHint": "TODO(real): Add your real photo and caption here"
       },
       {
         "id": 3,
-        "title": "Rainy Sunday Morning",
+        "title": "Everyday Magic",
         "caption": "“My favorite view forever”",
-        "dateLocation": "Cozy Chapters · 10:15 AM",
-        "secretNote": "Wrapped in wool socks and a messy bun with hot cocoa steam fogging the glass. Listening to rain tapping the window while you read.",
-        "moodChip": "Cozy Chapters",
+        "dateLocation": "Quiet Moments",
+        "secretNote": "The quiet, beautiful everyday moments that mean the most.",
+        "moodChip": "Cozy Vibe",
         "photoSlot": "gallery-3",
         "todoHint": "TODO(real): Add your real photo and caption here"
       },
       {
         "id": 4,
-        "title": "Festival Lights & Laughs",
-        "caption": "“When your favorite song came on”",
-        "dateLocation": "Pure Spark · 22:40",
-        "secretNote": "The bass was vibrating our chest cavities, fairy lights everywhere. When your favorite song dropped, you screamed and spun around pulling my hand.",
-        "moodChip": "Pure Spark",
+        "title": "Unfiltered Giggles",
+        "caption": "“That laugh I could listen to forever”",
+        "dateLocation": "Pure Spark",
+        "secretNote": "When you laugh until your stomach aches and your eyes crinkle up.",
+        "moodChip": "Laughter",
         "photoSlot": "gallery-4",
         "todoHint": "TODO(real): Add your real photo and caption here"
       },
       {
         "id": 5,
-        "title": "Dressed to the Nines",
-        "caption": "“Jaw on the floor. Still haven't recovered.”",
-        "dateLocation": "Gala Night · 20:05",
-        "secretNote": "You stepped out of the mirror room and I completely forgot how to speak English. Absolute royalty. You made the whole gala vanish.",
-        "moodChip": "10/10 Elegance",
+        "title": "Unforgettable",
+        "caption": "“Looking at you will always take my breath away”",
+        "dateLocation": "Dressed Up",
+        "secretNote": "Every time you get ready, you completely steal the entire room.",
+        "moodChip": "Stunning",
         "photoSlot": "gallery-5",
         "todoHint": "TODO(real): Add your real photo and caption here"
       },
       {
         "id": 6,
-        "title": "The Sleepy Train Ride",
-        "caption": "“Promised we'd stay awake, asleep in 4 minutes”",
-        "dateLocation": "Night Express · 23:12",
-        "secretNote": "We promised we would stay awake and play 20 questions. 4 minutes past the platform, your eyelashes fluttered shut and you snuggled into my coat.",
+        "title": "Sleepy Head",
+        "caption": "“Dozing off after a long day”",
+        "dateLocation": "Peaceful",
+        "secretNote": "The softest, most peaceful sleepy face.",
         "moodChip": "Sleepy Head",
         "photoSlot": "gallery-6",
         "todoHint": "TODO(real): Add your real photo and caption here"
@@ -271,49 +271,49 @@
     "playlist": [
       {
         "id": 1,
-        "title": "Until I Found You",
-        "artist": "Stephen Sanchez",
-        "duration": "02:57",
+        "title": "Tu Chahiye",
+        "artist": "Atif Aslam",
+        "duration": "04:33",
         "audioSrc": "media/audio/song-1.mp3",
-        "dedication": "“The song playing in the car that rainy November evening when I looked at you and realized I loved you.”",
-        "todoHint": "TODO(real): Swayam, replace with your favorite song & dedication"
+        "dedication": "“One of our special songs that always reminds me of you.”",
+        "todoHint": "Real song from Swayam's selection"
       },
       {
         "id": 2,
-        "title": "Yellow",
-        "artist": "Coldplay",
-        "duration": "04:29",
+        "title": "Tum Ho Toh",
+        "artist": "Vishal Mishra & Hansika Pareek",
+        "duration": "03:17",
         "audioSrc": "media/audio/song-2.mp3",
-        "dedication": "“Because every single star in our night sky looks like you, Isha.”",
-        "todoHint": "TODO(real): Swayam, replace with your favorite song & dedication"
+        "dedication": "“Because with you, everything in life feels complete.”",
+        "todoHint": "Real song from Swayam's selection"
       },
       {
         "id": 3,
-        "title": "Late Night Talking",
-        "artist": "Harry Styles",
-        "duration": "02:58",
+        "title": "Mere Liye",
+        "artist": "Akhil Sachdeva",
+        "duration": "04:59",
         "audioSrc": "media/audio/song-3.mp3",
-        "dedication": "“Our unofficial 2 AM kitchen cooking anthem while making midnight pasta.”",
-        "todoHint": "TODO(real): Swayam, replace with your favorite song & dedication"
+        "dedication": "“Every lyric hits straight in the heart.”",
+        "todoHint": "Real song from Swayam's selection"
       },
       {
         "id": 4,
-        "title": "Strawberries & Cigarettes",
-        "artist": "Troye Sivan",
-        "duration": "03:21",
+        "title": "Tere Naina",
+        "artist": "Shafqat Amanat Ali",
+        "duration": "04:44",
         "audioSrc": "media/audio/song-4.mp3",
-        "dedication": "“Summer highway drives with all windows down, your hand resting in mine.”",
-        "todoHint": "TODO(real): Swayam, replace with your favorite song & dedication"
+        "dedication": "“Those eyes of yours... MASHALLAH, I could get lost in them forever.”",
+        "todoHint": "Real song from Swayam's selection"
       },
       {
         "id": 5,
-        "title": "Isha's 20th Birthday Waltz",
-        "artist": "Swayam (Special Dedication)",
-        "duration": "03:15",
+        "title": "Happy Birthday To You Ji",
+        "artist": "Funzoa Mimi Teddy & Krsna Solo",
+        "duration": "03:03",
         "audioSrc": "media/audio/song-5.mp3",
-        "dedication": "“A melody written just for the girl who made my heart her home. Happy 20th, my love.”",
+        "dedication": "“Dedicated to the cutest birthday girl in the world! Happy Level 20, Ishuuuu!”",
         "isSpecial": true,
-        "todoHint": "TODO(real): Swayam, your special original piece or dedication"
+        "todoHint": "Real special dedication track from Swayam"
       }
     ]
   },
@@ -423,62 +423,85 @@
         "id": 1,
         "category": "late-nights",
         "title": "Open when you miss me",
-        "summary": "Take a deep breath and look at the screen... I am probably already thinking of you right this second.",
+        "date": "11/12/2025, 1:20 AM",
+        "summary": "“Hi hello namaste halo salam walekum... apka yeadu apke sath baat karne mei busy tha isliye paragraph late likha... MY PASANDIDA AURAT”",
         "sealColor": "gold",
         "sealLabel": "Gold Star Seal",
-        "quote": "“Take a deep breath and look at the screen...”",
-        "body": "I am probably already thinking of you right this second. Even if distance exists today, every good thing I see reminds me of your smile or some absurd little joke we cracked at 2 AM. If you still miss me after reading this, text me this exact emoji: 🌙 (I will answer instantly, guaranteed).",
+        "quote": "“You are the only one I love and will always love you no matter what MY PASANDIDA AURAT”",
+        "body": "Hi hello namaste halo salam walekum\n\nSorryyy jara 2hrs late ahe after the day has gone but to be clear apka yeadu apke sath baat karne mei busy tha isliye paragraph late likha 😂 Actually yk, that you everything what I am about say and what I don't say. This bond is growing stronger day by day I wish this keeps growing endlessly.\n\nEkto apmei koi jaadu hai, apko dekhta hu toh khush aapke bareme sochta hu toh khush, apka naam leta hai toh khush, ha haa khara bol tuch naray firavla ahes na 😂\n\nEkto ye careless bache ko manners sikha diye and who was never jealous of anything usse jealous possessive blah blah blah bana diya kaise 😂😭 itna kaise pyaar mei change hote hai yaar. Yrr ektr tula bhetnar ny 1 month I will miss your cute face, those cute acting and expressions, smell of yours, your lips, your butt 😂 , And the EYESSSS 🥺 Haye allah kya hoga apke iss majnu ka ek month apke bina khair agar likhte raha then it will become essay and after few more months a complete book on you.\n\nYou are the only one I love and will always love you no matter what MY PASANDIDA AURAT MY ❤️ Love Youuu beyond your imagination expectations realisation inception multiplication division and blah blah blah",
         "secretEmoji": "🌙",
         "isInitiallyOpen": true,
-        "todoHint": "TODO(real): Customize letter 1"
+        "images": [
+          "media/letters/letter-1-1.webp",
+          "media/letters/letter-1-2.webp"
+        ],
+        "todoHint": "Verbatim transcript from Swayam's real note (11/12/2025)"
       },
       {
         "id": 2,
         "category": "big-hugs",
-        "title": "Open when you're sad",
-        "summary": "Sealed until your sky looks a little cloudy. Contains five undeniable truths about how strong, gentle, and utterly cherished you are.",
+        "title": "Open when you need to know how loved you are",
+        "date": "1/17/2026, 2:11 AM",
+        "summary": "“Good Morning ⛅ Happy 5 months Ishuuuu ❤️ After all I am taller so I have more capacity to love 😌”",
         "sealColor": "rose",
         "sealLabel": "Rose Wax Seal",
-        "quote": "“You don't always have to be resilient...”",
-        "body": "It is completely okay if today feels heavy. Please remember that you don't carry the weight of everything by yourself. I love the quiet days, the messy days, and every shadow in between just as fiercely as the sunny ones. A big, warm hug is waiting for you anytime.",
+        "quote": "“After all I am taller so I have more capacity to love 😌”",
+        "body": "Good Morning ⛅\n\nHappy 5 months Ishuuuu ❤️ These 5 months were the best moments of my life I never dreamt that one day I will be enjoying so much,having fun with my gf never dreamt that there will be someone whose first priority will be me never dreamt that I will get so much love it's too much love for someone like me 😂 I wish that you love me the same forever and I love you too okay I love you more than you yk it right 🥺\n\nAfter all I am taller so I have more capacity to love 😌 Well I know the past few days were so harsh all bcoz of me the worst part I made you cry 2 times like I will regret it always I am sorry for all those things you had to face bcoz of me I genuinely love you a lot isha I just want you and nothing else no nothing only you I can't lose you I don't have any other option no backup it's only you and will always be you I can't think about loving someone like I love you it's not possible I just won't be able to love someone ever again I don't want to I just want you and you I just can't imagine my life without you maybe I will become like a zombie 🧟, 😭\n\nThe way isha you do so many things for me, your care for me, your love for me, the way you look at me the way you bite me the way you clean your lips on my clothes 😂 the angry look the sad look the gloomy look the happy face those stupid faces you make the sleepy face 😴 the way massage my head the way you tease me the way you pinch poke and beat me the way you feed me the way you scold me the way you kiss me the way you hug me the way you laugh the way you smile the way you treat me with politeness humbly with warmth i have never felt anything before and I love everything every single thing about you and I can't lose this things I can't lose you .\n\nYou have became my day and night afternoon evening everytime I just keep thinking about you and how come I became so lucky to have you and so much love I will never leave you never lose you I won't let anything ever again happen to you just keep loving me 🥺 plzzzzzzzzz isha",
         "isInitiallyOpen": false,
-        "todoHint": "TODO(real): Customize letter 2"
+        "images": [
+          "media/letters/letter-2-1.webp",
+          "media/letters/letter-2-2.webp",
+          "media/letters/letter-2-3.webp"
+        ],
+        "todoHint": "Verbatim transcript from Swayam's real note (1/17/2026)"
       },
       {
         "id": 3,
-        "category": "late-nights",
-        "title": "Open when you need a laugh",
-        "summary": "A classified compendium of our most ridiculous inside jokes, voice note quotes, and clumsy moments where we laughed until our stomachs ached.",
+        "category": "big-hugs",
+        "title": "Open when we have a rough day",
+        "date": "3/10/2026, 7:13 PM",
+        "summary": "“It's been 8 months... The only thing that would never change is my endless love for you - Yours Chiu”",
         "sealColor": "gold",
         "sealLabel": "Gold Star Seal",
-        "quote": "“Exhibit A: The Great Pastry Catastrophe!”",
-        "body": "Remember when we tried to look so poised and sophisticated, only for powdered sugar to shoot into my nostril from laughing at your face? That snort of yours is my favorite soundtrack on earth. Never stop laughing like that.",
+        "quote": "“The only thing that would never change is my endless love for you - Yours Chiu”",
+        "body": "It's been 8 months, it's been more than half a year and we are still together enjoying our life with each other. You aren't just a part of life but you have became my whole life my day starts with your name and ends with you I can't imagine my life without you there would be know one who will understand me like you do love me like you do care for me like you.\n\nI love youuuu so much that I get jealous too quick even a name of other boy sets me on fire especially that \"chutiya\" I want to talk to you bout many things and say sorry for being rude and doing ' Chid Chid \"it's like many things are changing rapidly and I just couldn't adapt them so sorry for that.\n\nThe only thing that would never change is my endless love for you I am thankful to you for making my life so happy and very happy and soo sooooooo happy\n\nI love youuuuu forever and ever ISHA\n- Yours Chiu",
         "isInitiallyOpen": false,
-        "todoHint": "TODO(real): Customize letter 3"
+        "images": [
+          "media/letters/letter-3-1.webp"
+        ],
+        "todoHint": "Verbatim transcript from Swayam's real note (3/10/2026)"
       },
       {
         "id": 4,
         "category": "late-nights",
-        "title": "Open when you can't sleep",
-        "summary": "A calming bedtime meditation letter to quiet your whirling racing thoughts. Close your eyes, breathe, and count soft starlight steps with me.",
+        "title": "Open when you need a smile",
+        "date": "Notes Archive",
+        "summary": "“Hello Monkey 🐒 Myself Bol Bachaan... You are my special one, my love, my monkey and my 'HOME'”",
         "sealColor": "lavender",
         "sealLabel": "Lavender Wax Seal",
-        "quote": "“Inhale peace, exhale noise...”",
-        "body": "You have done enough today. Let your thoughts settle like warm tea. Imagine my hand holding yours while the universe quietly watches over your sweet dreams. You are safe, you are protected, and you are loved. Dream beautifully, my darling.",
+        "quote": "“You are my special one, my love, my monkey and my 'HOME'.”",
+        "body": "Hello Monkey 🐒\n\nMyself Bol Bachaan, And today I am gonna tell you about how I feel about everything related to my Love ' ISHAAAAAA'.\n\nI feel like I have a developed a very good habbit, Isha . You are my special one , my love,my monkey and my 'HOME'.\n\nI am incapable of expressing how much I love you,but as you know I am 'YEADU' consider this note as my way of expressing my ❤️ love for you. You asked me what do you like in me ? Isha I like the way you look at me, I like the way make new cute words everytime and use them on me 🎀 , and the best part I like about you is that You love me a lot and I wsh beg pray to God that we stay like this forever and everrr.\n\nLOVE YOUUUUU ISHUUUUUU 💕💕 💕",
         "isInitiallyOpen": false,
-        "todoHint": "TODO(real): Customize letter 4"
+        "images": [
+          "media/letters/letter-4-1.webp"
+        ],
+        "todoHint": "Verbatim transcript from Swayam's real note"
       },
       {
         "id": 5,
         "category": "milestones",
-        "title": "Open when you're stressed",
-        "summary": "When assignments, deadlines, or expectations start piling up. A grounded reality check on how brilliant you are when you take it one breath at a time.",
+        "title": "Open when you want to remember our quirks",
+        "date": "Notes Archive",
+        "summary": "“I am in love with the way you say 'gap re, chupre' and 'khadyat jaa' and those eyes of yours MASHALLAH...”",
         "sealColor": "gold",
         "sealLabel": "Laurel Leaf Seal",
-        "quote": "“Drop your shoulders and unclench your jaw right now.”",
-        "body": "You do not have to conquer everything before sundown. Grades, projects, and chaos are small blips in our lifetime of joy. You are already extraordinary, and I believe in your magic even when you feel tired. One step at a time. I've got you.",
+        "quote": "“The way you always say 'gap re, chupre' and 'khadyat jaa'...”",
+        "body": "I don't know where to start from as you know I am dumb , but you are smart and have started to guide me in not just studies but in life too .\n\nYou hold a special role in my life since we met, I am in love with the way you smile, the way you care for me, the way you taunt me, the way you say \"gap re, chupre\" 😂, the way you always say \"khadyat jaa \" and those of eyes of yours MASHALLAH I just can't describe the amount of happiness you have brought with a constant fear of losing you 🥺 .\n\nI know I haven't wrote much but I am already short on words 😭 😂 The only thing left for me to say is \" Ishaa, I Love You \" and I hope we stay like this longer than we expect 🧿",
         "isInitiallyOpen": false,
-        "todoHint": "TODO(real): Customize letter 5"
+        "images": [
+          "media/letters/letter-5-1.webp"
+        ],
+        "todoHint": "Verbatim transcript from Swayam's real note"
       },
       {
         "id": 6,
@@ -491,6 +514,7 @@
         "body": "This vault remains locked until 30 October 2027. Swayam will hand over the key on your 21st birthday!",
         "isLockedSpecial": true,
         "unlockDate": "2027-10-30T00:00:00+05:30",
+        "images": [],
         "todoHint": "TODO(real): This envelope stays locked until 30.10.2027"
       }
     ]

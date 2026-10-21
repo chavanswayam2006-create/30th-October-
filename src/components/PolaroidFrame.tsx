@@ -113,11 +113,13 @@ export const PolaroidFrame: React.FC<PolaroidFrameProps> = ({
           </div>
         )}
 
-        {/* Subtle photo badge overlay */}
-        <div className="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-[#180d2d]/70 backdrop-blur-md text-primary text-[10px] flex items-center gap-1 pointer-events-none">
-          <Sparkles size={10} />
-          <span>{slotName}</span>
-        </div>
+        {/* Subtle photo badge overlay (dev-only) */}
+        {isDev && (
+          <div className="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-[#180d2d]/70 backdrop-blur-md text-primary text-[10px] flex items-center gap-1 pointer-events-none">
+            <Sparkles size={10} />
+            <span>{slotName}</span>
+          </div>
+        )}
       </div>
 
       {/* Caption & Marginalia Area */}

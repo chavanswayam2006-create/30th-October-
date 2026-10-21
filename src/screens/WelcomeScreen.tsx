@@ -26,21 +26,26 @@ export const WelcomeScreen: React.FC = () => {
   };
 
   const handlePressStart = (e: React.MouseEvent<HTMLButtonElement>) => {
-    soundService.vibrate([35, 50]);
-    soundService.playMagicalCelebrationChime();
-    soundService.startBackgroundMusic();
+    try {
+      soundService.vibrate([35, 50]);
+      soundService.playMagicalCelebrationChime();
+      soundService.startBackgroundMusic();
+    } catch (err) {
+      console.warn('Audio start error:', err);
+    }
     saveProgress({ hasStarted: true });
     setIsPressing(true);
 
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    setBursts(prev => [...prev, { id: Date.now(), x, y }]);
+    try {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = (e.clientX ?? 0) - (rect?.left ?? 0);
+      const y = (e.clientY ?? 0) - (rect?.top ?? 0);
+      setBursts(prev => [...prev, { id: Date.now(), x, y }]);
+    } catch {}
 
     setTimeout(() => {
       navigate('/level-map');
-    }, 600);
+    }, 300);
   };
 
   return (

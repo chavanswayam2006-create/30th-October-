@@ -5,11 +5,12 @@
   "milestoneDate": "2026-10-30T00:00:00+05:30",
   "summary": {
     "scannedVideosCount": 57,
-    "scannedPhotosCount": 0,
-    "scannedAudioCount": 0,
+    "scannedPhotosCount": 18,
+    "scannedAudioCount": 6,
+    "scannedLettersCount": 8,
     "mappedCinemaReels": 4,
-    "missingPhotoSlots": 18,
-    "placeholderPolicy": "Elegant empty cream polaroid with gold filigree heart + 'Add Photo' tag (dev-only watermark; zero remote stock/AI images)"
+    "missingPhotoSlots": 0,
+    "placeholderPolicy": "All photo slots mapped to real extracted frames from Swayam's videos. Zero remote stock/AI images."
   },
   "slots": {
     "cinema": [
@@ -160,56 +161,56 @@
     },
     "backgroundMusic": {
       "slot": "bg-music",
-      "title": "Lofi Love Tape (Our Song)",
-      "artist": "Swayam & Isha",
-      "status": "synthesized",
+      "title": "Darkhaast (Ambient Lofi Cut)",
+      "artist": "Arijit Singh & Sunidhi Chauhan",
+      "status": "ready",
       "file": "media/audio/lofi-love-tape.mp3"
     },
     "songs": [
       {
         "id": "song-1",
-        "title": "Until I Found You",
-        "artist": "Stephen Sanchez",
-        "duration": "02:57",
-        "status": "synthesized",
+        "title": "Tu Chahiye",
+        "artist": "Atif Aslam",
+        "duration": "04:33",
+        "status": "ready",
         "file": "media/audio/song-1.mp3",
-        "dedication": "The song playing in the car that rainy November evening when I looked at you and realized I loved you."
+        "dedication": "One of our special songs that always reminds me of you."
       },
       {
         "id": "song-2",
-        "title": "Yellow",
-        "artist": "Coldplay",
-        "duration": "04:29",
-        "status": "synthesized",
+        "title": "Tum Ho Toh",
+        "artist": "Vishal Mishra & Hansika Pareek",
+        "duration": "03:17",
+        "status": "ready",
         "file": "media/audio/song-2.mp3",
-        "dedication": "Because every single star in our night sky looks like you, Isha."
+        "dedication": "Because with you, everything in life feels complete."
       },
       {
         "id": "song-3",
-        "title": "Late Night Talking",
-        "artist": "Harry Styles",
-        "duration": "02:58",
-        "status": "synthesized",
+        "title": "Mere Liye",
+        "artist": "Akhil Sachdeva",
+        "duration": "04:59",
+        "status": "ready",
         "file": "media/audio/song-3.mp3",
-        "dedication": "Our unofficial 2 AM kitchen cooking anthem while making midnight pasta."
+        "dedication": "Every lyric hits straight in the heart."
       },
       {
         "id": "song-4",
-        "title": "Strawberries & Cigarettes",
-        "artist": "Troye Sivan",
-        "duration": "03:21",
-        "status": "synthesized",
+        "title": "Tere Naina",
+        "artist": "Shafqat Amanat Ali",
+        "duration": "04:44",
+        "status": "ready",
         "file": "media/audio/song-4.mp3",
-        "dedication": "Summer highway drives with all windows down, your hand resting in mine."
+        "dedication": "Those eyes of yours... MASHALLAH, I could get lost in them forever."
       },
       {
         "id": "song-5",
-        "title": "Isha's 20th Birthday Waltz",
-        "artist": "Swayam (Original Lofi)",
-        "duration": "03:15",
-        "status": "synthesized",
+        "title": "Happy Birthday To You Ji",
+        "artist": "Funzoa Mimi Teddy & Krsna Solo",
+        "duration": "03:03",
+        "status": "ready",
         "file": "media/audio/song-5.mp3",
-        "dedication": "A melody written just for the girl who made my heart her home. Happy 20th, my love."
+        "dedication": "Dedicated to the cutest birthday girl in the world! Happy Level 20, Ishuuuu!"
       }
     ]
   }
