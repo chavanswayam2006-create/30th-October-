@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#ffdf9b", "secondary-fixed": "#ffd9df", "secondary": "#f4b6c2", "on-error-container": "#ffdad6", "on-tertiary-fixed-variant": "#4a3d7c", "inverse-on-surface": "#362b4c", "on-background": "#ebddff", "on-primary-fixed": "#251a00", "inverse-surface": "#ebddff", "inverse-primary": "#725b24", "on-secondary-fixed": "#330f19", "background": "#180d2d", "tertiary-fixed": "#e7deff", "surface-dim": "#180d2d", "surface-container-lowest": "#130727", "surface-container-high": "#2f2445", "on-error": "#690005", "on-primary-container": "#6a531d", "primary-fixed-dim": "#e2c381", "surface-tint": "#e2c381", "on-secondary-container": "#e5a8b4", "surface-variant": "#3a2f50", "surface-container": "#251a3a", "outline": "#989081", "on-tertiary-container": "#5a4d8d", "surface-bright": "#3f3355", "primary-container": "#e8c987", "tertiary": "#ede5ff", "on-secondary": "#4c242e", "error": "#ffb4ab", "secondary-fixed-dim": "#f4b6c2", "tertiary-fixed-dim": "#ccbeff", "outline-variant": "#4d463a", "secondary-container": "#693c46", "on-tertiary": "#332664", "on-surface": "#ebddff", "primary": "#ffe6b5", "on-primary-fixed-variant": "#59440e", "on-surface-variant": "#d0c5b5", "surface": "#180d2d", "tertiary-container": "#d2c5ff", "surface-container-low": "#201536", "on-tertiary-fixed": "#1e0e4e", "on-primary": "#3f2e00", "surface-container-highest": "#3a2f50", "on-secondary-fixed-variant": "#663a44", "error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin": "1.25rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1.25rem", "gutter-desktop": "2rem", "margin-desktop": "4rem", "space-md": "1rem", "space-2xl": "4rem", "space-xl": "2.5rem", "margin-tablet": "2.5rem" }, "fontFamily": { "headline-xl-mobile": ["Playfair Display"], "label-sm": ["DM Sans"], "label-md": ["DM Sans"], "body-sm": ["DM Sans"], "headline-md": ["Playfair Display"], "display-lg": ["Playfair Display"], "body-lg": ["DM Sans"], "headline-sm": ["Playfair Display"], "body-xl": ["DM Sans"], "display-lg-mobile": ["Playfair Display"], "label-lg": ["DM Sans"], "headline-xl": ["Playfair Display"], "body-md": ["DM Sans"], "headline-lg": ["Playfair Display"] }, "fontSize": { "headline-xl-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-xl": ["18px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior:none;background-color:#180d2d;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-secondary-container selection:text-secondary"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_16px_rgba(10,5,20,0.6)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Isha Level 20 Crest" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VX4i_7tfm6r5G4YI9gJV3PwRMT7Wm7-dz76h1kufkwSBmYfdkH2aa5_ZZq8nUwkNoBeWX71zuFk1SrdQRrzaahv2Qjb7nF0h3e9im5ZhUWcFZj1cIUVfmRwAAd10zhTO0YH5Q94sAXx39QIh2vrKzmr3B470gL353qx5B3o7PUJnHv0mHohm4e6XG0923FvfXP1Z2bMJSZj4jAbJTS7vYbEflrI6azlvmz3pGnjUTceoZdKJXvn1bAkQ"/><a aria-label="Level Map" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary transition-all duration-300 hover:bg-surface-container-high" data-path="level-map" href="#"><span class="material-symbols-outlined text-[20px]">map</span></a><span class="font-headline-sm text-headline-sm text-primary tracking-tight ml-space-xs hidden min-[370px]:inline">Memory Lane</span></div><div class="flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-low/70 rounded-full"><span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.7)]"></span><span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.7)]"></span><span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.7)]"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span></div><div class="flex items-center gap-space-xs"><button aria-label="Lofi Love Track Music Player" class="h-11 px-space-sm rounded-full bg-surface-container-high/80 text-secondary flex items-center gap-1 transition-all hover:bg-surface-bright active:scale-95" type="button"><span class="material-symbols-outlined text-[18px] animate-pulse">music_note</span><span class="font-label-sm text-label-sm tracking-widest hidden sm:inline text-secondary-fixed-dim">LOFI</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_12px_rgba(232,201,135,0.35)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-32 px-margin bg-surface"><div class="flex flex-col w-full relative">
+<!-- Celestial Sparkle / Stardust Canvas Overlay -->
+<div class="pointer-events-none absolute inset-0 overflow-hidden z-0">
+<div class="absolute top-10 left-6 w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.9)] animate-ping opacity-60"></div>
+<div class="absolute top-48 right-8 w-2 h-2 rounded-full bg-secondary shadow-[0_0_10px_rgba(244,182,194,0.8)] opacity-70 animate-pulse"></div>
+<div class="absolute top-96 left-12 w-1 h-1 rounded-full bg-primary shadow-[0_0_6px_rgba(255,230,181,0.9)] opacity-50"></div>
+<div class="absolute top-[48rem] right-10 w-2 h-2 rounded-full bg-primary-container shadow-[0_0_12px_rgba(232,201,135,0.7)] animate-bounce opacity-60" style="animation-duration: 3.5s;"></div>
+<div class="absolute top-[68rem] left-8 w-1.5 h-1.5 rounded-full bg-secondary-fixed shadow-[0_0_8px_rgba(255,217,223,0.8)] opacity-60"></div>
+</div>
+<!-- Screen Header Banner -->
+<header class="relative z-10 flex flex-col items-center text-center mt-2 mb-8 px-2">
+<!-- Level 1 Arcade Pill -->
+<div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-surface-container-high shadow-[0_0_14px_rgba(232,201,135,0.2)] mb-3">
+<span class="material-symbols-outlined text-primary text-[15px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed">LEVEL 1 · QUEST UNLOCKED</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-tight">
+      Chapters of Us
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mt-1.5">
+      From strangers in a crowd to my absolute favorite story in the universe.
+    </p>
+<!-- Milestone Progress HUD -->
+<div class="w-full max-w-xs bg-surface-container-low rounded-full p-1.5 mt-5 shadow-inner flex items-center gap-3">
+<div class="flex-1 bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full w-full shadow-[0_0_8px_rgba(232,201,135,0.8)]"></div>
+</div>
+<div class="flex items-center gap-1 pr-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-sm text-label-sm text-primary-fixed font-semibold tracking-wider">STAGE 100%</span>
+</div>
+</div>
+</header>
+<!-- Vertical Milestone Timeline -->
+<section class="relative z-10 w-full max-w-md mx-auto">
+<!-- Continuous Champagne Gold Node Line -->
+<div class="absolute left-6 top-8 bottom-12 w-0.5 bg-gradient-to-b from-primary via-primary-container/70 to-secondary opacity-60"></div>
+<div class="space-y-12">
+<!-- Memory Node 1 -->
+<article class="relative flex items-start gap-5 pl-2">
+<!-- Glowing Timeline Node Pin -->
+<div class="relative z-20 flex-shrink-0 mt-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center shadow-[0_0_14px_rgba(232,201,135,0.45)]">
+<div class="w-3.5 h-3.5 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.8)]"></div>
+</div>
+</div>
+<!-- Polaroid Scrapbook Card -->
+<div class="relative flex-1 group transition-transform duration-300 transform -rotate-1 hover:rotate-0">
+<!-- Washi Tape Accent -->
+<div class="absolute -top-3 left-6 z-30 w-14 h-4 bg-secondary/50 rounded-sm shadow-sm transform -rotate-6 backdrop-blur-sm pointer-events-none"></div>
+<!-- Polaroid Envelope Frame (Warm Cream Paper Body) -->
+<div class="bg-[#FFF6EA] text-surface-container-lowest p-3 rounded-lg shadow-[0_10px_24px_rgba(10,5,20,0.65),0_0_16px_rgba(232,201,135,0.12)]">
+<!-- Photo Slot -->
+<div class="relative aspect-[4/3] w-full rounded bg-surface-container-lowest overflow-hidden flex flex-col items-center justify-center group-hover:scale-[1.01] transition-transform">
+<img class="w-full h-full object-cover opacity-90" data-alt="Nostalgic romantic polaroid of an accidental cute encounter at a cozy bookstore cafe, a table with spilled warm latte on a saucer, warm incandescent fairy lights, soft cinematic bokeh, cozy dark plum and honey golden undertones, intimate candid film grain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIQdG_dBVabk-iqzAMeV5dqNRlM2B8ng8Kt__gD2ttnMxN95b-IQeZx-2bmcGvmlBtA8Gp8WY7nJ9IB5RcbDOyS2oIBXdPaeTV9hQS_cFK5F-s1ZHTdsRIY_gHLv-wA-TP1H3OGVYGkzeNIrJtitkx77WdF9lHavCqjFLzVmas6i7bBTOZQLZhdghxJu-2U8XsX88C3sJq-7cGs8zoSyvGo1U1xQvb5wj4GR0-NEUAnKOyCIymXKSn"/>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[13px]">photo_camera</span>
+<span class="font-label-sm text-label-sm">#01</span>
+</div>
+</div>
+<!-- Polaroid Marginalia & Caption -->
+<div class="pt-3 pb-1 px-1">
+<div class="flex items-center justify-between gap-1 mb-1">
+<h2 class="font-headline-sm text-headline-sm tracking-tight text-surface-container-lowest">The Day We Met</h2>
+<span class="font-label-sm text-label-sm text-outline font-semibold tracking-wider">14 FEB 2023</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#4A3E31] leading-relaxed">
+                "You spilled your coffee, looked mortified, and I immediately knew I was in trouble."
+              </p>
+<!-- Handwritten Tape Annotation -->
+<div class="mt-2.5 flex items-center justify-between text-[#8E4154]">
+<span class="font-label-md text-label-md italic tracking-wide flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">draw</span>
+                  Remember this clumsiness?
+                </span>
+<span class="material-symbols-outlined text-[14px] text-secondary">favorite</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Memory Node 2 -->
+<article class="relative flex items-start gap-5 pl-2">
+<!-- Glowing Timeline Node Pin -->
+<div class="relative z-20 flex-shrink-0 mt-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center shadow-[0_0_14px_rgba(244,182,194,0.4)]">
+<div class="w-3.5 h-3.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(244,182,194,0.7)]"></div>
+</div>
+</div>
+<!-- Polaroid Scrapbook Card -->
+<div class="relative flex-1 group transition-transform duration-300 transform rotate-1.5 hover:rotate-0">
+<!-- Translucent Gold Corner Seal -->
+<div class="absolute -top-2.5 right-6 z-30 w-12 h-4 bg-primary-fixed-dim/60 rounded-sm shadow-sm transform rotate-12 backdrop-blur-sm pointer-events-none"></div>
+<!-- Polaroid Frame -->
+<div class="bg-[#FFF6EA] text-surface-container-lowest p-3 rounded-lg shadow-[0_10px_24px_rgba(10,5,20,0.65),0_0_16px_rgba(232,201,135,0.12)]">
+<div class="relative aspect-[4/3] w-full rounded bg-surface-container-lowest overflow-hidden flex flex-col items-center justify-center">
+<img class="w-full h-full object-cover opacity-90" data-alt="Romantic low-lit Italian bistro table with a decadent molten chocolate cake served first, two vintage champagne glasses reflecting candlelight, intimate dreamy aesthetic with deep plum and golden hues" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGY2lc02ItKQhig6EoKwJQzDRXw7lu4lxyLzNAKZOxZ1ZmCMo_BYki7MRCIzxlp7NfauqS8Jmfzr380C8TTa2iwsfNQHgjEoyxCVnTV5aIHK4F6Elt5ztg-U8fOwIloC8MBI2EltZxbZpmfRHi-JsNIaWJJwIoA-gSOSpeV4VIIKiMGwLUeLUYNSUC_BjA-NMFloiooui09sCm_FWtWdaUvoUJ6Bhrz7q_UPtqBiF58UV_n4yQ2VHI"/>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[13px]">bakery_dining</span>
+<span class="font-label-sm text-label-sm">#02</span>
+</div>
+</div>
+<div class="pt-3 pb-1 px-1">
+<div class="flex items-center justify-between gap-1 mb-1">
+<h2 class="font-headline-sm text-headline-sm tracking-tight text-surface-container-lowest">Our First Official Date</h2>
+<span class="font-label-sm text-label-sm text-outline font-semibold tracking-wider">03 MAR 2023</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#4A3E31] leading-relaxed">
+                "Three hours felt like twelve seconds. You ordered dessert first."
+              </p>
+<div class="mt-2.5 flex items-center justify-between text-[#8E4154]">
+<span class="font-label-md text-label-md italic tracking-wide flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">auto_stories</span>
+                  Best dessert decision ever ♥
+                </span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">L-02</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Memory Node 3 -->
+<article class="relative flex items-start gap-5 pl-2">
+<!-- Glowing Timeline Node Pin -->
+<div class="relative z-20 flex-shrink-0 mt-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center shadow-[0_0_14px_rgba(232,201,135,0.45)]">
+<div class="w-3.5 h-3.5 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.8)]"></div>
+</div>
+</div>
+<!-- Polaroid Scrapbook Card -->
+<div class="relative flex-1 group transition-transform duration-300 transform -rotate-1.5 hover:rotate-0">
+<!-- Washi Tape Accent -->
+<div class="absolute -top-3 left-8 z-30 w-16 h-4 bg-secondary/55 rounded-sm shadow-sm transform -rotate-3 backdrop-blur-sm pointer-events-none"></div>
+<div class="bg-[#FFF6EA] text-surface-container-lowest p-3 rounded-lg shadow-[0_10px_24px_rgba(10,5,20,0.65),0_0_16px_rgba(232,201,135,0.12)]">
+<div class="relative aspect-[4/3] w-full rounded bg-surface-container-lowest overflow-hidden flex flex-col items-center justify-center">
+<img class="w-full h-full object-cover opacity-90" data-alt="Candid film snapshot of a young woman laughing with genuine abandon, crinkling eyes and radiant smile in a retro arcade glowing with purple neon and warm amber marquee bulbs, cinematic softness" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtjsathfn71CBe1ugMeaOyLdo4V_RBmnz1kx77v9cUrSz-FP9dGLRIeBsyg1ttA30Gy0SUc0kpu64rd65xExvi1xcRZkzdGZTzBJm0AGOuLuBtpzw12Oxspz5lELwk39WPY2a6JTyU01nwqEnvzKoctiJzcl05ZCQedpXfQSgCsjiiXhog0sjttF_7Pdjzlv2w5hH32CRnyIAxYS3QyuEl4wW_Ys1K30EeaESVrcQ_M-ACJ1cS8quV"/>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[13px]">sentiment_very_satisfied</span>
+<span class="font-label-sm text-label-sm">#03</span>
+</div>
+</div>
+<div class="pt-3 pb-1 px-1">
+<div class="flex items-center justify-between gap-1 mb-1">
+<h2 class="font-headline-sm text-headline-sm tracking-tight text-surface-container-lowest">That Terrible Joke</h2>
+<span class="font-label-sm text-label-sm text-outline font-semibold tracking-wider">18 MAY 2023</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#4A3E31] leading-relaxed">
+                "The snort laugh. That's when I knew you were the one."
+              </p>
+<div class="mt-2.5 flex items-center justify-between text-[#8E4154]">
+<span class="font-label-md text-label-md italic tracking-wide flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">psychology_alt</span>
+                  I still tell that joke daily
+                </span>
+<span class="material-symbols-outlined text-[14px] text-primary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Memory Node 4 -->
+<article class="relative flex items-start gap-5 pl-2">
+<!-- Glowing Timeline Node Pin -->
+<div class="relative z-20 flex-shrink-0 mt-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center shadow-[0_0_14px_rgba(244,182,194,0.4)]">
+<div class="w-3.5 h-3.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(244,182,194,0.7)]"></div>
+</div>
+</div>
+<!-- Polaroid Scrapbook Card -->
+<div class="relative flex-1 group transition-transform duration-300 transform rotate-2 hover:rotate-0">
+<div class="absolute -top-3 right-8 z-30 w-14 h-4 bg-tertiary-container/50 rounded-sm shadow-sm transform rotate-4 backdrop-blur-sm pointer-events-none"></div>
+<div class="bg-[#FFF6EA] text-surface-container-lowest p-3 rounded-lg shadow-[0_10px_24px_rgba(10,5,20,0.65),0_0_16px_rgba(232,201,135,0.12)]">
+<div class="relative aspect-[4/3] w-full rounded bg-surface-container-lowest overflow-hidden flex flex-col items-center justify-center">
+<img class="w-full h-full object-cover opacity-90" data-alt="A vintage road trip memory of two people sitting on the hood of an old car under an immense starry midnight sky, milky way illuminated, cozy blankets and warm thermos, purple night horizon and champagne star glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9dv1bd-PvvV5pKgVLHueJ8tDZQVQ4-NkiTG0CdR0ILMs7bRba75AxGDpWWe9U3Irie3c_A9tmkEdbtGcTB87jOMy6NrL6i7L6pO7qwgXExNpisJVM_tybrnNUUhMrjKlTHelSfqGRfNTBveEfBD60LK3OPCLTtMmnpaUHKmX2N_LgUTAu578HnV3qf5fJxU75m2v-QtVwdbDuOdK5diE6pYppIzjYF1fxmeRk4QZxGfJ3rOQI1-zr"/>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[13px]">explore</span>
+<span class="font-label-sm text-label-sm">#04</span>
+</div>
+</div>
+<div class="pt-3 pb-1 px-1">
+<div class="flex items-center justify-between gap-1 mb-1">
+<h2 class="font-headline-sm text-headline-sm tracking-tight text-surface-container-lowest">Our First Trip Together</h2>
+<span class="font-label-sm text-label-sm text-outline font-semibold tracking-wider">12 NOV 2024</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#4A3E31] leading-relaxed">
+                "Getting completely lost under the starry sky and not caring even a little."
+              </p>
+<div class="mt-2.5 flex items-center justify-between text-[#8E4154]">
+<span class="font-label-md text-label-md italic tracking-wide flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">nightlight</span>
+                  Best night ever ♥
+                </span>
+<span class="material-symbols-outlined text-[15px] text-secondary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Memory Node 5: The Grand Milestone (Level 20 - Today) -->
+<article class="relative flex items-start gap-5 pl-2">
+<!-- Major Milestone Golden Orb Node -->
+<div class="relative z-20 flex-shrink-0 mt-3">
+<div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center shadow-[0_0_24px_rgba(232,201,135,0.85)] animate-pulse">
+<span class="material-symbols-outlined text-on-primary-container text-[18px]" style="font-variation-settings: 'FILL' 1;">crown</span>
+</div>
+</div>
+<!-- Special Illuminated Polaroid Card -->
+<div class="relative flex-1 group transition-transform duration-300 transform -rotate-0.5 hover:scale-[1.02]">
+<!-- Gold Badge Sticker -->
+<div class="absolute -top-3.5 right-4 z-30 px-3 py-1 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-sm text-label-sm font-bold shadow-[0_0_12px_rgba(232,201,135,0.6)] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">arrow_back_ios_new</span>
+<span>TODAY</span>
+</div>
+<!-- Polaroid Enclosure with Radiant Golden Shimmer -->
+<div class="bg-[#FFF6EA] text-surface-container-lowest p-3.5 rounded-xl shadow-[0_12px_36px_rgba(10,5,20,0.8),0_0_28px_rgba(232,201,135,0.35)]">
+<div class="relative aspect-[4/3] w-full rounded-lg bg-surface-container-lowest overflow-hidden flex flex-col items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="An ethereal 20th birthday celebration portrait framed by soft twinkling candlelight, delicate lavender and rose petals, subtle celebratory golden sparkles floating in air, glowing radiant smile, cinematic editorial mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgNhT_qopC1w9PdB0l_x_exL9Ta-cEaroadu4w0hbBTNF74FI72dR-XrNdIDH6buIW_AJvzFzeJEZR5g16iiPeIsqWqqvbo9iFJWEGS4GRxL4qamHgfcIbPFkS-PXxiJtaTZBNvkCS0YSkiVM_UuqL1W3cEbo_KpVhO0tcKUwLv6gUv2_cVHUVEDe9pIcfwZClqKW1QzwrHvj_lyx_oeErvVQDfzyHjrsMaSosUogPw_VyE-ifhNtG"/>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow">
+                LEVEL 20 SPECIAL
+              </div>
+</div>
+<div class="pt-3.5 pb-1 px-1">
+<div class="flex items-center justify-between gap-1 mb-1">
+<h2 class="font-headline-sm text-headline-sm tracking-tight text-surface-container-lowest flex items-center gap-1">
+                  Level 20: Today
+                  <span class="text-primary-container material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+</h2>
+<span class="font-label-sm text-label-sm text-[#8E4154] font-bold tracking-wider">30 OCT 2026</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#4A3E31] leading-relaxed font-medium">
+                "Celebrating the most extraordinary 20-year-old on this planet. Here's to everything we've built, and every chapter ahead."
+              </p>
+<div class="mt-3 pt-2 bg-secondary-fixed/40 rounded px-2.5 py-1.5 flex items-center justify-between text-on-secondary-fixed">
+<span class="font-label-md text-label-md italic font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">auto_awesome</span>
+                  My forever favorite player two.
+                </span>
+<span class="material-symbols-outlined text-[16px] text-[#A8324A]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Level 1 Completed Notification Pill -->
+<div class="relative z-10 w-full max-w-sm mx-auto mt-12 bg-surface-container p-4 rounded-xl shadow-[0_8px_24px_rgba(10,5,20,0.6)] flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container flex-shrink-0 shadow-[0_0_12px_rgba(232,201,135,0.4)]">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="font-headline-sm text-headline-sm text-primary tracking-tight leading-tight">Memory Lane Unlocked!</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">5 milestone polaroids saved to vault.</div>
+</div>
+</div>
+<!-- Interactive CTA Section -->
+<div class="relative z-10 mt-6 flex flex-col items-center gap-3 w-full max-w-sm mx-auto">
+<!-- Next Level Gold Pill Button -->
+<a class="w-full h-12 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(232,201,135,0.4)] transition-all duration-300 hover:bg-primary hover:scale-[1.02] active:scale-95" data-path="photo-gallery" href="#">
+<span>Next Level: Photo Gallery</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<!-- Secondary Soft Skip Option -->
+<a class="font-label-md text-label-md text-secondary-fixed-dim hover:text-secondary transition-colors py-1 flex items-center gap-1 active:scale-95" data-path="finale" href="#">
+<span>Skip Ahead to The Birthday Finale</span>
+<span class="material-symbols-outlined text-[15px]">fast_forward</span>
+</a>
+</div>
+</div>
+<script>
+  // Micro-interaction: Interactive tap effect on polaroids
+  document.querySelectorAll('article').forEach(card => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('img');
+      if (img) {
+        img.classList.add('scale-105');
+        setTimeout(() => img.classList.remove('scale-105'), 400);
+      }
+    });
+  });
+</script><footer class="mt-space-2xl pb-space-lg text-center flex flex-col items-center justify-center gap-1 opacity-80"><p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">Made with love by Swayam <span class="text-primary text-[14px]">✦</span> 30.10.2026</p><p class="font-label-sm text-label-sm text-secondary-fixed-dim tracking-wider uppercase">Isha · Level 20 Edition</p></footer></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-8px_24px_rgba(10,5,20,0.7)]" data-active-classes="text-primary bg-surface-container-high shadow-[0_0_16px_rgba(232,201,135,0.25)]"><div class="h-20 px-margin flex items-center justify-between gap-space-sm max-w-lg mx-auto"><a class="h-11 px-space-md rounded-full flex items-center justify-center text-secondary transition-all hover:text-secondary-fixed font-label-md text-label-md active:scale-95" data-path="finale" href="#">Skip</a><div class="flex items-center gap-space-xs"><a aria-label="Journey Map" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="level-map" href="#"><span class="material-symbols-outlined text-[22px]">explore</span></a><a aria-label="Songs of Us" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="songs-of-us" href="#"><span class="material-symbols-outlined text-[22px]">album</span></a></div><a class="h-11 px-space-lg rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg font-semibold flex items-center justify-center gap-1 shadow-[0_0_20px_rgba(232,201,135,0.4)] transition-all hover:bg-primary hover:scale-[1.03] active:scale-95" data-path="photo-gallery" href="#"><span>Next</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></a></div></nav></body></html>

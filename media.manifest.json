@@ -1,0 +1,216 @@
+{
+  "project": "Isha · Level 20",
+  "generatedAt": "2026-10-19T23:05:00+05:30",
+  "timezone": "Asia/Kolkata",
+  "milestoneDate": "2026-10-30T00:00:00+05:30",
+  "summary": {
+    "scannedVideosCount": 57,
+    "scannedPhotosCount": 0,
+    "scannedAudioCount": 0,
+    "mappedCinemaReels": 4,
+    "missingPhotoSlots": 18,
+    "placeholderPolicy": "Elegant empty cream polaroid with gold filigree heart + 'Add Photo' tag (dev-only watermark; zero remote stock/AI images)"
+  },
+  "slots": {
+    "cinema": [
+      {
+        "slot": "reel-1",
+        "title": "Reel #01: The Montage of Us",
+        "sourceFile": "Pics/VivaCut_video_1771101128092_1080HD.mp4",
+        "optimizedVideo": "media/videos/reel-1.mp4",
+        "posterFrame": "media/videos/reel-1-poster.webp",
+        "duration": "00:48",
+        "durationSec": 48.1,
+        "date": "2026-05-09",
+        "status": "ready"
+      },
+      {
+        "slot": "reel-2",
+        "title": "Reel #02: That Day With You",
+        "sourceFile": "Pics/VID_20260509_015027_591_bsl.mp4",
+        "optimizedVideo": "media/videos/reel-2.mp4",
+        "posterFrame": "media/videos/reel-2-poster.webp",
+        "duration": "00:54",
+        "durationSec": 54.7,
+        "date": "2026-05-09",
+        "status": "ready"
+      },
+      {
+        "slot": "reel-3",
+        "title": "Reel #03: Your Laugh, 3 AM",
+        "sourceFile": "Pics/VID-20260509-WA0009.mp4",
+        "optimizedVideo": "media/videos/reel-3.mp4",
+        "posterFrame": "media/videos/reel-3-poster.webp",
+        "duration": "00:24",
+        "durationSec": 24.2,
+        "date": "2026-05-09",
+        "status": "ready"
+      },
+      {
+        "slot": "reel-4",
+        "title": "Reel #04: The Secret Birthday Message",
+        "sourceFile": "Pics/VivaCut_video_1771100403868_1080HD.mp4",
+        "optimizedVideo": "media/videos/reel-4.mp4",
+        "posterFrame": "media/videos/reel-4-poster.webp",
+        "duration": "00:37",
+        "durationSec": 37.4,
+        "date": "2026-05-09",
+        "status": "locked",
+        "unlocksAt": "2026-10-30T00:00:00+05:30"
+      }
+    ],
+    "memoryLane": [
+      {
+        "slot": "memory-1",
+        "label": "The Day We Met",
+        "date": "14 FEB 2023",
+        "status": "placeholder",
+        "expectedPath": "media/photos/memory-1.webp",
+        "description": "Accidental encounter, spilled coffee, sheepish smiles"
+      },
+      {
+        "slot": "memory-2",
+        "label": "Our First Official Date",
+        "date": "03 MAR 2023",
+        "status": "placeholder",
+        "expectedPath": "media/photos/memory-2.webp",
+        "description": "Candlelit Italian dinner, dessert ordered first"
+      },
+      {
+        "slot": "memory-3",
+        "label": "Late Night Arcade Victory",
+        "date": "22 JUL 2023",
+        "status": "placeholder",
+        "expectedPath": "media/photos/memory-3.webp",
+        "description": "Neon lights, claw machine win, laughing till breathless"
+      },
+      {
+        "slot": "memory-4",
+        "label": "The Midnight Roadtrip",
+        "date": "18 NOV 2023",
+        "status": "placeholder",
+        "expectedPath": "media/photos/memory-4.webp",
+        "description": "Foggy windshields, singing off-key to old playlists"
+      },
+      {
+        "slot": "memory-5",
+        "label": "Level 20: Today",
+        "date": "30 OCT 2026",
+        "status": "placeholder",
+        "expectedPath": "media/photos/memory-5.webp",
+        "description": "Turning 20, radiant smile, our greatest adventure ahead"
+      }
+    ],
+    "gallery": [
+      {
+        "slot": "gallery-1",
+        "title": "Golden Hour in Florence",
+        "caption": "“You outshone the sunset”",
+        "status": "placeholder",
+        "expectedPath": "media/photos/gallery-1.webp"
+      },
+      {
+        "slot": "gallery-2",
+        "title": "3 AM Pizza Runs",
+        "caption": "“You ate 4 slices and claimed you weren’t hungry”",
+        "status": "placeholder",
+        "expectedPath": "media/photos/gallery-2.webp"
+      },
+      {
+        "slot": "gallery-3",
+        "title": "Rainy Sunday Morning",
+        "caption": "“My favorite view forever”",
+        "status": "placeholder",
+        "expectedPath": "media/photos/gallery-3.webp"
+      },
+      {
+        "slot": "gallery-4",
+        "title": "Festival Lights & Laughs",
+        "caption": "“When your favorite song came on”",
+        "status": "placeholder",
+        "expectedPath": "media/photos/gallery-4.webp"
+      },
+      {
+        "slot": "gallery-5",
+        "title": "Dressed to the Nines",
+        "caption": "“Jaw on the floor. Still haven't recovered.”",
+        "status": "placeholder",
+        "expectedPath": "media/photos/gallery-5.webp"
+      },
+      {
+        "slot": "gallery-6",
+        "title": "The Sleepy Train Ride",
+        "caption": "“Promised we'd stay awake, asleep in 4 minutes”",
+        "status": "placeholder",
+        "expectedPath": "media/photos/gallery-6.webp"
+      }
+    ],
+    "memoryMatch": [
+      { "id": "match-1", "label": "Stargaze", "status": "placeholder", "expectedPath": "media/photos/match-1.webp" },
+      { "id": "match-2", "label": "Chai Stop", "status": "placeholder", "expectedPath": "media/photos/match-2.webp" },
+      { "id": "match-3", "label": "Train 204", "status": "placeholder", "expectedPath": "media/photos/match-3.webp" },
+      { "id": "match-4", "label": "Taylor Track", "status": "placeholder", "expectedPath": "media/photos/match-4.webp" },
+      { "id": "match-5", "label": "Croissant", "status": "placeholder", "expectedPath": "media/photos/match-5.webp" },
+      { "id": "match-6", "label": "Level 20", "status": "placeholder", "expectedPath": "media/photos/match-6.webp" }
+    ],
+    "lettersKeepsake": {
+      "slot": "letters-keepsake",
+      "status": "placeholder",
+      "expectedPath": "media/photos/letters-keepsake.webp"
+    },
+    "backgroundMusic": {
+      "slot": "bg-music",
+      "title": "Lofi Love Tape (Our Song)",
+      "artist": "Swayam & Isha",
+      "status": "synthesized",
+      "file": "media/audio/lofi-love-tape.mp3"
+    },
+    "songs": [
+      {
+        "id": "song-1",
+        "title": "Until I Found You",
+        "artist": "Stephen Sanchez",
+        "duration": "02:57",
+        "status": "synthesized",
+        "file": "media/audio/song-1.mp3",
+        "dedication": "The song playing in the car that rainy November evening when I looked at you and realized I loved you."
+      },
+      {
+        "id": "song-2",
+        "title": "Yellow",
+        "artist": "Coldplay",
+        "duration": "04:29",
+        "status": "synthesized",
+        "file": "media/audio/song-2.mp3",
+        "dedication": "Because every single star in our night sky looks like you, Isha."
+      },
+      {
+        "id": "song-3",
+        "title": "Late Night Talking",
+        "artist": "Harry Styles",
+        "duration": "02:58",
+        "status": "synthesized",
+        "file": "media/audio/song-3.mp3",
+        "dedication": "Our unofficial 2 AM kitchen cooking anthem while making midnight pasta."
+      },
+      {
+        "id": "song-4",
+        "title": "Strawberries & Cigarettes",
+        "artist": "Troye Sivan",
+        "duration": "03:21",
+        "status": "synthesized",
+        "file": "media/audio/song-4.mp3",
+        "dedication": "Summer highway drives with all windows down, your hand resting in mine."
+      },
+      {
+        "id": "song-5",
+        "title": "Isha's 20th Birthday Waltz",
+        "artist": "Swayam (Original Lofi)",
+        "duration": "03:15",
+        "status": "synthesized",
+        "file": "media/audio/song-5.mp3",
+        "dedication": "A melody written just for the girl who made my heart her home. Happy 20th, my love."
+      }
+    ]
+  }
+}

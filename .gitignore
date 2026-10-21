@@ -1,0 +1,73 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node modules & build artifacts
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# -------------------------------------------------------------
+# PRIVATE PERSONAL MEDIA & VIDEO/PHOTO ASSETS (NEVER ON GITHUB)
+# -------------------------------------------------------------
+# Raw source directories
+/Pics/
+Pics/
+/media-source/
+media-source/
+
+# Public media files (photos, videos, audio, extracted stills)
+/public/media/
+public/media/
+public/media/photos/
+public/media/videos/
+public/media/audio/
+public/media/extracted_stills/
+
+# Design reference screenshots & assets
+stitch_isha_level_20_birthday_adventure/**/*.png
+stitch_isha_level_20_birthday_adventure/**/*.webp
+stitch_isha_level_20_birthday_adventure/**/*.jpg
+
+# Global media file extensions (foolproof safeguard)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.png
+*.webp
+*.jpg
+*.jpeg
+*.heic
+*.gif
+*.avif
+*.mp3
+*.wav
+*.aac
+*.m4a
+*.ogg
+
+# Local media analysis & temporary scratch files
+media_scan_raw.json
+scan_media.cjs
+analyze_videos.cjs
+scripts/extract_all_photos.cjs
+scripts/populate_photos.cjs

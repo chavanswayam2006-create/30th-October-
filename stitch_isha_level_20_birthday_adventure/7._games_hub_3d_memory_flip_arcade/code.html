@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#ffdf9b", "secondary-fixed": "#ffd9df", "secondary": "#f4b6c2", "on-error-container": "#ffdad6", "on-tertiary-fixed-variant": "#4a3d7c", "inverse-on-surface": "#362b4c", "on-background": "#ebddff", "on-primary-fixed": "#251a00", "inverse-surface": "#ebddff", "inverse-primary": "#725b24", "on-secondary-fixed": "#330f19", "background": "#180d2d", "tertiary-fixed": "#e7deff", "surface-dim": "#180d2d", "surface-container-lowest": "#130727", "surface-container-high": "#2f2445", "on-error": "#690005", "on-primary-container": "#6a531d", "primary-fixed-dim": "#e2c381", "surface-tint": "#e2c381", "on-secondary-container": "#e5a8b4", "surface-variant": "#3a2f50", "surface-container": "#251a3a", "outline": "#989081", "on-tertiary-container": "#5a4d8d", "surface-bright": "#3f3355", "primary-container": "#e8c987", "tertiary": "#ede5ff", "on-secondary": "#4c242e", "error": "#ffb4ab", "secondary-fixed-dim": "#f4b6c2", "tertiary-fixed-dim": "#ccbeff", "outline-variant": "#4d463a", "secondary-container": "#693c46", "on-tertiary": "#332664", "on-surface": "#ebddff", "primary": "#ffe6b5", "on-primary-fixed-variant": "#59440e", "on-surface-variant": "#d0c5b5", "surface": "#180d2d", "tertiary-container": "#d2c5ff", "surface-container-low": "#201536", "on-tertiary-fixed": "#1e0e4e", "on-primary": "#3f2e00", "surface-container-highest": "#3a2f50", "on-secondary-fixed-variant": "#663a44", "error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin": "1.25rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1.25rem", "gutter-desktop": "2rem", "margin-desktop": "4rem", "space-md": "1rem", "space-2xl": "4rem", "space-xl": "2.5rem", "margin-tablet": "2.5rem" }, "fontFamily": { "headline-xl-mobile": ["Playfair Display"], "label-sm": ["DM Sans"], "label-md": ["DM Sans"], "body-sm": ["DM Sans"], "headline-md": ["Playfair Display"], "display-lg": ["Playfair Display"], "body-lg": ["DM Sans"], "headline-sm": ["Playfair Display"], "body-xl": ["DM Sans"], "display-lg-mobile": ["Playfair Display"], "label-lg": ["DM Sans"], "headline-xl": ["Playfair Display"], "body-md": ["DM Sans"], "headline-lg": ["Playfair Display"] }, "fontSize": { "headline-xl-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-xl": ["18px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior:none;background-color:#180d2d;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    /* 3D Card Flip Styling */
+    .perspective-800 {
+      perspective: 800px;
+    }
+    .transform-style-3d {
+      transform-style: preserve-3d;
+    }
+    .backface-hidden {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .rotate-y-180 {
+      transform: rotateY(180deg);
+    }
+    @keyframes wiggleShake {
+      0%, 100% { transform: rotateY(180deg) translateX(0); }
+      20% { transform: rotateY(180deg) translateX(-4px) rotateZ(-2deg); }
+      40% { transform: rotateY(180deg) translateX(4px) rotateZ(2deg); }
+      60% { transform: rotateY(180deg) translateX(-3px) rotateZ(-1deg); }
+      80% { transform: rotateY(180deg) translateX(3px) rotateZ(1deg); }
+    }
+    .animate-wiggle {
+      animation: wiggleShake 0.45s ease-in-out;
+    }
+    @keyframes matchSparkle {
+      0% { transform: scale(0.6); opacity: 0; }
+      50% { transform: scale(1.35); opacity: 1; filter: drop-shadow(0 0 12px rgba(255,230,181,0.9)); }
+      100% { transform: scale(1); opacity: 0; }
+    }
+    .sparkle-burst {
+      animation: matchSparkle 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+    @keyframes driftStars {
+      0% { transform: translateY(0) translateX(0); opacity: 0.3; }
+      50% { transform: translateY(-10px) translateX(6px); opacity: 0.7; }
+      100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+    }
+    .star-drift {
+      animation: driftStars 6s ease-in-out infinite;
+    }
+  </style>
+</head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-secondary-container selection:text-secondary"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_16px_rgba(10,5,20,0.6)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Back" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary transition-all hover:bg-surface-container-high active:scale-95" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><img alt="Isha Level 20 Crest" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VX4i_7tfm6r5G4YI9gJV3PwRMT7Wm7-dz76h1kufkwSBmYfdkH2aa5_ZZq8nUwkNoBeWX71zuFk1SrdQRrzaahv2Qjb7nF0h3e9im5ZhUWcFZj1cIUVfmRwAAd10zhTO0YH5Q94sAXx39QIh2vrKzmr3B470gL353qx5B3o7PUJnHv0mHohm4e6XG0923FvfXP1Z2bMJSZj4jAbJTS7vYbEflrI6azlvmz3pGnjUTceoZdKJXvn1bAkQ"/><h1 class="font-headline-sm text-headline-sm text-primary tracking-tight ml-space-xs truncate max-w-[130px] min-[390px]:max-w-[180px]">Games Hub</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Music Track" class="h-11 px-space-sm rounded-full bg-surface-container-high/80 text-secondary flex items-center gap-1 transition-all hover:bg-surface-bright active:scale-95" type="button"><span class="material-symbols-outlined text-[18px] animate-pulse">music_note</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_12px_rgba(232,201,135,0.35)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-margin px-margin bg-surface"><div class="flex flex-col w-full space-y-space-lg">
+<!-- Level HUD & Progress Header -->
+<section class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high shadow-md">
+<span class="text-secondary text-[12px]">👾</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Level 05 · Arcade</span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#letters">
+<span>Skip to Level 06</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Editorial Intro -->
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-lg text-headline-lg text-primary">The Love Arcade</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Three playful challenges to prove who knows who better. Win stars to unlock the finale.</p>
+</div>
+<!-- Star Tracker HUD Pill -->
+<div class="w-full bg-surface-container p-space-md rounded-xl shadow-lg flex items-center justify-between relative overflow-hidden">
+<div class="absolute -right-4 -top-8 w-24 h-24 bg-primary/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center gap-space-sm z-10">
+<div class="flex items-center gap-1 text-primary-fixed text-body-xl">
+<span class="material-symbols-outlined text-[22px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[22px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[22px] text-outline opacity-60" id="third-star-icon">star</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-primary font-semibold" id="star-tracker-title">2 of 3 Stars Collected</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="star-tracker-desc">1 challenge remaining for Level 06</p>
+</div>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary z-10 shadow-[0_0_16px_rgba(232,201,135,0.2)]">
+<span class="material-symbols-outlined text-[24px]">trophy</span>
+</div>
+</div>
+</section>
+<!-- GAME 1: Memory Match -->
+<article class="flex flex-col bg-surface-container p-space-md rounded-xl shadow-lg relative overflow-hidden" id="memory-match-article">
+<!-- Drifting background star particles -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+<span class="absolute text-primary text-[10px] left-6 top-8 star-drift opacity-40">✦</span>
+<span class="absolute text-secondary text-[8px] right-12 top-14 star-drift opacity-30" style="animation-delay: 2s;">✦</span>
+<span class="absolute text-primary text-[9px] right-8 bottom-16 star-drift opacity-30" style="animation-delay: 3.5s;">✦</span>
+<span class="absolute text-secondary text-[11px] left-10 bottom-24 star-drift opacity-40" style="animation-delay: 1.2s;">✦</span>
+</div>
+<!-- Confetti canvas overlay for victory -->
+<canvas class="absolute inset-0 pointer-events-none z-30 hidden" id="memory-confetti-canvas"></canvas>
+<!-- Card Header -->
+<div class="flex items-start justify-between gap-space-sm mb-space-sm relative z-10">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">style</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Memory Match</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">4x3 Polaroid Deck</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Reset deck" class="p-1 rounded-full bg-surface-container-high text-primary hover:text-primary-fixed active:rotate-180 transition-all text-[14px] flex items-center justify-center" id="reset-memory-game" title="Shuffle &amp; Replay" type="button">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+</button>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-[0_0_12px_rgba(232,201,135,0.3)]" id="memory-status-badge">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+        Ready to Play
+      </span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md relative z-10">Flip and match Polaroid pairs of our favorite milestones across the year.</p>
+<!-- Interactive Polaroid 4x3 Grid Stage -->
+<div class="bg-surface-container-low p-space-sm rounded-lg mb-space-md relative z-10">
+<!-- HUD: Dynamic Moves Counter & Matches Found -->
+<div class="flex items-center justify-between mb-space-xs px-1 text-on-surface-variant">
+<div class="flex items-center gap-1.5 font-label-md text-label-md">
+<span class="text-primary font-semibold" id="memory-moves-counter">Moves: 0</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span id="pairs-matched-counter">Pairs: 0/6</span>
+</div>
+</div>
+<!-- 4x3 Interactive 3D Card Grid -->
+<div class="grid grid-cols-4 gap-2 perspective-800 select-none" id="memory-cards-grid">
+<!-- Cards dynamically populated via JS to allow shuffle/replay while preserving exact markup -->
+</div>
+<!-- Win Banner inside Game Board -->
+<div class="mt-space-sm p-space-xs rounded-md bg-secondary-container/40 flex items-center justify-between text-secondary transition-all" id="memory-win-banner">
+<div class="flex items-center gap-1">
+<span class="text-[14px]">🎉</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim font-medium" id="memory-win-text">Match all 6 pairs to claim your star!</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold" id="memory-record-badge">Record: 12 Moves</span>
+</div>
+</div>
+<!-- Playful Banter Sticky Note -->
+<div class="p-space-sm rounded-lg bg-surface-container-high flex items-start gap-space-sm shadow-sm relative z-10">
+<span class="material-symbols-outlined text-primary text-[20px]">sticky_note_2</span>
+<div class="flex flex-col">
+<p class="font-label-sm text-label-sm text-primary font-semibold">Swayam's Note:</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic" id="memory-swayam-note">"Flip the Polaroids to see our year unfold! Can you beat my personal best of 12 moves, or will the late-night chai memories trip you up?"</p>
+</div>
+</div>
+</article>
+<!-- GAME 2: How Well Do You Know Us? (Couples Quiz) -->
+<article class="flex flex-col bg-surface-container p-space-md rounded-xl shadow-lg relative overflow-hidden">
+<!-- Header -->
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">psychology_alt</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">How Well Do You Know Us?</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Couple's Trivia Quest</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-[0_0_12px_rgba(232,201,135,0.3)]">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+        Completed
+      </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">5 questions on inside jokes, secret nicknames, and the moments that shifted our world.</p>
+<!-- Interactive Card Stage (Q 3/5 preview) -->
+<div class="bg-surface-container-low p-space-md rounded-lg mb-space-md flex flex-col gap-space-sm shadow-inner">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Question 03 of 05</span>
+<span class="font-label-sm text-label-sm text-primary">Score: 5/5</span>
+</div>
+<h4 class="font-headline-sm text-[17px] text-on-surface leading-snug">"Where did we have our very first slice of pizza together?"</h4>
+<!-- Answer Options Pills -->
+<div class="flex flex-col gap-2 mt-1">
+<!-- Option A -->
+<button class="w-full text-left p-space-sm rounded-lg bg-surface-container-high/60 text-on-surface-variant font-body-sm text-body-sm flex items-center justify-between" type="button">
+<span>A) Little Italy Corner</span>
+<span class="text-outline text-[12px]">Option</span>
+</button>
+<!-- Option B (Correct Selected) -->
+<button class="w-full text-left p-space-sm rounded-lg bg-primary text-on-primary font-body-sm text-body-sm flex items-center justify-between shadow-[0_0_16px_rgba(232,201,135,0.25)]" type="button">
+<div class="flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>B) The park bench at midnight</span>
+</div>
+<span class="font-label-sm text-[11px] bg-on-primary/15 px-2 py-0.5 rounded-full font-bold">Correct! ♥</span>
+</button>
+<!-- Option C -->
+<button class="w-full text-left p-space-sm rounded-lg bg-surface-container-high/60 text-on-surface-variant font-body-sm text-body-sm flex items-center justify-between" type="button">
+<span>C) Campus cafeteria</span>
+<span class="text-outline text-[12px]">Option</span>
+</button>
+<!-- Option D -->
+<button class="w-full text-left p-space-sm rounded-lg bg-surface-container-high/60 text-on-surface-variant font-body-sm text-body-sm flex items-center justify-between" type="button">
+<span>D) Delivery in the car</span>
+<span class="text-outline text-[12px]">Option</span>
+</button>
+</div>
+<!-- Swayam Pop-up Reaction Note -->
+<div class="mt-2 p-space-sm rounded-lg bg-secondary-container text-on-secondary-container flex items-center gap-space-sm shadow-sm">
+<span class="text-[20px]">🍕</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary-fixed font-bold">Swayam Reacted:</span>
+<p class="font-body-sm text-body-sm text-on-secondary-container">"You remembered! Best $4 Margherita slice in the rain. Your coat smelled like basil for two days."</p>
+</div>
+</div>
+</div>
+<!-- Playful Banter Sticky Note -->
+<div class="p-space-sm rounded-lg bg-surface-container-high flex items-start gap-space-sm shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">quiz</span>
+<div class="flex flex-col">
+<p class="font-label-sm text-label-sm text-primary font-semibold">Swayam's Note:</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">"A perfect 5/5 score. Honestly, I thought Question 4 would trip you up, but you know my ridiculous coffee order better than I do."</p>
+</div>
+</div>
+</article>
+<!-- GAME 3: Heart Catcher (Night Sky Mini-Game) -->
+<article class="flex flex-col bg-surface-container p-space-md rounded-xl shadow-lg relative overflow-hidden">
+<!-- Header -->
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">celebration</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Heart Catcher</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">30s Night Sky Reflex</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">play_circle</span>
+        Ready to Play
+      </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">Catch falling golden stars, birthday cakes, and pink hearts in your basket before the clock expires.</p>
+<!-- Mini Interactive Canvas Simulation Area -->
+<div class="relative w-full h-56 bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col justify-between p-space-sm shadow-inner">
+<!-- Starlit Background Canvas Layer with SVGs -->
+<div class="absolute inset-0 pointer-events-none opacity-40">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<circle cx="15%" cy="20%" fill="#ffe6b5" r="1"></circle>
+<circle cx="45%" cy="12%" fill="#f4b6c2" r="1.5"></circle>
+<circle cx="80%" cy="28%" fill="#ffe6b5" r="1"></circle>
+<circle cx="28%" cy="55%" fill="#ffe6b5" r="1"></circle>
+<circle cx="68%" cy="60%" fill="#ffffff" r="1.5"></circle>
+<circle cx="90%" cy="75%" fill="#f4b6c2" r="1"></circle>
+</svg>
+</div>
+<!-- HUD Overlay Top -->
+<div class="flex items-center justify-between z-10">
+<div class="px-space-sm py-1 rounded-full bg-surface-container/80 text-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>00:30</span>
+</div>
+<div class="px-space-sm py-1 rounded-full bg-secondary-container text-secondary font-label-sm text-label-sm font-semibold shadow-sm">
+          Target: 20 Items
+        </div>
+</div>
+<!-- Falling Collectible Items (Positioned across the mini stage) -->
+<div class="relative w-full h-full flex-1">
+<!-- Golden Star Falling -->
+<div class="absolute left-8 top-4 flex flex-col items-center animate-bounce">
+<span class="text-[22px] drop-shadow-[0_0_8px_rgba(255,230,181,0.8)]">⭐</span>
+</div>
+<!-- Birthday Cake Falling -->
+<div class="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center">
+<span class="text-[24px] drop-shadow-[0_0_10px_rgba(244,182,194,0.6)]">🎂</span>
+</div>
+<!-- Pink Heart Falling -->
+<div class="absolute right-10 top-6 flex flex-col items-center animate-pulse">
+<span class="text-[20px] drop-shadow-[0_0_8px_rgba(244,182,194,0.8)]">💖</span>
+</div>
+<!-- Sparkle 20 Glyph -->
+<div class="absolute right-24 top-20 flex flex-col items-center">
+<span class="text-[16px] text-primary font-bold opacity-80">✦ 20</span>
+</div>
+<!-- Gold Woven Basket Catcher at Bottom -->
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 flex flex-col items-center cursor-pointer transition-all duration-300" id="basket-catcher">
+<div class="px-3 py-1 bg-primary text-on-primary rounded-t-lg shadow-[0_0_16px_rgba(232,201,135,0.4)] flex items-center gap-1 font-label-sm text-[11px] font-bold">
+<span class="material-symbols-outlined text-[14px]">shopping_basket</span>
+<span>Isha's Basket</span>
+</div>
+<div class="w-20 h-2 bg-primary-fixed-dim rounded-b-md"></div>
+</div>
+</div>
+<!-- Mini Score Pill Overlay -->
+<div class="z-10 bg-surface-container-high/90 px-space-sm py-1.5 rounded-lg flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-primary">
+<span class="text-[14px]">👑</span>
+<span class="font-semibold">Current Record: 20/20 Perfect Catch</span>
+</div>
+<button class="px-space-sm py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm active:scale-95 transition-transform" id="play-heart-btn" type="button">
+          Play Round
+        </button>
+</div>
+</div>
+<!-- Playful Banter Sticky Note -->
+<div class="p-space-sm rounded-lg bg-surface-container-high flex items-start gap-space-sm shadow-sm mt-space-md">
+<span class="material-symbols-outlined text-primary text-[20px]">sports_esports</span>
+<div class="flex flex-col">
+<p class="font-label-sm text-label-sm text-primary font-semibold">Swayam's Note:</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">"Warning: Birthday cakes are worth 5 bonus points, but they drop twice as fast. Good luck beating my high score!"</p>
+</div>
+</div>
+</article>
+<!-- Arcade Trophy & Next Level Gateway Callout -->
+<section class="bg-surface-container p-space-md rounded-xl shadow-xl flex flex-col items-center text-center gap-space-sm relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 pointer-events-none"></div>
+<div class="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-[0_0_24px_rgba(232,201,135,0.4)] z-10">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">lock_open</span>
+</div>
+<div class="flex flex-col gap-1 z-10">
+<h3 class="font-headline-sm text-headline-sm text-primary">Next Milestone Ready</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">You unlocked Level 06 with 2 stars. The golden envelope collection is waiting for you.</p>
+</div>
+<!-- Primary Celestial Action Button -->
+<a class="w-full py-3.5 px-space-md rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(232,201,135,0.35)] hover:scale-[1.02] active:scale-95 transition-all z-10" href="#level-06" id="letters">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+<span>Next Level: Open When Letters</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</section>
+</div>
+<script>
+  // Web Audio subtle sound feedback
+  const audioCtx = (typeof window !== 'undefined' && (window.AudioContext || window.webkitAudioContext)) ? new (window.AudioContext || window.webkitAudioContext)() : null;
+  function playClickTone(type = 'flip') {
+    if (!audioCtx) return;
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    const now = audioCtx.currentTime;
+
+    if (type === 'flip') {
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(480, now);
+      osc.frequency.exponentialRampToValueAtTime(720, now + 0.08);
+      gain.gain.setValueAtTime(0.06, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+      osc.start(now);
+      osc.stop(now + 0.08);
+    } else if (type === 'match') {
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(523.25, now); // C5
+      osc.frequency.setValueAtTime(659.25, now + 0.09); // E5
+      osc.frequency.setValueAtTime(783.99, now + 0.18); // G5
+      gain.gain.setValueAtTime(0.08, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+      osc.start(now);
+      osc.stop(now + 0.35);
+    } else if (type === 'miss') {
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(260, now);
+      osc.frequency.exponentialRampToValueAtTime(190, now + 0.15);
+      gain.gain.setValueAtTime(0.05, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+      osc.start(now);
+      osc.stop(now + 0.15);
+    }
+  }
+
+  // Confetti Particle System
+  function triggerConfetti() {
+    const canvas = document.getElementById('memory-confetti-canvas');
+    if (!canvas) return;
+    canvas.classList.remove('hidden');
+    const ctx = canvas.getContext('2d');
+    const rect = canvas.parentElement.getBoundingClientRect();
+    canvas.width = rect.width;
+    canvas.height = rect.height;
+
+    const colors = ['#ffe6b5', '#f4b6c2', '#e8c987', '#ebddff', '#ffd9df'];
+    const particles = Array.from({ length: 45 }, () => ({
+      x: canvas.width / 2,
+      y: canvas.height / 2,
+      vx: (Math.random() - 0.5) * 8,
+      vy: (Math.random() - 0.8) * 9,
+      size: Math.random() * 5 + 3,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      rotation: Math.random() * 360,
+      vRot: (Math.random() - 0.5) * 10,
+      life: 1
+    }));
+
+    let animationFrame;
+    function render() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      let alive = false;
+      particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.22; // gravity
+        p.rotation += p.vRot;
+        p.life -= 0.015;
+        if (p.life > 0) {
+          alive = true;
+          ctx.save();
+          ctx.globalAlpha = Math.max(0, p.life);
+          ctx.translate(p.x, p.y);
+          ctx.rotate((p.rotation * Math.PI) / 180);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.7);
+          ctx.restore();
+        }
+      });
+      if (alive) {
+        animationFrame = requestAnimationFrame(render);
+      } else {
+        cancelAnimationFrame(animationFrame);
+        canvas.classList.add('hidden');
+      }
+    }
+    render();
+  }
+
+  // 4x3 Polaroid Deck Data
+  const baseCardItems = [
+    { id: 'stargaze', label: 'Stargaze', icon: 'photo_camera', color: 'text-primary' },
+    { id: 'chai', label: 'Chai Stop', icon: 'local_cafe', color: 'text-secondary' },
+    { id: 'train', label: 'Train 204', icon: 'airplane_ticket', color: 'text-primary' },
+    { id: 'taylor', label: 'Taylor Track', icon: 'headphones', color: 'text-secondary' },
+    { id: 'croissant', label: 'Croissant', icon: 'bakery_dining', color: 'text-primary' },
+    { id: 'level20', label: 'Level 20', icon: 'favorite', color: 'text-secondary' }
+  ];
+
+  const gridContainer = document.getElementById('memory-cards-grid');
+  const movesCounter = document.getElementById('memory-moves-counter');
+  const pairsCounter = document.getElementById('pairs-matched-counter');
+  const winBanner = document.getElementById('memory-win-banner');
+  const winText = document.getElementById('memory-win-text');
+  const statusBadge = document.getElementById('memory-status-badge');
+  const swayamNote = document.getElementById('memory-swayam-note');
+  const resetBtn = document.getElementById('reset-memory-game');
+  const thirdStarIcon = document.getElementById('third-star-icon');
+  const starTitle = document.getElementById('star-tracker-title');
+  const starDesc = document.getElementById('star-tracker-desc');
+
+  let moves = 0;
+  let matchedPairs = 0;
+  let flippedCards = [];
+  let isLocked = false;
+  const tilts = ['-rotate-1', 'rotate-1', '-rotate-2', 'rotate-2', 'rotate-1', '-rotate-1', '-rotate-2', 'rotate-1', '-rotate-1', 'rotate-2', 'rotate-1', '-rotate-2'];
+
+  function initMemoryDeck() {
+    gridContainer.innerHTML = '';
+    moves = 0;
+    matchedPairs = 0;
+    flippedCards = [];
+    isLocked = false;
+    movesCounter.innerText = 'Moves: 0';
+    pairsCounter.innerText = 'Pairs: 0/6';
+    statusBadge.innerHTML = `<span class="material-symbols-outlined text-[14px]">play_circle</span> In Progress`;
+    statusBadge.className = 'inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold';
+    winText.innerText = 'Match all 6 pairs to claim your star!';
+    winBanner.className = 'mt-space-sm p-space-xs rounded-md bg-secondary-container/40 flex items-center justify-between text-secondary transition-all';
+    swayamNote.innerText = `"12 moves is my best record. Let's see if your photographic memory holds up on our favorite moments!"`;
+
+    // Duplicate and shuffle
+    let deck = [...baseCardItems, ...baseCardItems].map((item, idx) => ({
+      ...item,
+      uniqueId: idx + '-' + item.id,
+      tilt: tilts[idx % tilts.length]
+    }));
+    deck.sort(() => Math.random() - 0.5);
+
+    deck.forEach((card, index) => {
+      const cardEl = document.createElement('div');
+      cardEl.className = `aspect-square relative cursor-pointer group select-none active:scale-95 transition-transform duration-150`;
+      cardEl.setAttribute('role', 'button');
+      cardEl.setAttribute('aria-label', `Polaroid card ${index + 1}`);
+
+      cardEl.innerHTML = `
+        <div class="card-inner w-full h-full relative transform-style-3d transition-transform duration-500 rounded-md shadow-sm">
+          <!-- Back Face (Unflipped State) -->
+          <div class="card-back absolute inset-0 backface-hidden bg-surface-container-highest/90 border border-outline-variant/50 rounded-md p-1 flex flex-col items-center justify-center transition-colors group-hover:border-primary/40 group-active:border-primary">
+            <span class="text-primary-fixed-dim/60 text-[18px] group-hover:scale-110 transition-transform">✦</span>
+            <span class="font-label-sm text-[8px] text-on-surface-variant/70 tracking-widest uppercase mt-0.5">I&amp;S</span>
+          </div>
+
+          <!-- Front Face (Flipped State) -->
+          <div class="card-front absolute inset-0 backface-hidden rotate-y-180 bg-surface-container-highest border border-primary/40 rounded-md p-1 flex flex-col items-center justify-center ${card.tilt} shadow-[0_0_12px_rgba(232,201,135,0.18)]">
+            <span class="material-symbols-outlined ${card.color} text-[18px] transition-transform group-hover:scale-110">${card.icon}</span>
+            <span class="font-label-sm text-[8px] text-on-surface-variant mt-0.5 truncate max-w-full font-medium">${card.label}</span>
+            <!-- Sparkle burst container -->
+            <div class="sparkle-container absolute inset-0 pointer-events-none flex items-center justify-center opacity-0">
+              <span class="text-primary text-[24px]">✨</span>
+            </div>
+          </div>
+        </div>
+      `;
+
+      cardEl.addEventListener('click', () => handleCardTap(cardEl, card));
+      gridContainer.appendChild(cardEl);
+    });
+  }
+
+  function handleCardTap(cardEl, cardData) {
+    if (isLocked) return;
+    const inner = cardEl.querySelector('.card-inner');
+    if (inner.classList.contains('rotate-y-180') || cardEl.classList.contains('matched')) return;
+
+    // Flip card
+    playClickTone('flip');
+    inner.classList.add('rotate-y-180');
+    // Add gold glow to border
+    const front = cardEl.querySelector('.card-front');
+    front.classList.add('ring-1', 'ring-primary', 'shadow-[0_0_14px_rgba(232,201,135,0.45)]');
+
+    flippedCards.push({ element: cardEl, data: cardData, inner: inner, front: front });
+
+    if (flippedCards.length === 2) {
+      moves++;
+      movesCounter.innerText = `Moves: ${moves}`;
+      checkMatch();
+    }
+  }
+
+  function checkMatch() {
+    isLocked = true;
+    const [cardOne, cardTwo] = flippedCards;
+
+    if (cardOne.data.id === cardTwo.data.id) {
+      // MATCH FOUND
+      setTimeout(() => {
+        playClickTone('match');
+        cardOne.element.classList.add('matched');
+        cardTwo.element.classList.add('matched');
+
+        // Sparkle bursts
+        [cardOne, cardTwo].forEach(c => {
+          const sparkle = c.element.querySelector('.sparkle-container');
+          if (sparkle) {
+            sparkle.classList.remove('opacity-0');
+            sparkle.classList.add('sparkle-burst');
+          }
+          c.front.classList.add('bg-surface-container-high', 'border-primary');
+        });
+
+        matchedPairs++;
+        pairsCounter.innerText = `Pairs: ${matchedPairs}/6`;
+        flippedCards = [];
+        isLocked = false;
+
+        // Check Victory
+        if (matchedPairs === 6) {
+          handleVictory();
+        }
+      }, 350);
+    } else {
+      // MISMATCH: Gentle shake and flip back
+      setTimeout(() => {
+        playClickTone('miss');
+        cardOne.inner.classList.add('animate-wiggle');
+        cardTwo.inner.classList.add('animate-wiggle');
+
+        setTimeout(() => {
+          cardOne.inner.classList.remove('rotate-y-180', 'animate-wiggle');
+          cardTwo.inner.classList.remove('rotate-y-180', 'animate-wiggle');
+          cardOne.front.classList.remove('ring-1', 'ring-primary', 'shadow-[0_0_14px_rgba(232,201,135,0.45)]');
+          cardTwo.front.classList.remove('ring-1', 'ring-primary', 'shadow-[0_0_14px_rgba(232,201,135,0.45)]');
+          flippedCards = [];
+          isLocked = false;
+        }, 550);
+      }, 500);
+    }
+  }
+
+  function handleVictory() {
+    triggerConfetti();
+    statusBadge.innerHTML = `<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> Completed`;
+    statusBadge.className = 'inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-[0_0_12px_rgba(232,201,135,0.3)]';
+    winText.innerText = 'You remembered everything!';
+    winBanner.className = 'mt-space-sm p-space-xs rounded-md bg-secondary-container/70 flex items-center justify-between text-secondary transition-all shadow-[0_0_16px_rgba(232,201,135,0.25)]';
+    document.getElementById('memory-record-badge').innerText = `${moves} Moves (${moves <= 12 ? 'Record!' : 'Great Memory'})`;
+
+    // Update Note
+    if (moves <= 12) {
+      swayamNote.innerText = `"${moves} moves?! That photographic memory is almost frightening. You really didn't forget the 2AM roadside chai stall."`;
+    } else {
+      swayamNote.innerText = `"${moves} moves! Every memory safe and sound in your heart. Swayam is officially impressed!"`;
+    }
+
+    // Star HUD update
+    if (thirdStarIcon) {
+      thirdStarIcon.classList.remove('text-outline', 'opacity-60');
+      thirdStarIcon.classList.add('text-primary');
+      thirdStarIcon.style.fontVariationSettings = "'FILL' 1";
+    }
+    if (starTitle) {
+      starTitle.innerText = '3 of 3 Stars Collected!';
+    }
+    if (starDesc) {
+      starDesc.innerText = 'Level 06 Golden Envelopes fully unlocked!';
+    }
+  }
+
+  // Shuffle reset handler
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      initMemoryDeck();
+    });
+  }
+
+  // Initial render of memory deck
+  initMemoryDeck();
+
+  // Heart Catcher Micro-Interaction
+  const playBtn = document.getElementById('play-heart-btn');
+  const basket = document.getElementById('basket-catcher');
+  if (playBtn && basket) {
+    let positions = ['left-8', 'left-1/2', 'left-3/4'];
+    let idx = 0;
+    playBtn.addEventListener('click', () => {
+      idx = (idx + 1) % positions.length;
+      if (idx === 0) {
+        basket.style.transform = 'translateX(-50%)';
+        basket.style.left = '50%';
+      } else if (idx === 1) {
+        basket.style.transform = 'translateX(0%)';
+        basket.style.left = '15%';
+      } else {
+        basket.style.transform = 'translateX(0%)';
+        basket.style.left = '65%';
+      }
+      playBtn.innerText = 'Catching...';
+      playClickTone('flip');
+      setTimeout(() => {
+        playBtn.innerText = 'Score +1 ⭐';
+      }, 400);
+      setTimeout(() => {
+        playBtn.innerText = 'Play Round';
+      }, 1600);
+    });
+  }
+</script><footer class="mt-space-2xl pb-space-lg text-center flex flex-col items-center justify-center gap-1 opacity-80"><p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">Made with love by Swayam <span class="text-primary text-[14px]">✦</span> 30.10.2026</p><p class="font-label-sm text-label-sm text-secondary-fixed-dim tracking-wider uppercase">Isha · Level 20 Edition</p></footer></main></body></html>

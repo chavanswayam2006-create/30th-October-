@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#ffdf9b", "secondary-fixed": "#ffd9df", "secondary": "#f4b6c2", "on-error-container": "#ffdad6", "on-tertiary-fixed-variant": "#4a3d7c", "inverse-on-surface": "#362b4c", "on-background": "#ebddff", "on-primary-fixed": "#251a00", "inverse-surface": "#ebddff", "inverse-primary": "#725b24", "on-secondary-fixed": "#330f19", "background": "#180d2d", "tertiary-fixed": "#e7deff", "surface-dim": "#180d2d", "surface-container-lowest": "#130727", "surface-container-high": "#2f2445", "on-error": "#690005", "on-primary-container": "#6a531d", "primary-fixed-dim": "#e2c381", "surface-tint": "#e2c381", "on-secondary-container": "#e5a8b4", "surface-variant": "#3a2f50", "surface-container": "#251a3a", "outline": "#989081", "on-tertiary-container": "#5a4d8d", "surface-bright": "#3f3355", "primary-container": "#e8c987", "tertiary": "#ede5ff", "on-secondary": "#4c242e", "error": "#ffb4ab", "secondary-fixed-dim": "#f4b6c2", "tertiary-fixed-dim": "#ccbeff", "outline-variant": "#4d463a", "secondary-container": "#693c46", "on-tertiary": "#332664", "on-surface": "#ebddff", "primary": "#ffe6b5", "on-primary-fixed-variant": "#59440e", "on-surface-variant": "#d0c5b5", "surface": "#180d2d", "tertiary-container": "#d2c5ff", "surface-container-low": "#201536", "on-tertiary-fixed": "#1e0e4e", "on-primary": "#3f2e00", "surface-container-highest": "#3a2f50", "on-secondary-fixed-variant": "#663a44", "error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin": "1.25rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1.25rem", "gutter-desktop": "2rem", "margin-desktop": "4rem", "space-md": "1rem", "space-2xl": "4rem", "space-xl": "2.5rem", "margin-tablet": "2.5rem" }, "fontFamily": { "headline-xl-mobile": ["Playfair Display"], "label-sm": ["DM Sans"], "label-md": ["DM Sans"], "body-sm": ["DM Sans"], "headline-md": ["Playfair Display"], "display-lg": ["Playfair Display"], "body-lg": ["DM Sans"], "headline-sm": ["Playfair Display"], "body-xl": ["DM Sans"], "display-lg-mobile": ["Playfair Display"], "label-lg": ["DM Sans"], "headline-xl": ["Playfair Display"], "body-md": ["DM Sans"], "headline-lg": ["Playfair Display"] }, "fontSize": { "headline-xl-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-xl": ["18px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior:none;background-color:#180d2d;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-secondary-container selection:text-secondary"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_16px_rgba(10,5,20,0.6)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Isha Level 20 Crest" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VX4i_7tfm6r5G4YI9gJV3PwRMT7Wm7-dz76h1kufkwSBmYfdkH2aa5_ZZq8nUwkNoBeWX71zuFk1SrdQRrzaahv2Qjb7nF0h3e9im5ZhUWcFZj1cIUVfmRwAAd10zhTO0YH5Q94sAXx39QIh2vrKzmr3B470gL353qx5B3o7PUJnHv0mHohm4e6XG0923FvfXP1Z2bMJSZj4jAbJTS7vYbEflrI6azlvmz3pGnjUTceoZdKJXvn1bAkQ"/><a aria-label="Level Map" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary transition-all duration-300 hover:bg-surface-container-high" data-path="level-map" href="#"><span class="material-symbols-outlined text-[20px]">map</span></a><span class="font-headline-sm text-headline-sm text-primary tracking-tight ml-space-xs hidden min-[370px]:inline">Level Map</span></div><div class="flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-low/70 rounded-full"><span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.7)]"></span><span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.7)]"></span><span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.7)]"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span></div><div class="flex items-center gap-space-xs"><button aria-label="Lofi Love Track Music Player" class="h-11 px-space-sm rounded-full bg-surface-container-high/80 text-secondary flex items-center gap-1 transition-all hover:bg-surface-bright active:scale-95" type="button"><span class="material-symbols-outlined text-[18px] animate-pulse">music_note</span><span class="font-label-sm text-label-sm tracking-widest hidden sm:inline text-secondary-fixed-dim">LOFI</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_12px_rgba(232,201,135,0.35)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-32 px-margin bg-surface"><div class="flex flex-col w-full relative">
+<!-- Ambient Atmospheric Glows -->
+<div class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full bg-primary-container/10 blur-3xl"></div>
+<div class="pointer-events-none absolute top-96 -right-16 w-64 h-64 rounded-full bg-secondary-container/15 blur-3xl"></div>
+<div class="pointer-events-none absolute bottom-48 -left-12 w-72 h-72 rounded-full bg-tertiary-container/10 blur-3xl"></div>
+<!-- Header Banner & Quest Intro -->
+<header class="flex flex-col items-center text-center px-margin pt-2 pb-6 relative z-10">
+<div class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container-high/90 shadow-sm mb-3">
+<span class="material-symbols-outlined text-primary text-[15px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Chapter Two · Quest Board</span>
+<span class="material-symbols-outlined text-primary text-[15px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-tight mb-2">Our Journey</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mx-auto leading-relaxed">
+      Level by level, milestone by milestone · complete them to unlock the finale.
+    </p>
+<!-- Master Progress HUD -->
+<div class="w-full mt-5 p-space-md rounded-xl bg-surface-container-high/70 backdrop-blur-md shadow-md flex flex-col gap-2.5">
+<div class="flex items-center justify-between text-left">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-primary leading-none">2/8 Milestones Mastered</p>
+<p class="font-label-sm text-label-sm text-secondary tracking-normal mt-0.5">25% to Isha's Grand Finale</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest font-label-sm text-label-sm text-primary-fixed-dim">
+          ACT I OF IV
+        </span>
+</div>
+<!-- Segmented Track Bar -->
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden flex gap-0.5 p-0.5">
+<div class="h-full w-1/4 rounded-full bg-primary shadow-[0_0_8px_rgba(232,201,135,0.7)] transition-all duration-700"></div>
+<div class="h-full w-3/4 rounded-full bg-surface-variant/40"></div>
+</div>
+</div>
+</header>
+<!-- Winding Path Level Nodes Container -->
+<div class="relative w-full px-margin my-2 flex flex-col gap-6 z-10">
+<!-- Curved Golden Stardust Spine (SVG) -->
+<svg class="absolute top-8 left-1/2 -translate-x-1/2 w-full h-[calc(100%-4rem)] pointer-events-none opacity-40 z-0" fill="none" preserveaspectratio="none" viewbox="0 0 340 1380">
+<path class="text-primary-container" d="M 60,40 C 220,110 300,190 280,260 C 250,340 80,410 70,510 C 60,610 280,680 270,780 C 255,870 70,950 65,1050 C 60,1140 280,1210 170,1320" stroke="currentColor" stroke-dasharray="6 6" stroke-width="2.5"></path>
+<!-- Starry Accent Sparkles on Path -->
+<circle class="fill-primary" cx="170" cy="150" r="3"></circle>
+<circle class="fill-primary-fixed" cx="270" cy="380" r="2.5"></circle>
+<circle class="fill-primary" cx="160" cy="650" r="3.5"></circle>
+<circle class="fill-secondary" cx="260" cy="910" r="2.5"></circle>
+<circle class="fill-primary-container" cx="120" cy="1180" r="3"></circle>
+</svg>
+<!-- LEVEL 1: Memory Lane (Completed) -->
+<article class="relative z-10 w-full group">
+<div class="flex items-start gap-3.5 p-space-md rounded-xl bg-surface-container-high/85 shadow-md transition-all hover:bg-surface-bright">
+<!-- Node Status Indicator Hub -->
+<div class="flex flex-col items-center gap-1 shrink-0 pt-0.5">
+<div class="w-11 h-11 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_14px_rgba(232,201,135,0.45)]">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim font-bold">LVL 1</span>
+</div>
+<!-- Node Content & Polaroid Media -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2 mb-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Memory Lane</h2>
+<span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary font-label-sm text-label-sm flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+              Mastered
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-2.5">
+            The dusty café corner where coffee turned into 3 AM conversations and stolen smiles.
+          </p>
+<!-- Tactile Scrapbook Media Snip -->
+<div class="flex items-center gap-2.5 p-1.5 rounded-lg bg-surface-container-lowest/80">
+<img class="w-14 h-14 rounded object-cover -rotate-1 shadow-sm shrink-0" data-alt="A warm candlelight Polaroid snapshot of two hands intertwined beside ceramic coffee mugs on a rustic wooden table with soft purple and golden bokeh highlights, fine grain texture, film nostalgia aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV0ts3aiopGzIBdBPCWoUWGBlPmy7-7w-IrGA54t6O9Df7B79brrU_IwySj8nQEEx8icPztvyxatKYbNIF3AaKHPNFKBQDADhECaEkHokMjqYY4R1peag26WXXukTgJWoOYqgSLX1_TCmqDpdCV6viXmHAB5w4VSVquLBRwZE7rvdk5OkXQWtd3FHi6r1QlUriW1yFLjKUpjewQkioWatR180Wy8ViITRMgssdMR9sFrpoyBnvCedQ"/>
+<div class="min-w-0 flex-1 pr-1">
+<p class="font-label-sm text-label-sm text-secondary-fixed flex items-center gap-1 truncate">
+<span class="material-symbols-outlined text-[13px]">mode_comment</span> Swayam's Marginalia
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic truncate">
+                “Where my favorite story quietly began.”
+              </p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- LEVEL 2: Photo Gallery (Completed) -->
+<article class="relative z-10 w-full group">
+<div class="flex items-start gap-3.5 p-space-md rounded-xl bg-surface-container-high/85 shadow-md transition-all hover:bg-surface-bright">
+<div class="flex flex-col items-center gap-1 shrink-0 pt-0.5">
+<div class="w-11 h-11 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_14px_rgba(232,201,135,0.45)]">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">photo_library</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim font-bold">LVL 2</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2 mb-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Photo Gallery</h2>
+<span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary font-label-sm text-label-sm flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+              Mastered
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-2.5">
+            Polaroids tilted by hand, taped with pink washi tape, capturing you caught mid-laugh.
+          </p>
+<div class="flex items-center gap-2.5 p-1.5 rounded-lg bg-surface-container-lowest/80">
+<img class="w-14 h-14 rounded object-cover rotate-2 shadow-sm shrink-0" data-alt="A candid vintage Polaroid picture of a radiant young woman smiling under twinkling fairy lights at twilight, warm gold tones, rich plum shadows, film border with tiny washi tape corner." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBZThZ04EIbn3ZneoH_xBEDAefBtIK4nX2v-T9AAsZOarjSbFlYcaWaiZqLPO3zFBxeiUM0bhse2d7Di4JzSn9zJ3pX-FCT0HLlISobGCFb9t2DbiPg9oSLE0XCd8WjbakxT7tU_Om0Gtsl600FnrtXQjLHd4XoNXA4rBcAq6FHoj_OLEvPNLG5jdUhgFNAZ21gg67bRFBhTNdDSh97gmFUioviI3jLRdb3i7dIe4DWpC7e4EHKPYD"/>
+<div class="min-w-0 flex-1 pr-1">
+<p class="font-label-sm text-label-sm text-secondary-fixed flex items-center gap-1 truncate">
+<span class="material-symbols-outlined text-[13px]">mode_comment</span> Swayam's Marginalia
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic truncate">
+                “You never fail to outshine every star in the frame.”
+              </p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- LEVEL 3: Our Cinema (IN PROGRESS / ACTIVE QUEST) -->
+<article class="relative z-10 w-full group">
+<!-- Pulsing Aura Card Elevation -->
+<div class="p-space-md rounded-xl bg-surface-container-highest shadow-[0_0_28px_rgba(232,201,135,0.22)] relative overflow-hidden">
+<!-- Floating Active Ribbon -->
+<div class="absolute -top-1 -right-1 px-3 py-1 rounded-bl-xl bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-surface-container-lowest animate-ping"></span>
+          CURRENT STAGE
+        </div>
+<div class="flex items-start gap-3.5">
+<div class="flex flex-col items-center gap-1 shrink-0 pt-0.5">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-[0_0_20px_rgba(255,230,181,0.65)] animate-pulse">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">movie</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">LVL 3</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight truncate">Our Cinema</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mb-3 leading-relaxed">
+              Curated film reels, our unreleased montage cuts, and the midnight popcorn marathons.
+            </p>
+<!-- Prominent Media & Play Action -->
+<div class="p-2 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="relative w-full h-24 rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Cinematic still frame of a couple watching an indie movie in a cozy dark bedroom lit by projector glow and warm fairy lights, moody violet and deep amber lighting, 35mm film atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaI-rvWFGoOxsTcAiGWuWu8bUY9KZwvlSVzYjdPpQq3icKdrD4KN7M4YiYrnNhakWkoT8tEEglDg6ELon78eF2qpfm-k9haDp9JkVKQCmGLLrhqSaoFuYDmtvZ3vLY_Vhq3Z16LRlcggo1LnhwI77dw_apSAA60LO5BCC7rUiQiCmVE7id9UCPxKQEQ7yAE0-vb5VgQZ8tFp4PhwO4pvgrk4kyDqCGgw3jpQDOZoUyMgwOPz-dKr2Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent flex items-end p-2">
+<span class="font-label-sm text-label-sm text-primary-fixed flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">play_circle</span> Reel #03: “Late Night Whispers”
+                  </span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-2 pt-1">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[16px]">warning</span>
+<p class="font-body-sm text-body-sm text-secondary-fixed-dim italic truncate">
+                    “Warning: tears of pure nostalgia ahead.”
+                  </p>
+</div>
+<a class="px-3 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center gap-1 shrink-0 shadow-sm transition-transform active:scale-95" data-path="our-cinema" href="#">
+                  Play Now
+                  <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- LEVEL 4: Songs of Us (Next Stage) -->
+<article class="relative z-10 w-full group opacity-95">
+<div class="flex items-start gap-3.5 p-space-md rounded-xl bg-surface-container-high/80 shadow-sm transition-all hover:bg-surface-container-high">
+<div class="flex flex-col items-center gap-1 shrink-0 pt-0.5">
+<div class="w-11 h-11 rounded-full bg-surface-container-highest text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">music_note</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-bold">LVL 4</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2 mb-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Songs of Us</h2>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/60 text-secondary-fixed font-label-sm text-label-sm shrink-0">
+              Up Next
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-2">
+            The cassette tapes of rainy bus rides and that one acoustic track you played on loop for a month.
+          </p>
+<div class="p-2 rounded-lg bg-surface-container-lowest/70 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">queue_music</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic truncate">
+              “Wait till track 7 plays—you sang it in the car.”
+            </p>
+</div>
+</div>
+</div>
+</article>
+<!-- LEVEL 5: Games Hub (Locked) -->
+<article class="relative z-10 w-full group opacity-75">
+<div class="flex items-start gap-3.5 p-space-md rounded-xl bg-surface-container/60 shadow-none">
+<div class="flex flex-col items-center gap-1 shrink-0 pt-0.5">
+<div class="w-11 h-11 rounded-full bg-surface-container-low text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[19px]">sports_esports</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">LVL 5</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2 mb-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface-variant truncate">Games Hub</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-outline font-label-sm text-label-sm flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-[12px]">lock</span>
+              Locked
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-outline line-clamp-1 mb-1.5">
+            Arcade trivia, couples quiz battles, and hidden Easter eggs.
+          </p>
+<p class="font-label-sm text-label-sm text-outline italic truncate">
+            Swayam: “Think you remember our exact first date dessert?”
+          </p>
+</div>
+</div>
+</article>
+<!-- LEVEL 6: Open When Letters (Locked) -->
+<article class="relative z-10 w-full group opacity-75">
+<div class="flex items-start gap-3.5 p-space-md rounded-xl bg-surface-container/60 shadow-none">
+<div class="flex flex-col items-center gap-1 shrink-0 pt-0.5">
+<div class="w-11 h-11 rounded-full bg-surface-container-low text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[19px]">mail</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">LVL 6</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2 mb-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface-variant truncate">Open When Letters</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-outline font-label-sm text-label-sm flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-[12px]">lock</span>
+              Locked
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-outline line-clamp-1 mb-1.5">
+            Wax-sealed digital envelopes for when you miss me or feel overwhelmed.
+          </p>
+<p class="font-label-sm text-label-sm text-outline italic truncate">
+            Swayam: “Stored under genuine midnight plum wax seals.”
+          </p>
+</div>
+</div>
+</article>
+<!-- LEVEL 7: 20 Reasons (Locked) -->
+<article class="relative z-10 w-full group opacity-75">
+<div class="flex items-start gap-3.5 p-space-md rounded-xl bg-surface-container/60 shadow-none">
+<div class="flex flex-col items-center gap-1 shrink-0 pt-0.5">
+<div class="w-11 h-11 rounded-full bg-surface-container-low text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[19px]">featured_seasonal_and_gifts</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">LVL 7</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2 mb-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface-variant truncate">20 Reasons</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-outline font-label-sm text-label-sm flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-[12px]">lock</span>
+              Locked
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-outline line-clamp-1 mb-1.5">
+            Twenty handwritten testaments celebrating twenty gorgeous years of you.
+          </p>
+<p class="font-label-sm text-label-sm text-outline italic truncate">
+            Swayam: “Reason #14 took three drafts to express properly.”
+          </p>
+</div>
+</div>
+</article>
+<!-- LEVEL 8: Grand Finale (Grand Padlocked Citadel) -->
+<article class="relative z-10 w-full group">
+<div class="p-space-md rounded-xl bg-gradient-to-b from-surface-container-high/90 to-surface-container-low/95 shadow-lg flex flex-col gap-3 relative overflow-hidden">
+<!-- Golden Decorative Hairline Accent -->
+<div class="h-0.5 w-16 bg-primary-container rounded-full mx-auto"></div>
+<div class="flex items-start gap-3.5">
+<div class="flex flex-col items-center gap-1 shrink-0">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-lowest text-primary flex items-center justify-center shadow-[0_0_24px_rgba(232,201,135,0.2)] relative">
+<span class="material-symbols-outlined text-[28px]">castle</span>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim font-bold">LVL 8</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2 mb-1">
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight truncate">The Finale</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-secondary-fixed font-label-sm text-label-sm shrink-0">
+                Secret Sanctuary
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">
+              The starlit culmination crafted exclusively for your 20th birthday midnight.
+            </p>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-lowest/90 text-primary-fixed-dim font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">key</span>
+              Unlocks after Level 7 is complete
+            </div>
+</div>
+</div>
+<!-- Teaser Message Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/60 text-center">
+<p class="font-body-sm text-body-sm text-secondary-fixed italic">
+            “Keep going, birthday girl. The best part is waiting at the top.” — Swayam
+          </p>
+</div>
+</div>
+</article>
+</div>
+<!-- Quest Action Hub Floating Card -->
+<section class="mt-4 px-margin z-10">
+<div class="p-space-md rounded-xl bg-surface-container-high/90 backdrop-blur-xl shadow-xl flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Active Objective</span>
+<p class="font-headline-sm text-headline-sm text-primary">Resume Level 3: Our Cinema</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</div>
+</div>
+<!-- Action Button Group -->
+<div class="flex flex-col sm:flex-row items-center gap-2 pt-1">
+<a class="w-full h-12 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(232,201,135,0.4)] transition-all hover:bg-primary active:scale-95" data-path="our-cinema" href="#">
+<span>Continue Quest</span>
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+</a>
+<a class="w-full sm:w-auto h-11 px-space-lg rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md flex items-center justify-center gap-1 hover:text-on-surface active:scale-95" data-path="level-map" href="#">
+<span class="material-symbols-outlined text-[16px]">shuffle</span>
+<span>View All Badges</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Interactive Local Micro-script for node feedback -->
+<script>
+    (function () {
+      const activeNode = document.querySelector('[data-path="our-cinema"]');
+      if (activeNode) {
+        activeNode.addEventListener('click', function () {
+          try {
+            if (window.navigator && window.navigator.vibrate) {
+              window.navigator.vibrate([20, 30, 20]);
+            }
+          } catch (e) {
+            // Safe fallback
+          }
+        });
+      }
+    })();
+  </script>
+</div><footer class="mt-space-2xl pb-space-lg text-center flex flex-col items-center justify-center gap-1 opacity-80"><p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">Made with love by Swayam <span class="text-primary text-[14px]">✦</span> 30.10.2026</p><p class="font-label-sm text-label-sm text-secondary-fixed-dim tracking-wider uppercase">Isha · Level 20 Edition</p></footer></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-8px_24px_rgba(10,5,20,0.7)]" data-active-classes="text-primary bg-surface-container-high shadow-[0_0_16px_rgba(232,201,135,0.25)]"><div class="h-20 px-margin flex items-center justify-between gap-space-sm max-w-lg mx-auto"><a class="h-11 px-space-md rounded-full flex items-center justify-center text-secondary transition-all hover:text-secondary-fixed font-label-md text-label-md active:scale-95" data-path="finale" href="#">Skip</a><div class="flex items-center gap-space-xs"><a aria-current="page" aria-label="Journey Map" class="w-11 h-11 rounded-full flex items-center justify-center transition-all active:scale-95 text-primary bg-surface-container-high shadow-[0_0_16px_rgba(232,201,135,0.25)]" data-path="level-map" href="#"><span class="material-symbols-outlined text-[22px]">explore</span></a><a aria-label="Songs of Us" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="songs-of-us" href="#"><span class="material-symbols-outlined text-[22px]">album</span></a></div><a class="h-11 px-space-lg rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg font-semibold flex items-center justify-center gap-1 shadow-[0_0_20px_rgba(232,201,135,0.4)] transition-all hover:bg-primary hover:scale-[1.03] active:scale-95" data-path="photo-gallery" href="#"><span>Next</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></a></div></nav></body></html>

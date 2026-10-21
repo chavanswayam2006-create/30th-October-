@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#ffdf9b", "secondary-fixed": "#ffd9df", "secondary": "#f4b6c2", "on-error-container": "#ffdad6", "on-tertiary-fixed-variant": "#4a3d7c", "inverse-on-surface": "#362b4c", "on-background": "#ebddff", "on-primary-fixed": "#251a00", "inverse-surface": "#ebddff", "inverse-primary": "#725b24", "on-secondary-fixed": "#330f19", "background": "#180d2d", "tertiary-fixed": "#e7deff", "surface-dim": "#180d2d", "surface-container-lowest": "#130727", "surface-container-high": "#2f2445", "on-error": "#690005", "on-primary-container": "#6a531d", "primary-fixed-dim": "#e2c381", "surface-tint": "#e2c381", "on-secondary-container": "#e5a8b4", "surface-variant": "#3a2f50", "surface-container": "#251a3a", "outline": "#989081", "on-tertiary-container": "#5a4d8d", "surface-bright": "#3f3355", "primary-container": "#e8c987", "tertiary": "#ede5ff", "on-secondary": "#4c242e", "error": "#ffb4ab", "secondary-fixed-dim": "#f4b6c2", "tertiary-fixed-dim": "#ccbeff", "outline-variant": "#4d463a", "secondary-container": "#693c46", "on-tertiary": "#332664", "on-surface": "#ebddff", "primary": "#ffe6b5", "on-primary-fixed-variant": "#59440e", "on-surface-variant": "#d0c5b5", "surface": "#180d2d", "tertiary-container": "#d2c5ff", "surface-container-low": "#201536", "on-tertiary-fixed": "#1e0e4e", "on-primary": "#3f2e00", "surface-container-highest": "#3a2f50", "on-secondary-fixed-variant": "#663a44", "error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin": "1.25rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1.25rem", "gutter-desktop": "2rem", "margin-desktop": "4rem", "space-md": "1rem", "space-2xl": "4rem", "space-xl": "2.5rem", "margin-tablet": "2.5rem" }, "fontFamily": { "headline-xl-mobile": ["Playfair Display"], "label-sm": ["DM Sans"], "label-md": ["DM Sans"], "body-sm": ["DM Sans"], "headline-md": ["Playfair Display"], "display-lg": ["Playfair Display"], "body-lg": ["DM Sans"], "headline-sm": ["Playfair Display"], "body-xl": ["DM Sans"], "display-lg-mobile": ["Playfair Display"], "label-lg": ["DM Sans"], "headline-xl": ["Playfair Display"], "body-md": ["DM Sans"], "headline-lg": ["Playfair Display"] }, "fontSize": { "headline-xl-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-xl": ["18px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior:none;background-color:#180d2d;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+
+    /* Ambient Drifting Sparkles */
+    .ambient-sparkle {
+      position: fixed;
+      pointer-events: none;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(255, 230, 181, 0.9) 0%, rgba(244, 182, 194, 0.3) 60%, transparent 100%);
+      animation: float-sparkle linear infinite;
+      z-index: 10;
+    }
+    @keyframes float-sparkle {
+      0% {
+        transform: translateY(100vh) translateX(0) scale(0.6);
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.8;
+      }
+      80% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-40px) translateX(30px) scale(1.1);
+        opacity: 0;
+      }
+    }
+
+    /* 3D Envelope & Flap Flip Animation */
+    .perspective-container {
+      perspective: 900px;
+    }
+    .envelope-flap {
+      transform-origin: top center;
+      transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+    .envelope-card.is-open .envelope-flap {
+      transform: rotateX(180deg);
+      z-index: 1;
+    }
+
+    /* Paper Slide & Reveal */
+    .letter-paper-content {
+      max-height: 0;
+      opacity: 0;
+      transform: translateY(20px) scale(0.97);
+      overflow: hidden;
+      transition: max-height 0.75s cubic-bezier(0.2, 0.8, 0.2, 1),
+                  opacity 0.6s ease-out 0.2s,
+                  transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s;
+    }
+    .envelope-card.is-open .letter-paper-content {
+      max-height: 1200px;
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* Staggered Line-by-Line Fade-in for Letter Script */
+    .envelope-card.is-open .script-line-1 {
+      animation: scriptFade 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s forwards;
+    }
+    .envelope-card.is-open .script-line-2 {
+      animation: scriptFade 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.5s forwards;
+    }
+    .envelope-card.is-open .script-line-3 {
+      animation: scriptFade 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.7s forwards;
+    }
+    .script-line {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    @keyframes scriptFade {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Wax Seal Splinter Particle Burst */
+    .wax-particle {
+      position: absolute;
+      pointer-events: none;
+      border-radius: 9999px;
+      z-index: 60;
+      animation: waxBurst 0.65s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
+    }
+    @keyframes waxBurst {
+      0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(var(--tx), var(--ty)) scale(0.2) rotate(var(--rot));
+        opacity: 0;
+      }
+    }
+
+    /* Padlock wobble keyframe */
+    @keyframes padlockWobble {
+      0%, 100% { transform: rotate(0deg) scale(1); }
+      15% { transform: rotate(-14deg) scale(1.08); }
+      30% { transform: rotate(14deg) scale(1.08); }
+      45% { transform: rotate(-10deg) scale(1.04); }
+      60% { transform: rotate(10deg) scale(1.04); }
+      75% { transform: rotate(-4deg); }
+      90% { transform: rotate(4deg); }
+    }
+    .animate-padlock-wobble {
+      animation: padlockWobble 0.65s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    }
+
+    /* Smooth 60fps Transitions */
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+</head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-secondary-container selection:text-secondary relative overflow-x-hidden">
+<!-- Drifting Ambient Background Sparkles -->
+<div aria-hidden="true" class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="ambient-sparkle w-1.5 h-1.5" style="left: 12%; animation-duration: 8s; animation-delay: 0s;"></div>
+<div class="ambient-sparkle w-2 h-2" style="left: 32%; animation-duration: 11s; animation-delay: 2.5s;"></div>
+<div class="ambient-sparkle w-1 h-1" style="left: 56%; animation-duration: 9s; animation-delay: 1.2s;"></div>
+<div class="ambient-sparkle w-2.5 h-2.5" style="left: 78%; animation-duration: 13s; animation-delay: 4s;"></div>
+<div class="ambient-sparkle w-1.5 h-1.5" style="left: 92%; animation-duration: 10s; animation-delay: 1.8s;"></div>
+<div class="ambient-sparkle w-1 h-1" style="left: 20%; animation-duration: 12s; animation-delay: 6s;"></div>
+</div>
+<header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_16px_rgba(10,5,20,0.6)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Back" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary transition-all hover:bg-surface-container-high active:scale-95" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><img alt="Isha Level 20 Crest" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VX4i_7tfm6r5G4YI9gJV3PwRMT7Wm7-dz76h1kufkwSBmYfdkH2aa5_ZZq8nUwkNoBeWX71zuFk1SrdQRrzaahv2Qjb7nF0h3e9im5ZhUWcFZj1cIUVfmRwAAd10zhTO0YH5Q94sAXx39QIh2vrKzmr3B470gL353qx5B3o7PUJnHv0mHohm4e6XG0923FvfXP1Z2bMJSZj4jAbJTS7vYbEflrI6azlvmz3pGnjUTceoZdKJXvn1bAkQ"/><h1 class="font-headline-sm text-headline-sm text-primary tracking-tight ml-space-xs truncate max-w-[130px] min-[390px]:max-w-[180px]">Open When</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Music Track" class="h-11 px-space-sm rounded-full bg-surface-container-high/80 text-secondary flex items-center gap-1 transition-all hover:bg-surface-bright active:scale-95" type="button"><span class="material-symbols-outlined text-[18px] animate-pulse">music_note</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_12px_rgba(232,201,135,0.35)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-margin px-margin bg-surface z-10"><div class="flex flex-col w-full pb-space-lg">
+<!-- Level Breadcrumb / Quest Progress Bar -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-sm mb-space-md shadow-md flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-7 h-7 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">QUEST 06 / 20</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Archive of Little Solaces</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim bg-surface-container-high px-2 py-0.5 rounded-full transition-all" id="opened-counter">1 of 6 Opened</span>
+</div>
+</div>
+<!-- Header Intro Banner -->
+<div class="w-full bg-gradient-to-b from-surface-container-high/60 via-surface-container to-surface-container-low rounded-xl p-space-md shadow-lg relative overflow-hidden mb-space-lg">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -left-6 -bottom-6 w-28 h-28 bg-secondary/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center gap-2 mb-space-xs">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-highest shadow-sm">
+<span class="text-primary text-[10px]">✦</span>
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">LEVEL 06 · KEEPSAKES</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span> For Isha
+      </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight mb-space-xs">Open When...</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Six digital envelopes sealed with love. Open them whenever your heart needs a reminder of who is always in your corner.
+    </p>
+<!-- Interactive Filter / Mood Pill Strip -->
+<div class="flex items-center gap-space-xs mt-space-md overflow-x-auto pb-1">
+<span class="shrink-0 px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">done</span> All Letters
+      </span>
+<span class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+        Late Nights
+      </span>
+<span class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+        Big Hugs
+      </span>
+<span class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+        Milestones
+      </span>
+</div>
+</div>
+<!-- 2x3 Grid of Envelopes -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md w-full perspective-container">
+<!-- Envelope 1: UNSEALED / ACTIVE (Open when you miss me) -->
+<div class="envelope-card is-open col-span-1 sm:col-span-2 relative bg-surface-container-high rounded-xl p-space-md shadow-xl overflow-hidden flex flex-col transition-all cursor-pointer border border-primary/20" data-letter-id="1" id="envelope-1">
+<!-- Flap header / status indicator -->
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="status-dot w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="status-label font-label-sm text-label-sm text-secondary tracking-wider uppercase">CURRENTLY UNSEALED</span>
+</div>
+<div class="flex items-center gap-1 text-primary-fixed-dim bg-surface-container-lowest px-2 py-0.5 rounded-full">
+<span class="toggle-icon material-symbols-outlined text-[13px]">lock_open</span>
+<span class="toggle-text font-label-sm text-label-sm">Tap to Fold / Read</span>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-primary">Open when you miss me</span>
+</div>
+<!-- Tactile Letter Paper Slide-out -->
+<div class="letter-paper-content relative bg-surface-container-lowest rounded-lg p-space-md shadow-md mt-space-xs">
+<!-- Stamp & Postmark Details -->
+<div class="flex items-start justify-between border-b border-outline-variant/30 pb-space-xs mb-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">nights_stay</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-primary font-semibold">COZY FREQUENCY · LVL 20</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">To: My Favorite Girl in the World</p>
+</div>
+</div>
+<!-- Cracked Wax Seal Graphic -->
+<div class="seal-element relative w-9 h-9 rounded-full bg-gradient-to-br from-primary to-primary-fixed-dim flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-on-primary text-[18px]">broken_image</span>
+<div class="absolute inset-0 rounded-full bg-black/10"></div>
+</div>
+</div>
+<!-- Handwritten Content -->
+<div class="space-y-space-xs text-on-surface">
+<p class="script-line script-line-1 font-headline-sm text-headline-sm italic text-secondary leading-snug">
+            "Take a deep breath and look at the screen..."
+          </p>
+<p class="script-line script-line-2 font-body-md text-body-md text-on-surface-variant leading-relaxed pt-1">
+            I am probably already thinking of you right this second. Even if distance exists today, every good thing I see reminds me of your smile or some absurd little joke we cracked at 2 AM. If you still miss me after reading this, text me this exact emoji:
+          </p>
+<!-- Emoji Secret Code Trigger -->
+<div class="script-line script-line-3 py-space-xs flex items-center gap-space-xs" onclick="event.stopPropagation()">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-primary hover:bg-surface-bright flex items-center gap-2 transition-transform active:scale-95 shadow-sm" onclick="navigator.clipboard?.writeText('🌙'); alert('Copied 🌙 to clipboard! Send it to Swayam.');">
+<span class="text-xl">🌙</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Tap to copy secret moon</span>
+</button>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic">(I will answer instantly, guaranteed)</span>
+</div>
+<!-- Swayam's Tender Signature -->
+<div class="pt-space-sm flex items-end justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">With infinite devotion,</span>
+<span class="font-headline-sm text-headline-sm text-primary-fixed italic font-normal">Swayam ✦</span>
+</div>
+<div class="flex items-center gap-1 text-secondary-fixed-dim bg-secondary-container/40 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-sm text-label-sm">Safe with you</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Envelope 2: SEALED (Open when you're sad) -->
+<div class="envelope-card bg-surface-container rounded-xl p-space-md shadow-md flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container-high transition-all cursor-pointer border border-transparent hover:border-secondary/30" data-letter-id="2" id="envelope-2">
+<!-- Flap Decorator for 3D unfold simulation -->
+<div class="envelope-flap flex items-start justify-between gap-space-xs mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase mb-0.5">LETTER NO. 02</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Open when you're sad</h3>
+</div>
+<!-- Wax Seal Icon: Rose Wax with Heart -->
+<div class="seal-element relative w-10 h-10 rounded-full bg-secondary-container text-secondary flex items-center justify-center shadow-lg shrink-0 transition-transform group-hover:scale-105 active:scale-95">
+<span class="seal-icon material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<p class="envelope-summary font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-md">
+        Sealed until your sky looks a little cloudy. Contains five undeniable truths about how strong, gentle, and utterly cherished you are.
+</p>
+<div class="envelope-footer flex items-center justify-between pt-space-xs border-t border-outline-variant/20">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="seal-label-text">Rose Wax Seal</span>
+</div>
+<button class="break-seal-btn px-2.5 py-1 rounded-full bg-surface-container-high text-secondary hover:bg-secondary hover:text-on-secondary font-label-sm text-label-sm transition-all active:scale-95 shadow-sm">
+  Break Seal
+</button>
+</div>
+<!-- Expanded Reading Sheet -->
+<div class="letter-paper-content relative bg-surface-container-lowest rounded-lg p-space-md shadow-md mt-space-xs border border-secondary/20">
+<div class="flex items-start justify-between border-b border-outline-variant/30 pb-space-xs mb-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary font-semibold">GENTLE REFUGE · LVL 20</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">To: My Dearest Isha</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/30 px-2 py-0.5 rounded-full">Rose Petal Scent</span>
+</div>
+<div class="space-y-space-xs text-on-surface">
+<p class="script-line script-line-1 font-headline-sm text-headline-sm italic text-secondary leading-snug">
+      "You don't always have to be resilient..."
+    </p>
+<p class="script-line script-line-2 font-body-md text-body-md text-on-surface-variant leading-relaxed pt-1">
+      It is completely okay if today feels heavy. Please remember that you don't carry the weight of everything by yourself. I love the quiet days, the messy days, and every shadow in between just as fiercely as the sunny ones.
+    </p>
+<div class="script-line script-line-3 pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-secondary-fixed-dim italic">"A big, warm hug is waiting for you anytime."</span>
+<span class="font-headline-sm text-headline-sm text-primary italic font-normal">Swayam ✦</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Envelope 3: SEALED (Open when you need a laugh) -->
+<div class="envelope-card bg-surface-container rounded-xl p-space-md shadow-md flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container-high transition-all cursor-pointer border border-transparent hover:border-primary/30" data-letter-id="3" id="envelope-3">
+<div class="envelope-flap flex items-start justify-between gap-space-xs mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary tracking-wider uppercase mb-0.5">LETTER NO. 03</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Open when you need a laugh</h3>
+</div>
+<!-- Wax Seal Icon: Champagne Gold with Star -->
+<div class="seal-element relative w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-lg shrink-0 transition-transform group-hover:scale-105 active:scale-95">
+<span class="seal-icon material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="envelope-summary font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-md">
+        A classified compendium of our most ridiculous inside jokes, voice note quotes, and clumsy moments where we laughed until our stomachs ached.
+</p>
+<div class="envelope-footer flex items-center justify-between pt-space-xs border-t border-outline-variant/20">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="seal-label-text">Gold Star Seal</span>
+</div>
+<button class="break-seal-btn px-2.5 py-1 rounded-full bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary font-label-sm text-label-sm transition-all active:scale-95 shadow-sm">
+  Break Seal
+</button>
+</div>
+<!-- Expanded Reading Sheet -->
+<div class="letter-paper-content relative bg-surface-container-lowest rounded-lg p-space-md shadow-md mt-space-xs border border-primary/20">
+<div class="flex items-start justify-between border-b border-outline-variant/30 pb-space-xs mb-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">mood</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-primary font-semibold">CLASSIFIED LAUGHS · LVL 20</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Top Secret Inside Joke Vault</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-primary-container/30 px-2 py-0.5 rounded-full">Giggle Guarantee</span>
+</div>
+<div class="space-y-space-xs text-on-surface">
+<p class="script-line script-line-1 font-headline-sm text-headline-sm italic text-primary leading-snug">
+      "Exhibit A: The Great Pastry Catastrophe!"
+    </p>
+<p class="script-line script-line-2 font-body-md text-body-md text-on-surface-variant leading-relaxed pt-1">
+      Remember when we tried to look so poised and sophisticated, only for powdered sugar to shoot into my nostril from laughing at your face? That snort of yours is my favorite soundtrack on earth. Never stop laughing like that.
+    </p>
+<div class="script-line script-line-3 pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-primary-fixed-dim italic">"More goofy memories incoming this year!"</span>
+<span class="font-headline-sm text-headline-sm text-primary italic font-normal">Swayam ✦</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Envelope 4: SEALED (Open when you can't sleep) -->
+<div class="envelope-card bg-surface-container rounded-xl p-space-md shadow-md flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container-high transition-all cursor-pointer border border-transparent hover:border-tertiary/30" data-letter-id="4" id="envelope-4">
+<div class="envelope-flap flex items-start justify-between gap-space-xs mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim tracking-wider uppercase mb-0.5">LETTER NO. 04</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Open when you can't sleep</h3>
+</div>
+<!-- Wax Seal Icon: Lavender Wax with Crescent Moon -->
+<div class="seal-element relative w-10 h-10 rounded-full bg-on-tertiary-fixed-variant text-tertiary flex items-center justify-center shadow-lg shrink-0 transition-transform group-hover:scale-105 active:scale-95">
+<span class="seal-icon material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+</div>
+</div>
+<p class="envelope-summary font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-md">
+        A calming bedtime meditation letter to quiet your whirling racing thoughts. Close your eyes, breathe, and count soft starlight steps with me.
+</p>
+<div class="envelope-footer flex items-center justify-between pt-space-xs border-t border-outline-variant/20">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="seal-label-text">Lavender Wax Seal</span>
+</div>
+<button class="break-seal-btn px-2.5 py-1 rounded-full bg-surface-container-high text-tertiary hover:bg-tertiary hover:text-on-tertiary font-label-sm text-label-sm transition-all active:scale-95 shadow-sm">
+  Break Seal
+</button>
+</div>
+<!-- Expanded Reading Sheet -->
+<div class="letter-paper-content relative bg-surface-container-lowest rounded-lg p-space-md shadow-md mt-space-xs border border-tertiary/20">
+<div class="flex items-start justify-between border-b border-outline-variant/30 pb-space-xs mb-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">bedtime</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-tertiary font-semibold">STILL WATERS · LVL 20</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Midnight Whispers for Isha</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-on-tertiary-fixed-variant/40 px-2 py-0.5 rounded-full">Sleep Softly</span>
+</div>
+<div class="space-y-space-xs text-on-surface">
+<p class="script-line script-line-1 font-headline-sm text-headline-sm italic text-tertiary leading-snug">
+      "Inhale peace, exhale noise..."
+    </p>
+<p class="script-line script-line-2 font-body-md text-body-md text-on-surface-variant leading-relaxed pt-1">
+      You have done enough today. Let your thoughts settle like warm tea. Imagine my hand holding yours while the universe quietly watches over your sweet dreams. You are safe, you are protected, and you are loved.
+    </p>
+<div class="script-line script-line-3 pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-tertiary-fixed-dim italic">"Dream beautifully, my darling."</span>
+<span class="font-headline-sm text-headline-sm text-primary italic font-normal">Swayam ✦</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Envelope 5: SEALED (Open when you're stressed) -->
+<div class="envelope-card bg-surface-container rounded-xl p-space-md shadow-md flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container-high transition-all cursor-pointer border border-transparent hover:border-primary/30" data-letter-id="5" id="envelope-5">
+<div class="envelope-flap flex items-start justify-between gap-space-xs mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary tracking-wider uppercase mb-0.5">LETTER NO. 05</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Open when you're stressed</h3>
+</div>
+<!-- Wax Seal Icon: Gold Laurel Leaf -->
+<div class="seal-element relative w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-lg shrink-0 transition-transform group-hover:scale-105 active:scale-95">
+<span class="seal-icon material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+</div>
+<p class="envelope-summary font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-md">
+        When assignments, deadlines, or expectations start piling up. A grounded reality check on how brilliant you are when you take it one breath at a time.
+</p>
+<div class="envelope-footer flex items-center justify-between pt-space-xs border-t border-outline-variant/20">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="seal-label-text">Laurel Leaf Seal</span>
+</div>
+<button class="break-seal-btn px-2.5 py-1 rounded-full bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary font-label-sm text-label-sm transition-all active:scale-95 shadow-sm">
+  Break Seal
+</button>
+</div>
+<!-- Expanded Reading Sheet -->
+<div class="letter-paper-content relative bg-surface-container-lowest rounded-lg p-space-md shadow-md mt-space-xs border border-primary/20">
+<div class="flex items-start justify-between border-b border-outline-variant/30 pb-space-xs mb-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">spa</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-primary font-semibold">GROUNDING ROOTS · LVL 20</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Priority Check: Your Inner Peace</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-primary-container/30 px-2 py-0.5 rounded-full">Take 3 Breaths</span>
+</div>
+<div class="space-y-space-xs text-on-surface">
+<p class="script-line script-line-1 font-headline-sm text-headline-sm italic text-primary leading-snug">
+      "Drop your shoulders and unclench your jaw right now."
+    </p>
+<p class="script-line script-line-2 font-body-md text-body-md text-on-surface-variant leading-relaxed pt-1">
+      You do not have to conquer everything before sundown. Grades, projects, and chaos are small blips in our lifetime of joy. You are already extraordinary, and I believe in your magic even when you feel tired.
+    </p>
+<div class="script-line script-line-3 pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-primary-fixed-dim italic">"One step at a time. I've got you."</span>
+<span class="font-headline-sm text-headline-sm text-primary italic font-normal">Swayam ✦</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Envelope 6: LOCKED SPECIAL (Open when you turn 21) -->
+<div class="col-span-1 sm:col-span-2 bg-gradient-to-r from-surface-container-lowest via-surface-container-low to-surface-container rounded-xl p-space-md shadow-lg relative overflow-hidden cursor-pointer transition-all hover:border hover:border-primary/40 select-none" id="envelope-lock-21">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<!-- Miniature Vintage Padlock Graphic with Wobble -->
+<div class="w-11 h-11 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-fixed shrink-0 shadow-inner transition-transform" id="lock-icon-container">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">key</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-0.5">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">GRAND ARCHIVE VAULT</span>
+<span class="font-label-sm text-label-sm text-error bg-error-container/30 px-2 py-0.2 rounded-full">LOCKED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Open when you turn 21</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+              Unlocks 30.10.2027 · A whole year of Level 20 adventures awaits first. Sealed with a promise and an unwritten chapter.
+            </p>
+</div>
+</div>
+</div>
+<!-- Dynamic Sweet Interactive Padlock Tooltip -->
+<div class="hidden mt-space-sm py-2 px-3 bg-primary-container/20 border border-primary/40 rounded-lg text-primary text-center font-label-sm text-label-sm flex items-center justify-center gap-2 shadow-lg transition-all animate-fade-in" id="lock-tooltip">
+<span class="material-symbols-outlined text-[16px] text-primary">lock_clock</span>
+<span>Swayam says: Patiently waiting for 30.10.2027! ✨</span>
+</div>
+<!-- Countdown/Lock Indicator Bar -->
+<div class="mt-space-md bg-surface-container-highest/60 rounded-lg p-space-xs flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">hourglass_top</span>
+<span class="font-label-sm text-label-sm text-on-surface">Time remaining: 365 Days of Magic</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Key Safe With Swayam</span>
+</div>
+</div>
+</div>
+<!-- Intimate Scrapbook Polaroid Visual Accent -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md mt-space-lg shadow-md flex items-center gap-space-md">
+<div class="w-20 h-24 rounded bg-surface-container-highest shrink-0 overflow-hidden shadow relative transform -rotate-2">
+<img class="w-full h-full object-cover" data-alt="A warm candlelight Polaroid snapshot of vintage handwritten envelopes, gold leaf flakes, and dried lavender petals laid across deep purple velvet fabric in soft ambient evening glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqjo61yV8C4jzIi3DvDtBk4F8a6KLAUT-dYfdsj2w1ucMuc6bqOI9JRpMgfX6uNzUjPI-XWQcUE6ANGf1TFcdUgqBi00T20VowPRWzKgt0VFpdgha8-bJW9FmPxoNHYKi0NjLuUv2ICGbOyU_xiYK5_1El4vnWy_QUIZMeuOwPkFBVjozYY2DWwLBVdIG2e2H0-sa_LAtc-vuqO-9DeU0sjQtc1ASgk6DKgCS3utWY-eyLXYisKk9a"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1 text-primary mb-1">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Keeper's Note</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+        "Whenever the world feels loud or you forget how extraordinary you are, come back here. Each envelope is yours forever."
+      </p>
+</div>
+</div>
+<!-- Navigation / Next Level Pill & Skip Link -->
+<div class="w-full flex flex-col items-center gap-space-sm mt-space-xl">
+<a class="w-full max-w-sm py-3 px-space-lg rounded-full bg-gradient-to-r from-primary via-primary-container to-primary-fixed text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(232,201,135,0.35)] transition-all hover:scale-[1.02] active:scale-95 text-center" href="#level7">
+<span>Next Level: 20 Reasons Why</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<div class="flex items-center gap-space-md pt-space-xs">
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<span class="material-symbols-outlined text-[14px]">expand_less</span> Back to Top
+      </button>
+<span class="text-on-surface-variant/40">·</span>
+<a class="font-label-sm text-label-sm text-secondary-fixed-dim hover:text-secondary transition-colors flex items-center gap-1" href="#quest-log">
+<span class="material-symbols-outlined text-[14px]">map</span> Quest Map
+      </a>
+</div>
+</div>
+</div><footer class="mt-space-2xl pb-space-lg text-center flex flex-col items-center justify-center gap-1 opacity-80"><p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">Made with love by Swayam <span class="text-primary text-[14px]">✦</span> 30.10.2026</p><p class="font-label-sm text-label-sm text-secondary-fixed-dim tracking-wider uppercase">Isha · Level 20 Edition</p></footer></main>
+<script>
+  // Realistic Wax Seal Fragment & Gold Sparkle Burst
+  function burstWaxParticles(x, y, color = '#e8c987') {
+    const colors = [color, '#ffe6b5', '#ffd9df', '#f4b6c2', '#ffffff'];
+    const count = 18;
+    for (let i = 0; i < count; i++) {
+      const p = document.createElement('div');
+      p.className = 'wax-particle';
+      const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.5;
+      const distance = 35 + Math.random() * 45;
+      const tx = Math.cos(angle) * distance + 'px';
+      const ty = Math.sin(angle) * distance + 'px';
+      const rot = (Math.random() * 360) + 'deg';
+      const size = 3 + Math.random() * 5;
+
+      p.style.setProperty('--tx', tx);
+      p.style.setProperty('--ty', ty);
+      p.style.setProperty('--rot', rot);
+      p.style.width = size + 'px';
+      p.style.height = size + 'px';
+      p.style.left = x + 'px';
+      p.style.top = y + 'px';
+      p.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      p.style.boxShadow = '0 0 6px ' + colors[0];
+
+      document.body.appendChild(p);
+      setTimeout(() => p.remove(), 700);
+    }
+  }
+
+  // Update Opened Letters Count Counter
+  function updateOpenedCount() {
+    const openedCards = document.querySelectorAll('.envelope-card.is-open').length;
+    const counterEl = document.getElementById('opened-counter');
+    if (counterEl) {
+      counterEl.textContent = openedCards + ' of 6 Opened';
+    }
+  }
+
+  // Interactive Card Toggle between Sealed and Reading View
+  function toggleEnvelopeCard(card, event) {
+    // Trigger haptic vibration if supported
+    if (navigator.vibrate) {
+      navigator.vibrate(30);
+    }
+
+    const wasOpen = card.classList.contains('is-open');
+    const sealElement = card.querySelector('.seal-element');
+
+    if (!wasOpen) {
+      // Breaking the seal animation
+      if (sealElement) {
+        const rect = sealElement.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const color = card.dataset.letterId === '2' ? '#f4b6c2' : (card.dataset.letterId === '4' ? '#ede5ff' : '#e8c987');
+        burstWaxParticles(centerX, centerY, color);
+      }
+      card.classList.add('is-open');
+
+      const btn = card.querySelector('.break-seal-btn');
+      if (btn) btn.textContent = 'Fold Envelope';
+
+      const sealLabel = card.querySelector('.seal-label-text');
+      if (sealLabel) sealLabel.textContent = 'Seal Unbroken ✦';
+
+      const icon = card.querySelector('.seal-icon');
+      if (icon) icon.textContent = 'drafts';
+    } else {
+      // Re-folding back
+      card.classList.remove('is-open');
+
+      const btn = card.querySelector('.break-seal-btn');
+      if (btn) btn.textContent = 'Break Seal';
+
+      const sealLabel = card.querySelector('.seal-label-text');
+      if (sealLabel) {
+        if (card.dataset.letterId === '2') sealLabel.textContent = 'Rose Wax Seal';
+        else if (card.dataset.letterId === '3') sealLabel.textContent = 'Gold Star Seal';
+        else if (card.dataset.letterId === '4') sealLabel.textContent = 'Lavender Wax Seal';
+        else if (card.dataset.letterId === '5') sealLabel.textContent = 'Laurel Leaf Seal';
+      }
+
+      const icon = card.querySelector('.seal-icon');
+      if (icon) {
+        if (card.dataset.letterId === '2') icon.textContent = 'favorite';
+        else if (card.dataset.letterId === '3') icon.textContent = 'star';
+        else if (card.dataset.letterId === '4') icon.textContent = 'bedtime';
+        else if (card.dataset.letterId === '5') icon.textContent = 'spa';
+      }
+    }
+    updateOpenedCount();
+  }
+
+  // Attach Listeners to Envelope Cards
+  document.querySelectorAll('.envelope-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      // If clicking interactive sub-button like copy moon, don't toggle fold
+      if (e.target.closest('button[onclick*="navigator.clipboard"]')) {
+        return;
+      }
+      toggleEnvelopeCard(card, e);
+    });
+  });
+
+  // Letter 06: Grand Vault Locked Padlock Shake & Tooltip
+  const lockedEnvelope = document.getElementById('envelope-lock-21');
+  const lockIcon = document.getElementById('lock-icon-container');
+  const lockTooltip = document.getElementById('lock-tooltip');
+  let tooltipTimeout;
+
+  if (lockedEnvelope && lockIcon) {
+    lockedEnvelope.addEventListener('click', () => {
+      if (navigator.vibrate) {
+        navigator.vibrate([20, 40, 20]);
+      }
+
+      // Trigger shake animation
+      lockIcon.classList.remove('animate-padlock-wobble');
+      void lockIcon.offsetWidth; // trigger reflow
+      lockIcon.classList.add('animate-padlock-wobble');
+
+      // Show sweet message tooltip
+      if (lockTooltip) {
+        lockTooltip.classList.remove('hidden');
+        clearTimeout(tooltipTimeout);
+        tooltipTimeout = setTimeout(() => {
+          lockTooltip.classList.add('hidden');
+        }, 3400);
+      }
+    });
+  }
+</script>
+</body></html>

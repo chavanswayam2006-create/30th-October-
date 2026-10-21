@@ -1,0 +1,226 @@
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/500.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/400-italic.css";
+@import "@fontsource/playfair-display/500-italic.css";
+@import "@fontsource/playfair-display/600-italic.css";
+@import "@fontsource/dm-sans/400.css";
+@import "@fontsource/dm-sans/500.css";
+@import "@fontsource/dm-sans/600.css";
+@import "@fontsource/dm-sans/700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: #180d2d;
+    color: #ebddff;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: pan-y;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+  }
+
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+}
+
+/* Hide scrollbars cleanly */
+::-webkit-scrollbar { display: none; }
+* { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Dreamy Animated Gradient Background */
+@keyframes gradientShift {
+  0% {
+    background-color: #160a29;
+    background-image: radial-gradient(circle at 50% 10%, #30174c 0%, #170d2d 55%, #0c0618 100%);
+  }
+  50% {
+    background-color: #1e0e37;
+    background-image: radial-gradient(circle at 65% 30%, #39194d 0%, #15143a 50%, #0e0921 100%);
+  }
+  100% {
+    background-color: #12102e;
+    background-image: radial-gradient(circle at 35% 20%, #26164a 0%, #190c2f 55%, #0d061c 100%);
+  }
+}
+
+.dreamy-bg-ambient {
+  animation: gradientShift 16s ease infinite alternate;
+  background-size: 140% 140%;
+}
+
+/* Animated Gold Shimmer Sweep Across Title Letters */
+@keyframes goldSheen {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.title-shimmer-sheen {
+  background: linear-gradient(
+    110deg,
+    #ffe6b5 0%,
+    #ffdf9b 20%,
+    #ffffff 45%,
+    #f4b6c2 65%,
+    #e2c381 85%,
+    #ffe6b5 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldSheen 4.5s ease-in-out infinite;
+}
+
+/* Button Levitation & Radial Pulsing Glow */
+@keyframes ctaFloatGlow {
+  0%, 100% {
+    transform: translateY(0px);
+    box-shadow: 0 10px 24px -4px rgba(232, 201, 135, 0.38), 0 0 20px 4px rgba(255, 230, 181, 0.22);
+  }
+  50% {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 36px -4px rgba(232, 201, 135, 0.6), 0 0 32px 10px rgba(244, 182, 194, 0.35);
+  }
+}
+
+.cta-floating {
+  animation: ctaFloatGlow 3.6s ease-in-out infinite;
+  transition: transform 0.15s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.15s ease;
+}
+
+.cta-floating:active {
+  transform: scale(0.96) !important;
+  box-shadow: 0 4px 14px rgba(232, 201, 135, 0.5) !important;
+}
+
+/* 3D Perspective Utilities */
+.perspective-800 { perspective: 800px; }
+.perspective-container { perspective: 900px; }
+.card-perspective { perspective: 1000px; }
+.transform-style-3d, .preserve-3d { transform-style: preserve-3d; }
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.rotate-y-180 { transform: rotateY(180deg); }
+.card-flipped { transform: rotateY(180deg); }
+
+/* Wiggle shake on game miss */
+@keyframes wiggleShake {
+  0%, 100% { transform: rotateY(180deg) translateX(0); }
+  20% { transform: rotateY(180deg) translateX(-4px) rotateZ(-2deg); }
+  40% { transform: rotateY(180deg) translateX(4px) rotateZ(2deg); }
+  60% { transform: rotateY(180deg) translateX(-3px) rotateZ(-1deg); }
+  80% { transform: rotateY(180deg) translateX(3px) rotateZ(1deg); }
+}
+.animate-wiggle { animation: wiggleShake 0.45s ease-in-out; }
+
+/* Golden Ripple Waves */
+@keyframes ringWave {
+  0% { transform: scale(0.7); opacity: 0.95; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+.ripple-wave {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  border: 2px solid rgba(255, 230, 181, 0.9);
+  animation: ringWave 0.85s cubic-bezier(0.1, 0.7, 0.1, 1) forwards;
+}
+
+/* Golden Wave Ripple */
+@keyframes goldenWave {
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(232, 201, 135, 0); }
+  50% { transform: scale(1.08) translateY(-3px); box-shadow: 0 0 24px rgba(232, 201, 135, 0.8), 0 0 40px rgba(255, 230, 181, 0.4); }
+  100% { transform: scale(1); box-shadow: 0 0 12px rgba(232, 201, 135, 0.3); }
+}
+.wave-ripple { animation: goldenWave 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+
+/* Finale Pulse Glow */
+@keyframes finaleGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 24px rgba(232,201,135,0.45), 0 0 50px rgba(232,201,135,0.25);
+  }
+  50% {
+    box-shadow: 0 0 42px rgba(232,201,135,0.85), 0 0 70px rgba(255,230,181,0.6);
+    transform: scale(1.03);
+  }
+}
+.finale-glow-active { animation: finaleGlowPulse 1.8s ease-in-out infinite; }
+
+/* Parchment Warm Glow */
+.parchment-glow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 16px 36px rgba(0, 0, 0, 0.35), 0 0 24px rgba(232, 201, 135, 0.15);
+}
+
+/* Rotating Stardust Ray Glow */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.ray-glow {
+  animation: spinSlow 30s linear infinite;
+}
+
+/* Soft Floating Heart rising animation */
+@keyframes floatUpHeart {
+  0% { transform: translateY(0) scale(0.6); opacity: 0; }
+  15% { opacity: 0.9; }
+  85% { opacity: 0.9; }
+  100% { transform: translateY(-700px) scale(1.2); opacity: 0; }
+}
+
+/* Envelope 3D flap animation */
+.envelope-flap {
+  transform-origin: top center;
+  transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.envelope-card.is-open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  .dreamy-bg-ambient,
+  .title-shimmer-sheen,
+  .cta-floating,
+  .animate-pulse,
+  .animate-bounce,
+  .animate-spin,
+  .ray-glow,
+  .finale-glow-active {
+    animation: none !important;
+    transform: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+}

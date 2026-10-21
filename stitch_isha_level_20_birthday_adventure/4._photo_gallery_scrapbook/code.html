@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#ffdf9b", "secondary-fixed": "#ffd9df", "secondary": "#f4b6c2", "on-error-container": "#ffdad6", "on-tertiary-fixed-variant": "#4a3d7c", "inverse-on-surface": "#362b4c", "on-background": "#ebddff", "on-primary-fixed": "#251a00", "inverse-surface": "#ebddff", "inverse-primary": "#725b24", "on-secondary-fixed": "#330f19", "background": "#180d2d", "tertiary-fixed": "#e7deff", "surface-dim": "#180d2d", "surface-container-lowest": "#130727", "surface-container-high": "#2f2445", "on-error": "#690005", "on-primary-container": "#6a531d", "primary-fixed-dim": "#e2c381", "surface-tint": "#e2c381", "on-secondary-container": "#e5a8b4", "surface-variant": "#3a2f50", "surface-container": "#251a3a", "outline": "#989081", "on-tertiary-container": "#5a4d8d", "surface-bright": "#3f3355", "primary-container": "#e8c987", "tertiary": "#ede5ff", "on-secondary": "#4c242e", "error": "#ffb4ab", "secondary-fixed-dim": "#f4b6c2", "tertiary-fixed-dim": "#ccbeff", "outline-variant": "#4d463a", "secondary-container": "#693c46", "on-tertiary": "#332664", "on-surface": "#ebddff", "primary": "#ffe6b5", "on-primary-fixed-variant": "#59440e", "on-surface-variant": "#d0c5b5", "surface": "#180d2d", "tertiary-container": "#d2c5ff", "surface-container-low": "#201536", "on-tertiary-fixed": "#1e0e4e", "on-primary": "#3f2e00", "surface-container-highest": "#3a2f50", "on-secondary-fixed-variant": "#663a44", "error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin": "1.25rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1.25rem", "gutter-desktop": "2rem", "margin-desktop": "4rem", "space-md": "1rem", "space-2xl": "4rem", "space-xl": "2.5rem", "margin-tablet": "2.5rem" }, "fontFamily": { "headline-xl-mobile": ["Playfair Display"], "label-sm": ["DM Sans"], "label-md": ["DM Sans"], "body-sm": ["DM Sans"], "headline-md": ["Playfair Display"], "display-lg": ["Playfair Display"], "body-lg": ["DM Sans"], "headline-sm": ["Playfair Display"], "body-xl": ["DM Sans"], "display-lg-mobile": ["Playfair Display"], "label-lg": ["DM Sans"], "headline-xl": ["Playfair Display"], "body-md": ["DM Sans"], "headline-lg": ["Playfair Display"] }, "fontSize": { "headline-xl-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-xl": ["18px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior:none;background-color:#180d2d;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-secondary-container selection:text-secondary"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_16px_rgba(10,5,20,0.6)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Isha Level 20 Crest" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VX4i_7tfm6r5G4YI9gJV3PwRMT7Wm7-dz76h1kufkwSBmYfdkH2aa5_ZZq8nUwkNoBeWX71zuFk1SrdQRrzaahv2Qjb7nF0h3e9im5ZhUWcFZj1cIUVfmRwAAd10zhTO0YH5Q94sAXx39QIh2vrKzmr3B470gL353qx5B3o7PUJnHv0mHohm4e6XG0923FvfXP1Z2bMJSZj4jAbJTS7vYbEflrI6azlvmz3pGnjUTceoZdKJXvn1bAkQ"/><a aria-label="Level Map" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary transition-all duration-300 hover:bg-surface-container-high" data-path="level-map" href="#"><span class="material-symbols-outlined text-[20px]">map</span></a><span class="font-headline-sm text-headline-sm text-primary tracking-tight ml-space-xs hidden min-[370px]:inline">Photo Gallery</span></div><div class="flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-low/70 rounded-full"><span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.7)]"></span><span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.7)]"></span><span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.7)]"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span></div><div class="flex items-center gap-space-xs"><button aria-label="Lofi Love Track Music Player" class="h-11 px-space-sm rounded-full bg-surface-container-high/80 text-secondary flex items-center gap-1 transition-all hover:bg-surface-bright active:scale-95" type="button"><span class="material-symbols-outlined text-[18px] animate-pulse">music_note</span><span class="font-label-sm text-label-sm tracking-widest hidden sm:inline text-secondary-fixed-dim">LOFI</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_12px_rgba(232,201,135,0.35)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-32 px-margin bg-surface"><div class="flex flex-col w-full relative">
+<!-- Ambient Scrapbook Stardust Glows -->
+<div class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full bg-primary/10 blur-3xl"></div>
+<div class="pointer-events-none absolute top-96 -right-12 w-64 h-64 rounded-full bg-secondary/10 blur-3xl"></div>
+<!-- Header & Level Header Container -->
+<div class="flex flex-col items-center text-center space-y-space-xs pt-space-xs pb-space-md">
+<!-- Level Badge -->
+<div class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container-high/90 shadow-md">
+<span class="text-secondary text-[12px]">♥</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">LEVEL 02 · SCRAPBOOK</span>
+<span class="text-primary text-[10px]">✦</span>
+</div>
+<!-- Editorial Title -->
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-tight mt-space-xs">
+      Through My Eyes
+    </h1>
+<!-- Tender Subtitle -->
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mx-auto leading-relaxed">
+      A gallery of candid smiles, silly faces, and golden hour memories captured just for you.
+    </p>
+<!-- Interactive Hint Ribbon -->
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-low text-secondary-fixed-dim text-[11px] font-label-sm mt-space-xs">
+<span class="material-symbols-outlined text-[14px] animate-bounce">touch_app</span>
+<span>Tap any polaroid to view handwritten secrets</span>
+</div>
+</div>
+<!-- Scrapbook Polaroid Masonry Grid -->
+<div class="flex flex-col gap-space-lg w-full px-space-xs mt-space-sm">
+<!-- Polaroid 1 -->
+<div class="polaroid-card group relative w-full bg-[#fff7ee] text-[#2b1822] rounded-lg p-space-sm pb-space-lg shadow-xl transition-all duration-300 transform -rotate-2 hover:rotate-0 hover:scale-[1.02] cursor-pointer" onclick="openPolaroidModal('Golden Hour in Florence', 'You outshone the sunset. The entire Tuscan sky turned peach and gold, but I couldn’t stop staring at the glow on your cheekbones.', 'Tuscany, Italy · 18:42')">
+<!-- Washi Tape Decor -->
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-5 bg-secondary-fixed/80 backdrop-blur-sm shadow-sm transform -rotate-1 rounded-sm pointer-events-none"></div>
+<!-- Polaroid Photo Frame -->
+<div class="w-full aspect-[4/3] rounded overflow-hidden bg-surface-container-highest relative">
+<img class="w-full h-full object-cover" data-alt="Dreamy candid photograph of a stylish 20-year-old girl in Florence overlooking warm terracotta rooftops at golden hour. Soft amber sunlight illuminates her warm brown eyes and soft waves of dark hair, smiling spontaneously, high-end warm editorial film aesthetic with golden honey glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeNLQy4B14h5ao_bpjxl_SQVPoOzKJpFjFjWcs44k9UJctu7fi3zlgJ7HmgEdl7BXm4puMHNhmFdvUrM8jMdCf4ExlUh4oWnabgnFFfTjEnUswjO67aoRHaoY0sC921kyoV4MB-fvtWdhUBXKpUOBwEjGz-rUDYmZ0z2Zb2Uv1r10z5GBtfLy9w5Zq7hqXe6j6qk-22MCN8Yrd9FNn0SKPAecII6WXv5J0_udEK6QDqFqziDzZZrdw"/>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-[#180d2d]/60 backdrop-blur-md text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="text-[10px]">✦</span> 01/06
+        </div>
+</div>
+<!-- Polaroid Handwriting Note -->
+<div class="pt-space-md px-space-xs flex flex-col">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-[#3d182b] tracking-tight">Golden Hour in Florence</h3>
+<span class="text-secondary text-[16px]">♥</span>
+</div>
+<p class="font-body-md text-body-md text-[#593946] italic mt-0.5">
+          “You outshone the sunset”
+        </p>
+<div class="flex items-center justify-between mt-space-sm text-[11px] font-label-md text-[#886976]">
+<span>October Memory</span>
+<span class="flex items-center gap-1 text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[14px]">favorite</span> Swayam
+          </span>
+</div>
+</div>
+</div>
+<!-- Polaroid 2 -->
+<div class="polaroid-card group relative w-full bg-[#fff7ee] text-[#2b1822] rounded-lg p-space-sm pb-space-lg shadow-xl transition-all duration-300 transform rotate-3 hover:rotate-0 hover:scale-[1.02] cursor-pointer" onclick="openPolaroidModal('3 AM Pizza Runs', 'You ate 4 whole slices and loudly swore you weren’t even hungry. Grease on our fingers, giggling in the neon light waiting for our cab.', 'Corner Pizzeria · 03:14 AM')">
+<!-- Washi Tape Decor -->
+<div class="absolute -top-3.5 right-6 w-24 h-5 bg-primary-fixed/85 backdrop-blur-sm shadow-sm transform rotate-3 rounded-sm pointer-events-none"></div>
+<!-- Polaroid Photo Frame -->
+<div class="w-full aspect-[4/3] rounded overflow-hidden bg-surface-container-highest relative">
+<img class="w-full h-full object-cover" data-alt="Late night candid shot of a happy girl laughing with a slice of woodfired pizza inside a warm vintage neon-lit diner at 3 AM. Casual oversized hoodie, joyful unposed grin, warm ambient diner lighting, deep violet and amber tones, nostalgic grainy film feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZroZ8Apc9A5MrVdvZhKL9ySaaWYH5tWR3nRGjASSNwMRii_hsSDdx7ljZOeaeBo6Xoi8n5XVPw8696-XJdyLkLLsJ3vdu4jVtUaa04-6qj4otePugRdVvPSmpxGFSBG0-pcZpPf6ZlAyM7Gu2KOr-yyTSbCOizGzn4eebIF9kJ7tiordCIZ07L1pBk0AO_GpyUaC_HO-cc10PZcj_eqc35liPItUnua3b1kD8Pg-Drn56o0sYPm0"/>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-[#180d2d]/60 backdrop-blur-md text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="text-[10px]">✦</span> 02/06
+        </div>
+</div>
+<!-- Polaroid Handwriting Note -->
+<div class="pt-space-md px-space-xs flex flex-col">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-[#3d182b] tracking-tight">3 AM Pizza Runs</h3>
+<span class="text-primary text-[14px]">✦</span>
+</div>
+<p class="font-body-md text-body-md text-[#593946] italic mt-0.5">
+          “You ate 4 slices and claimed you weren’t hungry”
+        </p>
+<div class="flex items-center justify-between mt-space-sm text-[11px] font-label-md text-[#886976]">
+<span>Late Night Quest</span>
+<span class="flex items-center gap-1 text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[14px]">local_pizza</span> Crushed
+          </span>
+</div>
+</div>
+</div>
+<!-- Polaroid 3 -->
+<div class="polaroid-card group relative w-full bg-[#fff7ee] text-[#2b1822] rounded-lg p-space-sm pb-space-lg shadow-xl transition-all duration-300 transform -rotate-1 hover:rotate-0 hover:scale-[1.02] cursor-pointer" onclick="openPolaroidModal('Rainy Sunday Morning', 'Wrapped in wool socks and a messy bun with hot cocoa steam fogging the glass. Listening to rain tapping the window while you read.', 'Home Sanctuary · 10:15 AM')">
+<!-- Washi Tape Decor -->
+<div class="absolute -top-3 left-8 w-24 h-5 bg-tertiary-fixed/80 backdrop-blur-sm shadow-sm transform -rotate-2 rounded-sm pointer-events-none"></div>
+<!-- Polaroid Photo Frame -->
+<div class="w-full aspect-[4/3] rounded overflow-hidden bg-surface-container-highest relative">
+<img class="w-full h-full object-cover" data-alt="Cozy intimate portrait of a young woman wrapped in a knit plum throw blanket by a rain-streaked window on a lazy Sunday morning. Steaming ceramic mug in hand, natural soft overcast lighting, gentle warm expression, moody violet and cream aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_2O2PuUcL75UkpuqyvgFA0bTsTJy--kTH4awOlr4mnt6VVrSTaewWUBBDTTr4qHRvYdWEpfdfq9y3E7tDo7O65WaSDNO4Ji_KLS6uf-zsBTzEtE60H2DhGeVRgbukFB761rK7F15Se0gLnalvFbHtuGZrSGjBBlih8UY41bce4JZCjHQJ5rUk2FrQTADAlIycwdSWdHaRwo049KwYFgfOt2G_5jdyfTLNX7Dg9nnBhGIdwgmgN9DA"/>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-[#180d2d]/60 backdrop-blur-md text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="text-[10px]">✦</span> 03/06
+        </div>
+</div>
+<!-- Polaroid Handwriting Note -->
+<div class="pt-space-md px-space-xs flex flex-col">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-[#3d182b] tracking-tight">Rainy Sunday Morning</h3>
+<span class="text-secondary text-[16px]">♥</span>
+</div>
+<p class="font-body-md text-body-md text-[#593946] italic mt-0.5">
+          “My favorite view forever”
+        </p>
+<div class="flex items-center justify-between mt-space-sm text-[11px] font-label-md text-[#886976]">
+<span>Cozy Chapters</span>
+<span class="flex items-center gap-1 text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[14px]">water_drop</span> Peaceful
+          </span>
+</div>
+</div>
+</div>
+<!-- Polaroid 4 -->
+<div class="polaroid-card group relative w-full bg-[#fff7ee] text-[#2b1822] rounded-lg p-space-sm pb-space-lg shadow-xl transition-all duration-300 transform rotate-2 hover:rotate-0 hover:scale-[1.02] cursor-pointer" onclick="openPolaroidModal('Festival Lights &amp; Laughs', 'The bass was vibrating our chest cavities, fairy lights everywhere. When your favorite song dropped, you screamed and spun around pulling my hand.', 'Summer Music Grounds · 22:40')">
+<!-- Washi Tape Decor -->
+<div class="absolute -top-3.5 right-10 w-28 h-5 bg-secondary-fixed/90 backdrop-blur-sm shadow-sm transform -rotate-1 rounded-sm pointer-events-none"></div>
+<!-- Polaroid Photo Frame -->
+<div class="w-full aspect-[4/3] rounded overflow-hidden bg-surface-container-highest relative">
+<img class="w-full h-full object-cover" data-alt="Energetic festival snapshot of an ecstatic young woman mid-spin under canopies of glowing gold fairy lights and carnival stage lasers at night. Sparkles on cheekbones, hands raised, wind in her hair, joyous open-mouthed laugh, cinematic night palette with purple haze." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFdx53a8jWjXL34HFZA91yoDYgX6PuLv90Rl02SaAG18lvSNSP1iGYWY8nvUBqIVvJebPjKTIuh1hP3K5UHUS8VU_g3P9oRZms3s8IgAWwVqcjZvBUyGUiUtbt4MP1_NpdIbQhuIga9Vn644Zhto3JyN51oUS75MtbbClVxDRWK6NE7OyeB5mjA7nUgpbUbAAbmPXt5vTM8__IJQSdD9rYZKQ87xt_QbaLTXmHXNAIDsXG3bLP9qcN"/>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-[#180d2d]/60 backdrop-blur-md text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="text-[10px]">✦</span> 04/06
+        </div>
+</div>
+<!-- Polaroid Handwriting Note -->
+<div class="pt-space-md px-space-xs flex flex-col">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-[#3d182b] tracking-tight">Festival Lights &amp; Laughs</h3>
+<span class="text-primary text-[14px]">✦</span>
+</div>
+<p class="font-body-md text-body-md text-[#593946] italic mt-0.5">
+          “When your favorite song came on”
+        </p>
+<div class="flex items-center justify-between mt-space-sm text-[11px] font-label-md text-[#886976]">
+<span>Pure Spark</span>
+<span class="flex items-center gap-1 text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[14px]">graphic_eq</span> Electric
+          </span>
+</div>
+</div>
+</div>
+<!-- Polaroid 5 -->
+<div class="polaroid-card group relative w-full bg-[#fff7ee] text-[#2b1822] rounded-lg p-space-sm pb-space-lg shadow-xl transition-all duration-300 transform -rotate-2 hover:rotate-0 hover:scale-[1.02] cursor-pointer" onclick="openPolaroidModal('Dressed to the Nines', 'You stepped out of the mirror room and I completely forgot how to speak English. Absolute royalty. You made the whole gala vanish.', 'The Grand Conservatory · 20:05')">
+<!-- Washi Tape Decor -->
+<div class="absolute -top-3 left-12 w-24 h-5 bg-primary-fixed/85 backdrop-blur-sm shadow-sm transform rotate-2 rounded-sm pointer-events-none"></div>
+<!-- Polaroid Photo Frame -->
+<div class="w-full aspect-[4/3] rounded overflow-hidden bg-surface-container-highest relative">
+<img class="w-full h-full object-cover" data-alt="Elegant cinematic portrait of a stunning young woman in an evening velvet plum dress holding delicate champagne flute near grand chandelier reflections. Subtle knowing smile, diamond drop earrings catching light, lavish romantic interior, rich moody jewel tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_bSWBykLSWBryYJYTZ5eLy7r1oqqD3rmbEH-1nWrnyvBloz-eZHpntpj_zdVUqpXL5iNkgZ61T2glEowceWz5LKWKjkpk9xlgMc9pL2l8brpSSS99OiVrhCp0xocQ9F4CvmDAT_rIaLfNh5MHSF2EpqBUrAhtJy0rE2URu07xOHvF_7lb8hYQwgGGy5XKcxb1KJprJtih8l5dnVsODY8m0OLNcckiuaeWPwD6wySEEzlR9SxXX5dm"/>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-[#180d2d]/60 backdrop-blur-md text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="text-[10px]">✦</span> 05/06
+        </div>
+</div>
+<!-- Polaroid Handwriting Note -->
+<div class="pt-space-md px-space-xs flex flex-col">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-[#3d182b] tracking-tight">Dressed to the Nines</h3>
+<span class="text-secondary text-[16px]">♥</span>
+</div>
+<p class="font-body-md text-body-md text-[#593946] italic mt-0.5">
+          “Jaw on the floor. Still haven’t recovered.”
+        </p>
+<div class="flex items-center justify-between mt-space-sm text-[11px] font-label-md text-[#886976]">
+<span>Gala Night</span>
+<span class="flex items-center gap-1 text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span> 10/10
+          </span>
+</div>
+</div>
+</div>
+<!-- Polaroid 6 -->
+<div class="polaroid-card group relative w-full bg-[#fff7ee] text-[#2b1822] rounded-lg p-space-sm pb-space-lg shadow-xl transition-all duration-300 transform rotate-1.5 hover:rotate-0 hover:scale-[1.02] cursor-pointer" onclick="openPolaroidModal('The Sleepy Train Ride', 'We promised we would stay awake and play 20 questions. 4 minutes past the platform, your eyelashes fluttered shut and you snuggled into my coat.', 'Night Express to Interlaken · 23:12')">
+<!-- Washi Tape Decor -->
+<div class="absolute -top-3 right-1/2 translate-x-1/2 w-28 h-5 bg-secondary-fixed/80 backdrop-blur-sm shadow-sm transform -rotate-1 rounded-sm pointer-events-none"></div>
+<!-- Polaroid Photo Frame -->
+<div class="w-full aspect-[4/3] rounded overflow-hidden bg-surface-container-highest relative">
+<img class="w-full h-full object-cover" data-alt="Tender and peaceful candid photo of a girl fast asleep resting her cheek on a soft dark wool shoulder inside a quiet night train carriage. Window reflections of passing city lanterns outside, soft ambient travel lights, peaceful intimacy, grainy 35mm film mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUUsHj982QpGFmXKqXXV_5tqtJd_0ZBJlUzbuCkjnaxzucxKI2PkXI5FNJUZ8qR1wCDVvhtR08cp3iXd-HDcZtyv_yYpjGybb7z0UxlCol2_IXV0XGQQlL56yuPFJDOFSHtY5xMrKVqmbEE6gjxIjYyNU8yMSuXfhP1PFLDwYnCbCCgb1qDrdaMZNtn9FqJpaFoKyWO2JaFCGOR9X0eEIY_tQZMKwvvwUD8vtxTIZ8ADN8_5OxGFPL"/>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-[#180d2d]/60 backdrop-blur-md text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="text-[10px]">✦</span> 06/06
+        </div>
+</div>
+<!-- Polaroid Handwriting Note -->
+<div class="pt-space-md px-space-xs flex flex-col">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-[#3d182b] tracking-tight">The Sleepy Train Ride</h3>
+<span class="text-primary text-[14px]">✦</span>
+</div>
+<p class="font-body-md text-body-md text-[#593946] italic mt-0.5">
+          “You fell asleep on my shoulder within 4 minutes”
+        </p>
+<div class="flex items-center justify-between mt-space-sm text-[11px] font-label-md text-[#886976]">
+<span>Night Train</span>
+<span class="flex items-center gap-1 text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[14px]">bedtime</span> Softest
+          </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Scrapbook Memory Milestone Strip -->
+<div class="mt-space-xl p-space-md rounded-xl bg-surface-container-high/80 backdrop-blur-md flex flex-col items-center text-center shadow-lg">
+<div class="flex items-center gap-2 text-primary font-headline-sm text-headline-sm">
+<span>✦</span>
+<span>All 6 Polaroids Discovered</span>
+<span>✦</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+      You unlocked the memory vault for Level 02. Ready for the cinematic screening?
+    </p>
+<!-- Next Level Action Button -->
+<a class="mt-space-md w-full py-3.5 px-space-lg rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-lg hover:bg-primary transition-transform active:scale-95" data-path="songs-of-us" href="#">
+<span>Next Level: Our Cinema</span>
+<span class="material-symbols-outlined text-[20px]">movie</span>
+</a>
+</div>
+<!-- Interactive Lightbox Modal -->
+<div class="fixed inset-0 z-50 bg-[#130727]/90 backdrop-blur-xl flex flex-col items-center justify-center p-space-margin hidden" id="polaroid-lightbox">
+<!-- Close trigger -->
+<button class="absolute top-5 right-5 w-11 h-11 rounded-full bg-surface-container-high text-primary flex items-center justify-center shadow-lg active:scale-95" onclick="closePolaroidModal()" type="button">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+<!-- Modal Card Body -->
+<div class="w-full max-w-sm bg-[#fff7ee] text-[#2b1822] rounded-xl p-space-md shadow-2xl relative animate-fade-in flex flex-col">
+<!-- Tape seal -->
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-6 bg-secondary-fixed/90 rounded-sm shadow pointer-events-none"></div>
+<div class="flex items-center justify-between text-secondary pt-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm text-[#886976] uppercase tracking-wider" id="modal-location">Secret Location</span>
+<span class="text-[14px]">♥♥♥</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-[#3d182b]" id="modal-title">Memory Title</h2>
+<div class="my-space-md p-space-sm bg-[#fbf0e4] rounded-lg">
+<p class="font-body-lg text-body-lg text-[#4a2a38] italic leading-relaxed" id="modal-desc">
+          Memory note details...
+        </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-[#886976] font-label-md text-label-md">
+<span>From Swayam’s Heart</span>
+<button class="px-space-md py-1.5 rounded-full bg-[#3d182b] text-[#ffe6b5] font-label-sm text-label-sm active:scale-95" onclick="closePolaroidModal()" type="button">
+          Tuck away ✕
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function openPolaroidModal(title, desc, location) {
+    const modal = document.getElementById('polaroid-lightbox');
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-desc').textContent = desc;
+    document.getElementById('modal-location').textContent = location;
+    if (modal) {
+      modal.classList.remove('hidden');
+    }
+  }
+
+  function closePolaroidModal() {
+    const modal = document.getElementById('polaroid-lightbox');
+    if (modal) {
+      modal.classList.add('hidden');
+    }
+  }
+</script><footer class="mt-space-2xl pb-space-lg text-center flex flex-col items-center justify-center gap-1 opacity-80"><p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">Made with love by Swayam <span class="text-primary text-[14px]">✦</span> 30.10.2026</p><p class="font-label-sm text-label-sm text-secondary-fixed-dim tracking-wider uppercase">Isha · Level 20 Edition</p></footer></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-8px_24px_rgba(10,5,20,0.7)]" data-active-classes="text-primary bg-surface-container-high shadow-[0_0_16px_rgba(232,201,135,0.25)]"><div class="h-20 px-margin flex items-center justify-between gap-space-sm max-w-lg mx-auto"><a class="h-11 px-space-md rounded-full flex items-center justify-center text-secondary transition-all hover:text-secondary-fixed font-label-md text-label-md active:scale-95" data-path="finale" href="#">Skip</a><div class="flex items-center gap-space-xs"><a aria-label="Journey Map" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="level-map" href="#"><span class="material-symbols-outlined text-[22px]">explore</span></a><a aria-label="Songs of Us" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="songs-of-us" href="#"><span class="material-symbols-outlined text-[22px]">album</span></a></div><a aria-current="page" class="h-11 px-space-lg rounded-full font-label-lg font-semibold flex items-center justify-center gap-1 transition-all hover:scale-[1.03] active:scale-95 text-primary bg-surface-container-high shadow-[0_0_16px_rgba(232,201,135,0.25)]" data-path="photo-gallery" href="#"><span>Next</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></a></div></nav></body></html>

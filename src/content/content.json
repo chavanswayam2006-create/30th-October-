@@ -1,0 +1,547 @@
+{
+  "meta": {
+    "recipient": "Isha",
+    "creator": "Swayam",
+    "birthdayDate": "2026-10-30",
+    "displayDate": "30 October 2026",
+    "milestoneAge": 20,
+    "timezone": "Asia/Kolkata"
+  },
+  "welcome": {
+    "badge": "Level 20 Unlocked · Oct 30, 2026",
+    "tagline": "A Dedicated Odyssey",
+    "titlePrefix": "Happy",
+    "titleAge": "20th,",
+    "titleName": "Isha",
+    "subtitle": "A little enchanted world I built just for you.",
+    "swayamQuote": "“Ready for your adventure, my favorite human?”",
+    "swayamSignature": "— Swayam",
+    "pressStartText": "Press Start",
+    "audioTrackTitle": "Lofi Love Tape (Our Song)",
+    "skipText": "Skip Prologue",
+    "footerText": "Made with love by Swayam · 30.10.2026",
+    "footerSubtext": "A 20-chapter digital memory chest"
+  },
+  "levelMap": {
+    "chapterBadge": "Chapter Two · Quest Board",
+    "title": "Our Journey",
+    "subtitle": "Level by level, milestone by milestone · complete them to unlock the finale.",
+    "progressLabel": "Milestones Mastered",
+    "progressSubtext": "to Isha's Grand Finale",
+    "actLabel": "ACT I OF IV",
+    "continueQuestBtn": "Continue Quest",
+    "levels": [
+      {
+        "id": 1,
+        "path": "memory-lane",
+        "title": "Memory Lane",
+        "description": "The dusty café corner where coffee turned into 3 AM conversations and stolen smiles.",
+        "marginalia": "“Where my favorite story quietly began.”",
+        "status": "mastered"
+      },
+      {
+        "id": 2,
+        "path": "photo-gallery",
+        "title": "Photo Gallery",
+        "description": "Polaroids tilted by hand, taped with pink washi tape, capturing you caught mid-laugh.",
+        "marginalia": "“You never fail to outshine every star in the frame.”",
+        "status": "mastered"
+      },
+      {
+        "id": 3,
+        "path": "our-cinema",
+        "title": "Our Cinema",
+        "description": "Curated film reels, our unreleased montage cuts, and the midnight popcorn marathons.",
+        "marginalia": "“Warning: tears of pure nostalgia ahead.”",
+        "status": "current"
+      },
+      {
+        "id": 4,
+        "path": "songs-of-us",
+        "title": "Songs of Us",
+        "description": "The cassette tapes of rainy bus rides and that one acoustic track you played on loop for a month.",
+        "marginalia": "“Wait till track 7 plays—you sang it in the car.”",
+        "status": "next"
+      },
+      {
+        "id": 5,
+        "path": "games-hub",
+        "title": "Games Hub",
+        "description": "Arcade trivia, couples quiz battles, and hidden Easter eggs.",
+        "marginalia": "“Think you remember our exact first date dessert?”",
+        "status": "locked"
+      },
+      {
+        "id": 6,
+        "path": "open-when-letters",
+        "title": "Open When Letters",
+        "description": "Wax-sealed digital envelopes for when you miss me or feel overwhelmed.",
+        "marginalia": "“Stored under genuine midnight plum wax seals.”",
+        "status": "locked"
+      },
+      {
+        "id": 7,
+        "path": "20-reasons",
+        "title": "20 Reasons",
+        "description": "Twenty handwritten testaments celebrating twenty gorgeous years of you.",
+        "marginalia": "“Reason #14 took three drafts to express properly.”",
+        "status": "locked"
+      },
+      {
+        "id": 8,
+        "path": "finale",
+        "title": "The Finale",
+        "description": "The starlit culmination crafted exclusively for your 20th birthday midnight.",
+        "marginalia": "“Keep going, birthday girl. The best part is waiting at the top.”",
+        "status": "locked",
+        "unlockRule": "Unlocks after Level 7 is complete"
+      }
+    ]
+  },
+  "memoryLane": {
+    "badge": "LEVEL 1 · QUEST UNLOCKED",
+    "title": "Chapters of Us",
+    "subtitle": "From strangers in a crowd to my absolute favorite story in the universe.",
+    "milestones": [
+      {
+        "id": 1,
+        "title": "The Day We Met",
+        "date": "14 FEB 2023",
+        "quote": "“You spilled your coffee, looked mortified, and I immediately knew I was in trouble.”",
+        "note": "Remember this clumsiness?",
+        "photoSlot": "memory-1",
+        "todoHint": "TODO(real): Personalize your actual first meeting date and story"
+      },
+      {
+        "id": 2,
+        "title": "Our First Official Date",
+        "date": "03 MAR 2023",
+        "quote": "“Three hours felt like twelve seconds. You ordered dessert first.”",
+        "note": "Best dessert decision ever ♥",
+        "photoSlot": "memory-2",
+        "todoHint": "TODO(real): Personalize your actual first date details"
+      },
+      {
+        "id": 3,
+        "title": "Late Night Arcade Victory",
+        "date": "22 JUL 2023",
+        "quote": "“You screamed when you won the giant plush bear on the third try.”",
+        "note": "Still sitting proudly on your bed ✨",
+        "photoSlot": "memory-3",
+        "todoHint": "TODO(real): Personalize this milestone memory"
+      },
+      {
+        "id": 4,
+        "title": "The Midnight Roadtrip",
+        "date": "18 NOV 2023",
+        "quote": "“Foggy windshields, singing off-key to old songs, watching the horizon wake up.”",
+        "note": "That 4 AM sunrise together 🌅",
+        "photoSlot": "memory-4",
+        "todoHint": "TODO(real): Personalize this roadtrip/trip memory"
+      },
+      {
+        "id": 5,
+        "title": "Level 20: Today",
+        "date": "30 OCT 2026",
+        "quote": "“Watching you turn 20 is pure starlight. Happy birthday, my absolute favorite human.”",
+        "note": "The best chapter begins right now ♥",
+        "photoSlot": "memory-5",
+        "todoHint": "TODO(real): Personalize birthday milestone message"
+      }
+    ]
+  },
+  "gallery": {
+    "badge": "LEVEL 02 · SCRAPBOOK",
+    "title": "Through My Eyes",
+    "subtitle": "A gallery of candid smiles, silly faces, and golden hour memories captured just for you.",
+    "hint": "Tap any polaroid to view handwritten secrets",
+    "polaroids": [
+      {
+        "id": 1,
+        "title": "Golden Hour in Florence",
+        "caption": "“You outshone the sunset”",
+        "dateLocation": "October Memory · 18:42",
+        "secretNote": "You outshone the sunset. The entire sky turned peach and gold, but I couldn’t stop staring at the glow on your cheekbones.",
+        "moodChip": "Tuscany Glow",
+        "photoSlot": "gallery-1",
+        "todoHint": "TODO(real): Add your real photo and caption here"
+      },
+      {
+        "id": 2,
+        "title": "3 AM Pizza Runs",
+        "caption": "“You ate 4 slices and claimed you weren’t hungry”",
+        "dateLocation": "Late Night Quest · 03:14 AM",
+        "secretNote": "You ate 4 whole slices and loudly swore you weren’t even hungry. Grease on our fingers, giggling in the neon light waiting for our cab.",
+        "moodChip": "Late Night Quest",
+        "photoSlot": "gallery-2",
+        "todoHint": "TODO(real): Add your real photo and caption here"
+      },
+      {
+        "id": 3,
+        "title": "Rainy Sunday Morning",
+        "caption": "“My favorite view forever”",
+        "dateLocation": "Cozy Chapters · 10:15 AM",
+        "secretNote": "Wrapped in wool socks and a messy bun with hot cocoa steam fogging the glass. Listening to rain tapping the window while you read.",
+        "moodChip": "Cozy Chapters",
+        "photoSlot": "gallery-3",
+        "todoHint": "TODO(real): Add your real photo and caption here"
+      },
+      {
+        "id": 4,
+        "title": "Festival Lights & Laughs",
+        "caption": "“When your favorite song came on”",
+        "dateLocation": "Pure Spark · 22:40",
+        "secretNote": "The bass was vibrating our chest cavities, fairy lights everywhere. When your favorite song dropped, you screamed and spun around pulling my hand.",
+        "moodChip": "Pure Spark",
+        "photoSlot": "gallery-4",
+        "todoHint": "TODO(real): Add your real photo and caption here"
+      },
+      {
+        "id": 5,
+        "title": "Dressed to the Nines",
+        "caption": "“Jaw on the floor. Still haven't recovered.”",
+        "dateLocation": "Gala Night · 20:05",
+        "secretNote": "You stepped out of the mirror room and I completely forgot how to speak English. Absolute royalty. You made the whole gala vanish.",
+        "moodChip": "10/10 Elegance",
+        "photoSlot": "gallery-5",
+        "todoHint": "TODO(real): Add your real photo and caption here"
+      },
+      {
+        "id": 6,
+        "title": "The Sleepy Train Ride",
+        "caption": "“Promised we'd stay awake, asleep in 4 minutes”",
+        "dateLocation": "Night Express · 23:12",
+        "secretNote": "We promised we would stay awake and play 20 questions. 4 minutes past the platform, your eyelashes fluttered shut and you snuggled into my coat.",
+        "moodChip": "Sleepy Head",
+        "photoSlot": "gallery-6",
+        "todoHint": "TODO(real): Add your real photo and caption here"
+      }
+    ]
+  },
+  "cinema": {
+    "badge": "LEVEL 03 · THEATER",
+    "title": "Our Cinema",
+    "subtitle": "Grab your favorite blanket · Private screening of our story.",
+    "concessionNote": "“I brought the sweet & salty mix popcorn you like. No talking during our favorite part! ✨”",
+    "reels": [
+      {
+        "id": "reel-1",
+        "title": "Reel #01: The Montage of Us",
+        "subtitle": "00:48 · 18 months of everyday giggles",
+        "videoSrc": "media/videos/reel-1.mp4",
+        "posterSrc": "media/videos/reel-1-poster.webp",
+        "duration": "00:48",
+        "isLocked": false
+      },
+      {
+        "id": "reel-2",
+        "title": "Reel #02: That Day With You",
+        "subtitle": "00:54 · Raw cuts & stolen glances",
+        "videoSrc": "media/videos/reel-2.mp4",
+        "posterSrc": "media/videos/reel-2-poster.webp",
+        "duration": "00:54",
+        "isLocked": false
+      },
+      {
+        "id": "reel-3",
+        "title": "Reel #03: Your Laugh, 3 AM",
+        "subtitle": "00:24 · Pure unrestrained happiness",
+        "videoSrc": "media/videos/reel-3.mp4",
+        "posterSrc": "media/videos/reel-3-poster.webp",
+        "duration": "00:24",
+        "isLocked": false
+      },
+      {
+        "id": "reel-4",
+        "title": "Reel #04: The Secret Birthday Message",
+        "subtitle": "00:37 · Unlocks 30 October 2026 at midnight 🔒",
+        "videoSrc": "media/videos/reel-4.mp4",
+        "posterSrc": "media/videos/reel-4-poster.webp",
+        "duration": "00:37",
+        "isLocked": true,
+        "unlockTime": "2026-10-30T00:00:00+05:30"
+      }
+    ]
+  },
+  "songs": {
+    "badge": "LEVEL 04 · SOUNDTRACK",
+    "sideBadge": "SIDE A",
+    "title": "Songs of Us",
+    "subtitle": "The soundtrack that scored our late-night drives, midnight confessions, and quiet kitchen waltzes.",
+    "playlist": [
+      {
+        "id": 1,
+        "title": "Until I Found You",
+        "artist": "Stephen Sanchez",
+        "duration": "02:57",
+        "audioSrc": "media/audio/song-1.mp3",
+        "dedication": "“The song playing in the car that rainy November evening when I looked at you and realized I loved you.”",
+        "todoHint": "TODO(real): Swayam, replace with your favorite song & dedication"
+      },
+      {
+        "id": 2,
+        "title": "Yellow",
+        "artist": "Coldplay",
+        "duration": "04:29",
+        "audioSrc": "media/audio/song-2.mp3",
+        "dedication": "“Because every single star in our night sky looks like you, Isha.”",
+        "todoHint": "TODO(real): Swayam, replace with your favorite song & dedication"
+      },
+      {
+        "id": 3,
+        "title": "Late Night Talking",
+        "artist": "Harry Styles",
+        "duration": "02:58",
+        "audioSrc": "media/audio/song-3.mp3",
+        "dedication": "“Our unofficial 2 AM kitchen cooking anthem while making midnight pasta.”",
+        "todoHint": "TODO(real): Swayam, replace with your favorite song & dedication"
+      },
+      {
+        "id": 4,
+        "title": "Strawberries & Cigarettes",
+        "artist": "Troye Sivan",
+        "duration": "03:21",
+        "audioSrc": "media/audio/song-4.mp3",
+        "dedication": "“Summer highway drives with all windows down, your hand resting in mine.”",
+        "todoHint": "TODO(real): Swayam, replace with your favorite song & dedication"
+      },
+      {
+        "id": 5,
+        "title": "Isha's 20th Birthday Waltz",
+        "artist": "Swayam (Special Dedication)",
+        "duration": "03:15",
+        "audioSrc": "media/audio/song-5.mp3",
+        "dedication": "“A melody written just for the girl who made my heart her home. Happy 20th, my love.”",
+        "isSpecial": true,
+        "todoHint": "TODO(real): Swayam, your special original piece or dedication"
+      }
+    ]
+  },
+  "gamesHub": {
+    "badge": "Level 05 · Arcade",
+    "title": "The Love Arcade",
+    "subtitle": "Three playful challenges to prove who knows who better. Win stars to unlock the finale.",
+    "starTrackerTitle": "Stars Collected",
+    "starTrackerDesc": "Collect stars to unlock Level 06",
+    "trivia": [
+      {
+        "id": 1,
+        "question": "Where did we have our very first slice of pizza together?",
+        "options": [
+          "Little Italy Corner",
+          "The park bench at midnight",
+          "Campus cafeteria",
+          "Delivery in the car"
+        ],
+        "correctIndex": 1,
+        "swayamReaction": "“You remembered! Best $4 Margherita slice in the rain. Your coat smelled like basil for two days.”",
+        "wrongReaction": "“Close, but nope! Think about freezing our fingers off on wooden slats in the rain!”",
+        "todoHint": "TODO(real): Customize question 1"
+      },
+      {
+        "id": 2,
+        "question": "What is Swayam's exact coffee order that he pretends is 'simple'?",
+        "options": [
+          "Iced Americano, black",
+          "Oat milk vanilla latte with an extra shot",
+          "Hot caramel macchiato half-sweet",
+          "Filter coffee with jaggery"
+        ],
+        "correctIndex": 1,
+        "swayamReaction": "“Guilty as charged! The barista knows my name before I even step through the doorway.”",
+        "wrongReaction": "“You gave me way too much credit for having a simple coffee order!”",
+        "todoHint": "TODO(real): Customize question 2"
+      },
+      {
+        "id": 3,
+        "question": "What song did we both sing at the top of our lungs on the highway?",
+        "options": [
+          "Cruel Summer",
+          "Yellow",
+          "Until I Found You",
+          "Night Changes"
+        ],
+        "correctIndex": 0,
+        "swayamReaction": "“YES! Window down, throat sore, screaming the bridge like our lives depended on it.”",
+        "wrongReaction": "“Good guess, but think louder and higher pitched!”",
+        "todoHint": "TODO(real): Customize question 3"
+      },
+      {
+        "id": 4,
+        "question": "What was the first movie we watched together where you fell asleep midway?",
+        "options": [
+          "Interstellar",
+          "La La Land",
+          "Spirited Away",
+          "About Time"
+        ],
+        "correctIndex": 3,
+        "swayamReaction": "“You made it exactly 22 minutes before your head dropped on my shoulder. Cutest nap ever.”",
+        "wrongReaction": "“Nope! Though to be fair, you've taken naps during several of those!”",
+        "todoHint": "TODO(real): Customize question 4"
+      },
+      {
+        "id": 5,
+        "question": "What is our sacred midnight comfort food?",
+        "options": [
+          "Spicy instant ramen with melted cheese",
+          "Chocolate chip cookies from the oven",
+          "Hot samosas & cutting chai",
+          "Leftover biryani eaten straight from the fridge"
+        ],
+        "correctIndex": 0,
+        "swayamReaction": "“2 AM ramen masters forever! Nobody cracks the soft-boiled egg quite like you.”",
+        "wrongReaction": "“A tempting contender, but nothing beats our holy grail of 2 AM ramen!”",
+        "todoHint": "TODO(real): Customize question 5"
+      }
+    ],
+    "memoryMatch": {
+      "swayamNote": "“Can you beat my personal best of 12 moves, or will the late-night chai memories trip you up?”",
+      "winText": "Match all 6 pairs to claim your star!",
+      "cards": [
+        { "id": "stargaze", "label": "Stargaze", "icon": "camera" },
+        { "id": "chai", "label": "Chai Stop", "icon": "coffee" },
+        { "id": "train", "label": "Train 204", "icon": "ticket" },
+        { "id": "taylor", "label": "Taylor Track", "icon": "headphones" },
+        { "id": "croissant", "label": "Croissant", "icon": "croissant" },
+        { "id": "level20", "label": "Level 20", "icon": "heart" }
+      ]
+    },
+    "heartCatcher": {
+      "targetScore": 20,
+      "timeLimit": 30,
+      "swayamNote": "“Warning: Birthday cakes are worth 5 bonus points, but they drop twice as fast. Good luck beating my high score!”"
+    }
+  },
+  "letters": {
+    "badge": "LEVEL 06 · KEEPSAKES",
+    "title": "Open When...",
+    "subtitle": "Six digital envelopes sealed with love. Open them whenever your heart needs a reminder of who is always in your corner.",
+    "keepersNote": "“Whenever the world feels loud or you forget how extraordinary you are, come back here. Each envelope is yours forever.”",
+    "envelopes": [
+      {
+        "id": 1,
+        "category": "late-nights",
+        "title": "Open when you miss me",
+        "summary": "Take a deep breath and look at the screen... I am probably already thinking of you right this second.",
+        "sealColor": "gold",
+        "sealLabel": "Gold Star Seal",
+        "quote": "“Take a deep breath and look at the screen...”",
+        "body": "I am probably already thinking of you right this second. Even if distance exists today, every good thing I see reminds me of your smile or some absurd little joke we cracked at 2 AM. If you still miss me after reading this, text me this exact emoji: 🌙 (I will answer instantly, guaranteed).",
+        "secretEmoji": "🌙",
+        "isInitiallyOpen": true,
+        "todoHint": "TODO(real): Customize letter 1"
+      },
+      {
+        "id": 2,
+        "category": "big-hugs",
+        "title": "Open when you're sad",
+        "summary": "Sealed until your sky looks a little cloudy. Contains five undeniable truths about how strong, gentle, and utterly cherished you are.",
+        "sealColor": "rose",
+        "sealLabel": "Rose Wax Seal",
+        "quote": "“You don't always have to be resilient...”",
+        "body": "It is completely okay if today feels heavy. Please remember that you don't carry the weight of everything by yourself. I love the quiet days, the messy days, and every shadow in between just as fiercely as the sunny ones. A big, warm hug is waiting for you anytime.",
+        "isInitiallyOpen": false,
+        "todoHint": "TODO(real): Customize letter 2"
+      },
+      {
+        "id": 3,
+        "category": "late-nights",
+        "title": "Open when you need a laugh",
+        "summary": "A classified compendium of our most ridiculous inside jokes, voice note quotes, and clumsy moments where we laughed until our stomachs ached.",
+        "sealColor": "gold",
+        "sealLabel": "Gold Star Seal",
+        "quote": "“Exhibit A: The Great Pastry Catastrophe!”",
+        "body": "Remember when we tried to look so poised and sophisticated, only for powdered sugar to shoot into my nostril from laughing at your face? That snort of yours is my favorite soundtrack on earth. Never stop laughing like that.",
+        "isInitiallyOpen": false,
+        "todoHint": "TODO(real): Customize letter 3"
+      },
+      {
+        "id": 4,
+        "category": "late-nights",
+        "title": "Open when you can't sleep",
+        "summary": "A calming bedtime meditation letter to quiet your whirling racing thoughts. Close your eyes, breathe, and count soft starlight steps with me.",
+        "sealColor": "lavender",
+        "sealLabel": "Lavender Wax Seal",
+        "quote": "“Inhale peace, exhale noise...”",
+        "body": "You have done enough today. Let your thoughts settle like warm tea. Imagine my hand holding yours while the universe quietly watches over your sweet dreams. You are safe, you are protected, and you are loved. Dream beautifully, my darling.",
+        "isInitiallyOpen": false,
+        "todoHint": "TODO(real): Customize letter 4"
+      },
+      {
+        "id": 5,
+        "category": "milestones",
+        "title": "Open when you're stressed",
+        "summary": "When assignments, deadlines, or expectations start piling up. A grounded reality check on how brilliant you are when you take it one breath at a time.",
+        "sealColor": "gold",
+        "sealLabel": "Laurel Leaf Seal",
+        "quote": "“Drop your shoulders and unclench your jaw right now.”",
+        "body": "You do not have to conquer everything before sundown. Grades, projects, and chaos are small blips in our lifetime of joy. You are already extraordinary, and I believe in your magic even when you feel tired. One step at a time. I've got you.",
+        "isInitiallyOpen": false,
+        "todoHint": "TODO(real): Customize letter 5"
+      },
+      {
+        "id": 6,
+        "category": "milestones",
+        "title": "Open when you turn 21",
+        "summary": "Unlocks 30.10.2027 · A whole year of Level 20 adventures awaits first. Sealed with a promise and an unwritten chapter.",
+        "sealColor": "locked",
+        "sealLabel": "Grand Archive Vault",
+        "quote": "“The adventure of Level 20 comes first...”",
+        "body": "This vault remains locked until 30 October 2027. Swayam will hand over the key on your 21st birthday!",
+        "isLockedSpecial": true,
+        "unlockDate": "2027-10-30T00:00:00+05:30",
+        "todoHint": "TODO(real): This envelope stays locked until 30.10.2027"
+      }
+    ]
+  },
+  "reasons20": {
+    "badge": "LEVEL 07 · THE TRIBUTE",
+    "title": "20 Reasons Why",
+    "subtitle": "Twenty little things that make you the most extraordinary person I know. Tap each card to unveil the memory.",
+    "reasons": [
+      { "id": 1, "text": "The way you scrunch your nose when laughing uncontrollably", "category": "smile" },
+      { "id": 2, "text": "Your endless empathy and baby talk for every stray cat we pass", "category": "kindness" },
+      { "id": 3, "text": "Your midnight tea rituals and soft quiet hums while waiting for water to boil", "category": "quirk" },
+      { "id": 4, "text": "How your warm hug instantly silences all my doubts and anxiety", "category": "comfort" },
+      { "id": 5, "text": "The way your eyes dance whenever you spot a vintage bookstore window", "category": "passion" },
+      { "id": 6, "text": "Singing completely off-key with total confidence to our roadtrip playlists", "category": "fun" },
+      { "id": 7, "text": "How you make 3 AM conversations feel like uncovering secrets of the universe", "category": "depth" },
+      { "id": 8, "text": "The way you fiercely protect the people you love with your whole heart", "category": "loyalty" },
+      { "id": 9, "text": "Your adorable sleepy voice when you pick up the phone first thing in the morning", "category": "sweetness" },
+      { "id": 10, "text": "Ordering dessert first because 'life is too short to wait for sugar'", "category": "quirk" },
+      { "id": 11, "text": "The pride and quiet glow on your face when you master something hard", "category": "brilliance" },
+      { "id": 12, "text": "How you remember tiny passing details I mentioned weeks ago", "category": "thoughtfulness" },
+      { "id": 13, "text": "Your infectious laugh that turns any gloomy rainy room into pure sunshine", "category": "smile" },
+      { "id": 14, "text": "How safe and grounded my entire soul feels whenever my hand is in yours", "category": "comfort" },
+      { "id": 15, "text": "Your fierce curiosity about the world, the stars, and how things work", "category": "brilliance" },
+      { "id": 16, "text": "The funny faces you pull when you're deeply concentrating on something", "category": "fun" },
+      { "id": 17, "text": "The way you listen with your whole being, never just waiting for your turn to speak", "category": "depth" },
+      { "id": 18, "text": "How you look in my oversized hoodies, pulling the sleeves over your hands", "category": "sweetness" },
+      { "id": 19, "text": "Your unwavering belief in me even when I struggled to believe in myself", "category": "loyalty" },
+      { "id": 20, "text": "Simply because you are Isha—my once-in-a-lifetime person, today and for all chapters ahead", "category": "infinite" }
+    ],
+    "todoHint": "TODO(real): Swayam can adjust or replace any of these 20 reasons in content.json"
+  },
+  "finale": {
+    "badge": "Level 20 Complete · Quest Mastered",
+    "title": "Happy 20th Birthday, My Love",
+    "subtitle": "The grand finale of your sacred quest ♥",
+    "letterHeader": "Midnight Dispatch · Swayam",
+    "letterDate": "30.10.2026",
+    "letterSalutation": "Dear Isha,",
+    "letterParagraph1": "Watching you step into your twenties is the greatest privilege of my life. You bring so much light, grace, and wild laughter into every single day we share.",
+    "letterParagraph2": "Thank you for being my anchor, my favorite chaos, and my dream come true. Level 20 is just the beginning of your greatest adventure yet.",
+    "letterParagraph3": "Every moment with you feels like discovering a secret constellation meant only for us. Here is to all our chapters ahead.",
+    "letterSignoff": "Forever yours,",
+    "letterAuthor": "Swayam",
+    "sealMonogram": "I✦S",
+    "giftCardTitle": "Your Real Birthday Gift Awaits...",
+    "giftCardDescription": "This digital universe is just the prologue. Look under your desk / behind the door right now!",
+    "giftHint": "Look under your desk / behind the door right now! Swayam hid your physical 20th birthday keepsake! ♥",
+    "giftUnlockedBadge": "Gift Unlocked! 💖 Under Your Desk",
+    "giftRealWorldQuest": "Real World Quest · Hugs guaranteed upon arrival 🧸✨",
+    "replayJourneyText": "Replay Journey",
+    "backToMapText": "Back to Level Map"
+  }
+}

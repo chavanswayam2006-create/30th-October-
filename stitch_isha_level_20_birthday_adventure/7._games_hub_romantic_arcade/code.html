@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#ffdf9b", "secondary-fixed": "#ffd9df", "secondary": "#f4b6c2", "on-error-container": "#ffdad6", "on-tertiary-fixed-variant": "#4a3d7c", "inverse-on-surface": "#362b4c", "on-background": "#ebddff", "on-primary-fixed": "#251a00", "inverse-surface": "#ebddff", "inverse-primary": "#725b24", "on-secondary-fixed": "#330f19", "background": "#180d2d", "tertiary-fixed": "#e7deff", "surface-dim": "#180d2d", "surface-container-lowest": "#130727", "surface-container-high": "#2f2445", "on-error": "#690005", "on-primary-container": "#6a531d", "primary-fixed-dim": "#e2c381", "surface-tint": "#e2c381", "on-secondary-container": "#e5a8b4", "surface-variant": "#3a2f50", "surface-container": "#251a3a", "outline": "#989081", "on-tertiary-container": "#5a4d8d", "surface-bright": "#3f3355", "primary-container": "#e8c987", "tertiary": "#ede5ff", "on-secondary": "#4c242e", "error": "#ffb4ab", "secondary-fixed-dim": "#f4b6c2", "tertiary-fixed-dim": "#ccbeff", "outline-variant": "#4d463a", "secondary-container": "#693c46", "on-tertiary": "#332664", "on-surface": "#ebddff", "primary": "#ffe6b5", "on-primary-fixed-variant": "#59440e", "on-surface-variant": "#d0c5b5", "surface": "#180d2d", "tertiary-container": "#d2c5ff", "surface-container-low": "#201536", "on-tertiary-fixed": "#1e0e4e", "on-primary": "#3f2e00", "surface-container-highest": "#3a2f50", "on-secondary-fixed-variant": "#663a44", "error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin": "1.25rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1.25rem", "gutter-desktop": "2rem", "margin-desktop": "4rem", "space-md": "1rem", "space-2xl": "4rem", "space-xl": "2.5rem", "margin-tablet": "2.5rem" }, "fontFamily": { "headline-xl-mobile": ["Playfair Display"], "label-sm": ["DM Sans"], "label-md": ["DM Sans"], "body-sm": ["DM Sans"], "headline-md": ["Playfair Display"], "display-lg": ["Playfair Display"], "body-lg": ["DM Sans"], "headline-sm": ["Playfair Display"], "body-xl": ["DM Sans"], "display-lg-mobile": ["Playfair Display"], "label-lg": ["DM Sans"], "headline-xl": ["Playfair Display"], "body-md": ["DM Sans"], "headline-lg": ["Playfair Display"] }, "fontSize": { "headline-xl-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-xl": ["18px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior:none;background-color:#180d2d;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-secondary-container selection:text-secondary"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_16px_rgba(10,5,20,0.6)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Back" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary transition-all hover:bg-surface-container-high active:scale-95" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><img alt="Isha Level 20 Crest" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VX4i_7tfm6r5G4YI9gJV3PwRMT7Wm7-dz76h1kufkwSBmYfdkH2aa5_ZZq8nUwkNoBeWX71zuFk1SrdQRrzaahv2Qjb7nF0h3e9im5ZhUWcFZj1cIUVfmRwAAd10zhTO0YH5Q94sAXx39QIh2vrKzmr3B470gL353qx5B3o7PUJnHv0mHohm4e6XG0923FvfXP1Z2bMJSZj4jAbJTS7vYbEflrI6azlvmz3pGnjUTceoZdKJXvn1bAkQ"/><h1 class="font-headline-sm text-headline-sm text-primary tracking-tight ml-space-xs truncate max-w-[130px] min-[390px]:max-w-[180px]">Games Hub</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Music Track" class="h-11 px-space-sm rounded-full bg-surface-container-high/80 text-secondary flex items-center gap-1 transition-all hover:bg-surface-bright active:scale-95" type="button"><span class="material-symbols-outlined text-[18px] animate-pulse">music_note</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_12px_rgba(232,201,135,0.35)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-margin px-margin bg-surface"><div class="flex flex-col w-full space-y-space-lg">
+<!-- Level HUD & Progress Header -->
+<section class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high shadow-md">
+<span class="text-secondary text-[12px]">👾</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Level 05 · Arcade</span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#letters">
+<span>Skip to Level 06</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Editorial Intro -->
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-lg text-headline-lg text-primary">The Love Arcade</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Three playful challenges to prove who knows who better. Win stars to unlock the finale.</p>
+</div>
+<!-- Star Tracker HUD Pill -->
+<div class="w-full bg-surface-container p-space-md rounded-xl shadow-lg flex items-center justify-between relative overflow-hidden">
+<div class="absolute -right-4 -top-8 w-24 h-24 bg-primary/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center gap-space-sm z-10">
+<div class="flex items-center gap-1 text-primary-fixed text-body-xl">
+<span class="material-symbols-outlined text-[22px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[22px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[22px] text-outline opacity-60">star</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-primary font-semibold">2 of 3 Stars Collected</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">1 challenge remaining for Level 06</p>
+</div>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary z-10 shadow-[0_0_16px_rgba(232,201,135,0.2)]">
+<span class="material-symbols-outlined text-[24px]">trophy</span>
+</div>
+</div>
+</section>
+<!-- GAME 1: Memory Match -->
+<article class="flex flex-col bg-surface-container p-space-md rounded-xl shadow-lg relative overflow-hidden">
+<!-- Card Header -->
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">style</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Memory Match</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">4x3 Polaroid Deck</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-[0_0_12px_rgba(232,201,135,0.3)]">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+        Completed
+      </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">Flip and match Polaroid pairs of our favorite milestones across the year.</p>
+<!-- Polaroid 4x3 Grid Mini Simulation -->
+<div class="bg-surface-container-low p-space-sm rounded-lg mb-space-md">
+<div class="grid grid-cols-4 gap-2">
+<!-- Card 1 (Matched) -->
+<div class="aspect-square bg-surface-container-highest rounded-md p-1 flex flex-col items-center justify-center transform -rotate-1 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">photo_camera</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant mt-0.5">Stargaze</span>
+</div>
+<!-- Card 2 (Matched) -->
+<div class="aspect-square bg-surface-container-highest rounded-md p-1 flex flex-col items-center justify-center transform rotate-1 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">photo_camera</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant mt-0.5">Stargaze</span>
+</div>
+<!-- Card 3 (Matched) -->
+<div class="aspect-square bg-surface-container-highest rounded-md p-1 flex flex-col items-center justify-center transform -rotate-2 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">local_cafe</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant mt-0.5">Chai Stop</span>
+</div>
+<!-- Card 4 (Matched) -->
+<div class="aspect-square bg-surface-container-highest rounded-md p-1 flex flex-col items-center justify-center transform rotate-2 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">local_cafe</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant mt-0.5">Chai Stop</span>
+</div>
+<!-- Row 2 -->
+<div class="aspect-square bg-surface-container-highest rounded-md p-1 flex flex-col items-center justify-center transform rotate-1 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">airplane_ticket</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant mt-0.5">Train 204</span>
+</div>
+<div class="aspect-square bg-surface-container-highest rounded-md p-1 flex flex-col items-center justify-center transform -rotate-1 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">airplane_ticket</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant mt-0.5">Train 204</span>
+</div>
+<div class="aspect-square bg-surface-container-highest rounded-md p-1 flex flex-col items-center justify-center transform -rotate-2 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">headphones</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant mt-0.5">Taylor Track</span>
+</div>
+<div class="aspect-square bg-surface-container-highest rounded-md p-1 flex flex-col items-center justify-center transform rotate-1 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">headphones</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant mt-0.5">Taylor Track</span>
+</div>
+<!-- Row 3 -->
+<div class="aspect-square bg-surface-container-highest rounded-md p-1 flex flex-col items-center justify-center transform -rotate-1 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">bakery_dining</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant mt-0.5">Croissant</span>
+</div>
+<div class="aspect-square bg-surface-container-highest rounded-md p-1 flex flex-col items-center justify-center transform rotate-2 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">bakery_dining</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant mt-0.5">Croissant</span>
+</div>
+<div class="aspect-square bg-surface-container-highest rounded-md p-1 flex flex-col items-center justify-center transform rotate-1 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">favorite</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant mt-0.5">Level 20</span>
+</div>
+<div class="aspect-square bg-surface-container-highest rounded-md p-1 flex flex-col items-center justify-center transform -rotate-2 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">favorite</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant mt-0.5">Level 20</span>
+</div>
+</div>
+<!-- Win Banner inside Game Board -->
+<div class="mt-space-sm p-space-xs rounded-md bg-secondary-container/40 flex items-center justify-between text-secondary">
+<div class="flex items-center gap-1">
+<span class="text-[14px]">🎉</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim font-medium">You remembered everything!</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">12 Moves (Record)</span>
+</div>
+</div>
+<!-- Playful Banter Sticky Note -->
+<div class="p-space-sm rounded-lg bg-surface-container-high flex items-start gap-space-sm shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">sticky_note_2</span>
+<div class="flex flex-col">
+<p class="font-label-sm text-label-sm text-primary font-semibold">Swayam's Note:</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">"12 moves?! That photographic memory is almost frightening. You really didn’t forget the 2AM roadside chai stall."</p>
+</div>
+</div>
+</article>
+<!-- GAME 2: How Well Do You Know Us? (Couples Quiz) -->
+<article class="flex flex-col bg-surface-container p-space-md rounded-xl shadow-lg relative overflow-hidden">
+<!-- Header -->
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">psychology_alt</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">How Well Do You Know Us?</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Couple's Trivia Quest</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-[0_0_12px_rgba(232,201,135,0.3)]">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+        Completed
+      </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">5 questions on inside jokes, secret nicknames, and the moments that shifted our world.</p>
+<!-- Interactive Card Stage (Q 3/5 preview) -->
+<div class="bg-surface-container-low p-space-md rounded-lg mb-space-md flex flex-col gap-space-sm shadow-inner">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Question 03 of 05</span>
+<span class="font-label-sm text-label-sm text-primary">Score: 5/5</span>
+</div>
+<h4 class="font-headline-sm text-[17px] text-on-surface leading-snug">"Where did we have our very first slice of pizza together?"</h4>
+<!-- Answer Options Pills -->
+<div class="flex flex-col gap-2 mt-1">
+<!-- Option A -->
+<button class="w-full text-left p-space-sm rounded-lg bg-surface-container-high/60 text-on-surface-variant font-body-sm text-body-sm flex items-center justify-between" type="button">
+<span>A) Little Italy Corner</span>
+<span class="text-outline text-[12px]">Option</span>
+</button>
+<!-- Option B (Correct Selected) -->
+<button class="w-full text-left p-space-sm rounded-lg bg-primary text-on-primary font-body-sm text-body-sm flex items-center justify-between shadow-[0_0_16px_rgba(232,201,135,0.25)]" type="button">
+<div class="flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>B) The park bench at midnight</span>
+</div>
+<span class="font-label-sm text-[11px] bg-on-primary/15 px-2 py-0.5 rounded-full font-bold">Correct! ♥</span>
+</button>
+<!-- Option C -->
+<button class="w-full text-left p-space-sm rounded-lg bg-surface-container-high/60 text-on-surface-variant font-body-sm text-body-sm flex items-center justify-between" type="button">
+<span>C) Campus cafeteria</span>
+<span class="text-outline text-[12px]">Option</span>
+</button>
+<!-- Option D -->
+<button class="w-full text-left p-space-sm rounded-lg bg-surface-container-high/60 text-on-surface-variant font-body-sm text-body-sm flex items-center justify-between" type="button">
+<span>D) Delivery in the car</span>
+<span class="text-outline text-[12px]">Option</span>
+</button>
+</div>
+<!-- Swayam Pop-up Reaction Note -->
+<div class="mt-2 p-space-sm rounded-lg bg-secondary-container text-on-secondary-container flex items-center gap-space-sm shadow-sm">
+<span class="text-[20px]">🍕</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary-fixed font-bold">Swayam Reacted:</span>
+<p class="font-body-sm text-body-sm text-on-secondary-container">"You remembered! Best $4 Margherita slice in the rain. Your coat smelled like basil for two days."</p>
+</div>
+</div>
+</div>
+<!-- Playful Banter Sticky Note -->
+<div class="p-space-sm rounded-lg bg-surface-container-high flex items-start gap-space-sm shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">quiz</span>
+<div class="flex flex-col">
+<p class="font-label-sm text-label-sm text-primary font-semibold">Swayam's Note:</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">"A perfect 5/5 score. Honestly, I thought Question 4 would trip you up, but you know my ridiculous coffee order better than I do."</p>
+</div>
+</div>
+</article>
+<!-- GAME 3: Heart Catcher (Night Sky Mini-Game) -->
+<article class="flex flex-col bg-surface-container p-space-md rounded-xl shadow-lg relative overflow-hidden">
+<!-- Header -->
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">celebration</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Heart Catcher</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">30s Night Sky Reflex</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">play_circle</span>
+        Ready to Play
+      </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">Catch falling golden stars, birthday cakes, and pink hearts in your basket before the clock expires.</p>
+<!-- Mini Interactive Canvas Simulation Area -->
+<div class="relative w-full h-56 bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col justify-between p-space-sm shadow-inner">
+<!-- Starlit Background Canvas Layer with SVGs -->
+<div class="absolute inset-0 pointer-events-none opacity-40">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<circle cx="15%" cy="20%" fill="#ffe6b5" r="1"></circle>
+<circle cx="45%" cy="12%" fill="#f4b6c2" r="1.5"></circle>
+<circle cx="80%" cy="28%" fill="#ffe6b5" r="1"></circle>
+<circle cx="28%" cy="55%" fill="#ffe6b5" r="1"></circle>
+<circle cx="68%" cy="60%" fill="#ffffff" r="1.5"></circle>
+<circle cx="90%" cy="75%" fill="#f4b6c2" r="1"></circle>
+</svg>
+</div>
+<!-- HUD Overlay Top -->
+<div class="flex items-center justify-between z-10">
+<div class="px-space-sm py-1 rounded-full bg-surface-container/80 text-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>00:30</span>
+</div>
+<div class="px-space-sm py-1 rounded-full bg-secondary-container text-secondary font-label-sm text-label-sm font-semibold shadow-sm">
+          Target: 20 Items
+        </div>
+</div>
+<!-- Falling Collectible Items (Positioned across the mini stage) -->
+<div class="relative w-full h-full flex-1">
+<!-- Golden Star Falling -->
+<div class="absolute left-8 top-4 flex flex-col items-center animate-bounce">
+<span class="text-[22px] drop-shadow-[0_0_8px_rgba(255,230,181,0.8)]">⭐</span>
+</div>
+<!-- Birthday Cake Falling -->
+<div class="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center">
+<span class="text-[24px] drop-shadow-[0_0_10px_rgba(244,182,194,0.6)]">🎂</span>
+</div>
+<!-- Pink Heart Falling -->
+<div class="absolute right-10 top-6 flex flex-col items-center animate-pulse">
+<span class="text-[20px] drop-shadow-[0_0_8px_rgba(244,182,194,0.8)]">💖</span>
+</div>
+<!-- Sparkle 20 Glyph -->
+<div class="absolute right-24 top-20 flex flex-col items-center">
+<span class="text-[16px] text-primary font-bold opacity-80">✦ 20</span>
+</div>
+<!-- Gold Woven Basket Catcher at Bottom -->
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 flex flex-col items-center cursor-pointer transition-all duration-300" id="basket-catcher">
+<div class="px-3 py-1 bg-primary text-on-primary rounded-t-lg shadow-[0_0_16px_rgba(232,201,135,0.4)] flex items-center gap-1 font-label-sm text-[11px] font-bold">
+<span class="material-symbols-outlined text-[14px]">shopping_basket</span>
+<span>Isha's Basket</span>
+</div>
+<div class="w-20 h-2 bg-primary-fixed-dim rounded-b-md"></div>
+</div>
+</div>
+<!-- Mini Score Pill Overlay -->
+<div class="z-10 bg-surface-container-high/90 px-space-sm py-1.5 rounded-lg flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-primary">
+<span class="text-[14px]">👑</span>
+<span class="font-semibold">Current Record: 20/20 Perfect Catch</span>
+</div>
+<button class="px-space-sm py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm active:scale-95 transition-transform" id="play-heart-btn" type="button">
+          Play Round
+        </button>
+</div>
+</div>
+<!-- Playful Banter Sticky Note -->
+<div class="p-space-sm rounded-lg bg-surface-container-high flex items-start gap-space-sm shadow-sm mt-space-md">
+<span class="material-symbols-outlined text-primary text-[20px]">sports_esports</span>
+<div class="flex flex-col">
+<p class="font-label-sm text-label-sm text-primary font-semibold">Swayam's Note:</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">"Warning: Birthday cakes are worth 5 bonus points, but they drop twice as fast. Good luck beating my high score!"</p>
+</div>
+</div>
+</article>
+<!-- Arcade Trophy & Next Level Gateway Callout -->
+<section class="bg-surface-container p-space-md rounded-xl shadow-xl flex flex-col items-center text-center gap-space-sm relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 pointer-events-none"></div>
+<div class="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-[0_0_24px_rgba(232,201,135,0.4)] z-10">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">lock_open</span>
+</div>
+<div class="flex flex-col gap-1 z-10">
+<h3 class="font-headline-sm text-headline-sm text-primary">Next Milestone Ready</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">You unlocked Level 06 with 2 stars. The golden envelope collection is waiting for you.</p>
+</div>
+<!-- Primary Celestial Action Button -->
+<a class="w-full py-3.5 px-space-md rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(232,201,135,0.35)] hover:scale-[1.02] active:scale-95 transition-all z-10" href="#level-06" id="letters">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+<span>Next Level: Open When Letters</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</section>
+</div>
+<script>
+  // Playful Heart Catcher Micro-Interaction
+  const playBtn = document.getElementById('play-heart-btn');
+  const basket = document.getElementById('basket-catcher');
+  if (playBtn && basket) {
+    let positions = ['left-8', 'left-1/2', 'left-3/4'];
+    let idx = 0;
+    playBtn.addEventListener('click', () => {
+      idx = (idx + 1) % positions.length;
+      if (idx === 0) {
+        basket.style.transform = 'translateX(-50%)';
+        basket.style.left = '50%';
+      } else if (idx === 1) {
+        basket.style.transform = 'translateX(0%)';
+        basket.style.left = '15%';
+      } else {
+        basket.style.transform = 'translateX(0%)';
+        basket.style.left = '65%';
+      }
+      playBtn.innerText = 'Catching...';
+      setTimeout(() => {
+        playBtn.innerText = 'Score +1 ⭐';
+      }, 400);
+      setTimeout(() => {
+        playBtn.innerText = 'Play Round';
+      }, 1600);
+    });
+  }
+</script><footer class="mt-space-2xl pb-space-lg text-center flex flex-col items-center justify-center gap-1 opacity-80"><p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">Made with love by Swayam <span class="text-primary text-[14px]">✦</span> 30.10.2026</p><p class="font-label-sm text-label-sm text-secondary-fixed-dim tracking-wider uppercase">Isha · Level 20 Edition</p></footer></main></body></html>

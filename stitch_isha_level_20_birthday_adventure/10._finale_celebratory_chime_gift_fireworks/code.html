@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#ffdf9b", "secondary-fixed": "#ffd9df", "secondary": "#f4b6c2", "on-error-container": "#ffdad6", "on-tertiary-fixed-variant": "#4a3d7c", "inverse-on-surface": "#362b4c", "on-background": "#ebddff", "on-primary-fixed": "#251a00", "inverse-surface": "#ebddff", "inverse-primary": "#725b24", "on-secondary-fixed": "#330f19", "background": "#180d2d", "tertiary-fixed": "#e7deff", "surface-dim": "#180d2d", "surface-container-lowest": "#130727", "surface-container-high": "#2f2445", "on-error": "#690005", "on-primary-container": "#6a531d", "primary-fixed-dim": "#e2c381", "surface-tint": "#e2c381", "on-secondary-container": "#e5a8b4", "surface-variant": "#3a2f50", "surface-container": "#251a3a", "outline": "#989081", "on-tertiary-container": "#5a4d8d", "surface-bright": "#3f3355", "primary-container": "#e8c987", "tertiary": "#ede5ff", "on-secondary": "#4c242e", "error": "#ffb4ab", "secondary-fixed-dim": "#f4b6c2", "tertiary-fixed-dim": "#ccbeff", "outline-variant": "#4d463a", "secondary-container": "#693c46", "on-tertiary": "#332664", "on-surface": "#ebddff", "primary": "#ffe6b5", "on-primary-fixed-variant": "#59440e", "on-surface-variant": "#d0c5b5", "surface": "#180d2d", "tertiary-container": "#d2c5ff", "surface-container-low": "#201536", "on-tertiary-fixed": "#1e0e4e", "on-primary": "#3f2e00", "surface-container-highest": "#3a2f50", "on-secondary-fixed-variant": "#663a44", "error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin": "1.25rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1.25rem", "gutter-desktop": "2rem", "margin-desktop": "4rem", "space-md": "1rem", "space-2xl": "4rem", "space-xl": "2.5rem", "margin-tablet": "2.5rem" }, "fontFamily": { "headline-xl-mobile": ["Playfair Display"], "label-sm": ["DM Sans"], "label-md": ["DM Sans"], "body-sm": ["DM Sans"], "headline-md": ["Playfair Display"], "display-lg": ["Playfair Display"], "body-lg": ["DM Sans"], "headline-sm": ["Playfair Display"], "body-xl": ["DM Sans"], "display-lg-mobile": ["Playfair Display"], "label-lg": ["DM Sans"], "headline-xl": ["Playfair Display"], "body-md": ["DM Sans"], "headline-lg": ["Playfair Display"] }, "fontSize": { "headline-xl-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-xl": ["18px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior:none;background-color:#180d2d;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+/* Celebration and Animation Styles */
+@keyframes rayRotate {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.08); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.35; transform: scale(0.96); }
+  50% { opacity: 0.85; transform: scale(1.06); }
+}
+@keyframes gentleBreath {
+  0%, 100% { box-shadow: 0 12px 36px rgba(10,5,20,0.5), 0 0 15px rgba(232,201,135,0.06); }
+  50% { box-shadow: 0 16px 42px rgba(10,5,20,0.65), 0 0 30px rgba(232,201,135,0.22); }
+}
+@keyframes lineFadeUp {
+  0% { opacity: 0; transform: translateY(14px); filter: blur(3px); }
+  100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+@keyframes floatUpHeart {
+  0% { transform: translateY(0) scale(0.6) rotate(0deg); opacity: 0; }
+  15% { opacity: 0.8; }
+  80% { opacity: 0.6; }
+  100% { transform: translateY(-100vh) scale(1.2) rotate(35deg); opacity: 0; }
+}
+@keyframes sparkAnim {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(0) translate(var(--tx), var(--ty)); opacity: 0; }
+}
+.ray-glow {
+  animation: rayRotate 22s linear infinite;
+}
+.badge-halo {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+.parchment-glow {
+  animation: gentleBreath 6s ease-in-out infinite;
+}
+.stagger-line-1 { animation: lineFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; opacity: 0; }
+.stagger-line-2 { animation: lineFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards; opacity: 0; }
+.stagger-line-3 { animation: lineFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards; opacity: 0; }
+.stagger-line-4 { animation: lineFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards; opacity: 0; }
+.stagger-line-5 { animation: lineFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 2.2s forwards; opacity: 0; }
+
+/* 3D Gift Box Opening Styles */
+.gift-scene {
+  perspective: 900px;
+}
+.gift-lid {
+  transform-origin: top center;
+  transition: transform 0.85s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+}
+.gift-open .gift-lid {
+  transform: translateY(-46px) rotateX(-50deg) rotateZ(12deg) scale(1.08);
+}
+.gift-open .gift-burst-rays {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.gift-open .gift-content-reveal {
+  max-height: 260px;
+  opacity: 1;
+  transform: translateY(0);
+}
+</style></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-secondary-container selection:text-secondary relative overflow-x-hidden"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_16px_rgba(10,5,20,0.6)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Isha Level 20 Crest" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VX4i_7tfm6r5G4YI9gJV3PwRMT7Wm7-dz76h1kufkwSBmYfdkH2aa5_ZZq8nUwkNoBeWX71zuFk1SrdQRrzaahv2Qjb7nF0h3e9im5ZhUWcFZj1cIUVfmRwAAd10zhTO0YH5Q94sAXx39QIh2vrKzmr3B470gL353qx5B3o7PUJnHv0mHohm4e6XG0923FvfXP1Z2bMJSZj4jAbJTS7vYbEflrI6azlvmz3pGnjUTceoZdKJXvn1bAkQ"/><a aria-label="Level Map" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary transition-all duration-300 hover:bg-surface-container-high" data-path="level-map" href="#"><span class="material-symbols-outlined text-[20px]">map</span></a><span class="font-headline-sm text-headline-sm text-primary tracking-tight ml-space-xs hidden min-[370px]:inline">Finale</span></div><div class="flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-low/70 rounded-full"><span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.7)]"></span><span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.7)]"></span><span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.7)]"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span></div><div class="flex items-center gap-space-xs"><button aria-label="Lofi Love Track Music Player" class="h-11 px-space-sm rounded-full bg-surface-container-high/80 text-secondary flex items-center gap-1 transition-all hover:bg-surface-bright active:scale-95" type="button"><span class="material-symbols-outlined text-[18px] animate-pulse">music_note</span><span class="font-label-sm text-label-sm tracking-widest hidden sm:inline text-secondary-fixed-dim">LOFI</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_12px_rgba(232,201,135,0.35)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header>
+<!-- Canvas for celebration fireworks & floating confetti -->
+<canvas class="fixed inset-0 pointer-events-none z-20 w-full h-full" id="celebrationCanvas"></canvas>
+<!-- Rising Floating Hearts Container -->
+<div aria-hidden="true" class="fixed inset-0 pointer-events-none z-10 overflow-hidden" id="heartsContainer"></div>
+<!-- Touch Sparkle Effect Canvas -->
+<canvas class="fixed inset-0 pointer-events-none z-30 w-full h-full" id="sparkleTrailCanvas"></canvas>
+<main class="flex-1 flex flex-col relative w-full pt-16 pb-32 px-margin bg-surface"><div class="flex flex-col w-full relative overflow-hidden pb-8">
+<!-- Celestial Atmospheric Fireworks Background (Multi-hue Harmonious SVG Ambient) -->
+<div aria-hidden="true" class="absolute inset-0 pointer-events-none opacity-50 select-none overflow-hidden">
+<svg class="w-full h-full" preserveaspectratio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialgradient cx="50%" cy="50%" id="burst-gold" r="50%">
+<stop offset="0%" stop-color="#FFE6B5" stop-opacity="0.95"></stop>
+<stop offset="35%" stop-color="#E8C987" stop-opacity="0.5"></stop>
+<stop offset="100%" stop-color="#180D2D" stop-opacity="0"></stop>
+</radialgradient>
+<radialgradient cx="50%" cy="50%" id="burst-rose" r="50%">
+<stop offset="0%" stop-color="#FB7185" stop-opacity="0.9"></stop>
+<stop offset="45%" stop-color="#F472B6" stop-opacity="0.45"></stop>
+<stop offset="100%" stop-color="#180D2D" stop-opacity="0"></stop>
+</radialgradient>
+<radialgradient cx="50%" cy="50%" id="burst-lavender" r="50%">
+<stop offset="0%" stop-color="#C084FC" stop-opacity="0.9"></stop>
+<stop offset="40%" stop-color="#A78BFA" stop-opacity="0.4"></stop>
+<stop offset="100%" stop-color="#180D2D" stop-opacity="0"></stop>
+</radialgradient>
+<radialgradient cx="50%" cy="50%" id="burst-coral" r="50%">
+<stop offset="0%" stop-color="#FB923C" stop-opacity="0.85"></stop>
+<stop offset="45%" stop-color="#F43F5E" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#180D2D" stop-opacity="0"></stop>
+</radialgradient>
+<radialgradient cx="50%" cy="50%" id="burst-stardust" r="50%">
+<stop offset="0%" stop-color="#FDF4DC" stop-opacity="0.95"></stop>
+<stop offset="35%" stop-color="#E0E7FF" stop-opacity="0.45"></stop>
+<stop offset="100%" stop-color="#180D2D" stop-opacity="0"></stop>
+</radialgradient>
+</defs>
+<!-- Multi-Color Sparkle Bursts -->
+<circle cx="15%" cy="12%" fill="url(#burst-gold)" r="100"></circle>
+<circle cx="85%" cy="16%" fill="url(#burst-rose)" r="115"></circle>
+<circle cx="50%" cy="30%" fill="url(#burst-lavender)" r="130"></circle>
+<circle cx="20%" cy="62%" fill="url(#burst-coral)" r="110"></circle>
+<circle cx="82%" cy="72%" fill="url(#burst-stardust)" r="125"></circle>
+<!-- Star sparks & Multi-Hue Embers -->
+<g fill="#FFE6B5" opacity="0.75">
+<circle cx="12%" cy="25%" r="1.5"></circle>
+<circle cx="28%" cy="10%" r="1"></circle>
+<circle cx="42%" cy="18%" r="2"></circle>
+<circle cx="68%" cy="8%" r="1.5"></circle>
+<circle cx="88%" cy="28%" r="2"></circle>
+<circle cx="92%" cy="48%" r="1"></circle>
+<circle cx="8%" cy="55%" r="1.8"></circle>
+<circle cx="24%" cy="82%" r="1.5"></circle>
+<circle cx="78%" cy="88%" r="2"></circle>
+</g>
+<g fill="#F472B6" opacity="0.65">
+<circle cx="22%" cy="20%" r="1.4"></circle>
+<circle cx="62%" cy="26%" r="1.6"></circle>
+<circle cx="76%" cy="40%" r="1.2"></circle>
+<circle cx="34%" cy="70%" r="1.8"></circle>
+</g>
+<g fill="#C084FC" opacity="0.7">
+<circle cx="38%" cy="12%" r="1.5"></circle>
+<circle cx="82%" cy="35%" r="1.8"></circle>
+<circle cx="18%" cy="78%" r="1.5"></circle>
+<circle cx="66%" cy="84%" r="1.6"></circle>
+</g>
+</svg>
+</div>
+<!-- Milestone Banner with Animated Light Rays & Stardust Halo -->
+<div class="flex flex-col items-center text-center mt-2 mb-6 relative z-10 px-space-xs">
+<div class="relative group cursor-pointer inline-flex items-center">
+<!-- Soft pulsing light rays around badge -->
+<div class="absolute -inset-3 rounded-full bg-gradient-to-r from-primary-fixed/20 via-primary-container/30 to-secondary/20 blur-md badge-halo pointer-events-none"></div>
+<div class="absolute -inset-6 ray-glow opacity-30 pointer-events-none">
+<svg class="w-full h-full" fill="none" viewbox="0 0 100 100">
+<circle cx="50" cy="50" r="46" stroke="#FFE6B5" stroke-dasharray="3 7" stroke-width="0.8"></circle>
+<circle cx="50" cy="50" r="40" stroke="#F4B6C2" stroke-dasharray="2 6" stroke-width="0.6"></circle>
+</svg>
+</div>
+<div class="relative inline-flex items-center gap-2 px-space-md py-1.5 rounded-full bg-surface-container-high/90 border border-primary-fixed/30 shadow-[0_0_24px_rgba(232,201,135,0.35)] backdrop-blur-md">
+<span class="text-primary text-[14px] animate-spin" style="animation-duration: 8s;">✦</span>
+<span class="font-label-sm text-label-sm tracking-widest text-primary-fixed uppercase font-semibold">Level 20 Complete · Quest Mastered</span>
+<span class="text-primary text-[14px] animate-spin" style="animation-duration: 8s; animation-direction: reverse;">✦</span>
+</div>
+</div>
+<!-- Hero Title -->
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary tracking-tight font-medium max-w-sm drop-shadow-[0_2px_12px_rgba(232,201,135,0.35)] mt-4">
+      Happy 20th Birthday, My Love
+</h1>
+<p class="font-body-md text-body-md text-secondary-fixed-dim mt-2 tracking-wide flex items-center justify-center gap-1.5">
+<span>The grand finale of your sacred quest</span>
+<span class="text-secondary text-[12px] animate-pulse">♥</span>
+</p>
+</div>
+<!-- Centered Golden Crest & Fireworks Pedestal with Stardust Halo -->
+<div class="relative flex flex-col items-center justify-center my-4 py-2 z-10">
+<div class="relative w-44 h-44 flex items-center justify-center">
+<!-- Rotating Stardust Halo Rays -->
+<div class="absolute -inset-4 ray-glow opacity-40 pointer-events-none">
+<svg class="w-full h-full" fill="none" viewbox="0 0 120 120">
+<line stroke="#FFE6B5" stroke-linecap="round" stroke-width="1.5" x1="60" x2="60" y1="2" y2="16"></line>
+<line stroke="#FFE6B5" stroke-linecap="round" stroke-width="1.5" x1="60" x2="60" y1="104" y2="118"></line>
+<line stroke="#FFE6B5" stroke-linecap="round" stroke-width="1.5" x1="2" x2="16" y1="60" y2="60"></line>
+<line stroke="#FFE6B5" stroke-linecap="round" stroke-width="1.5" x1="104" x2="118" y1="60" y2="60"></line>
+<line stroke="#F4B6C2" stroke-linecap="round" stroke-width="1.2" x1="18.97" x2="28.87" y1="18.97" y2="28.87"></line>
+<line stroke="#F4B6C2" stroke-linecap="round" stroke-width="1.2" x1="91.13" x2="101.03" y1="91.13" y2="101.03"></line>
+<line stroke="#F4B6C2" stroke-linecap="round" stroke-width="1.2" x1="18.97" x2="28.87" y1="101.03" y2="91.13"></line>
+<line stroke="#F4B6C2" stroke-linecap="round" stroke-width="1.2" x1="91.13" x2="101.03" y1="28.87" y2="18.97"></line>
+</svg>
+</div>
+<!-- Outer Pulsing Stardust Aura -->
+<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-container/25 via-secondary/25 to-tertiary-container/20 blur-xl animate-pulse"></div>
+<!-- Ambient Glow Behind Seal -->
+<div class="absolute w-36 h-36 rounded-full bg-primary/15 shadow-[0_0_42px_rgba(232,201,135,0.45)]"></div>
+<img alt="Isha Level 20 Crest" class="w-36 h-36 object-contain relative z-10 drop-shadow-[0_8px_24px_rgba(10,5,20,0.8)] transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VX4i_7tfm6r5G4YI9gJV3PwRMT7Wm7-dz76h1kufkwSBmYfdkH2aa5_ZZq8nUwkNoBeWX71zuFk1SrdQRrzaahv2Qjb7nF0h3e9im5ZhUWcFZj1cIUVfmRwAAd10zhTO0YH5Q94sAXx39QIh2vrKzmr3B470gL353qx5B3o7PUJnHv0mHohm4e6XG0923FvfXP1Z2bMJSZj4jAbJTS7vYbEflrI6azlvmz3pGnjUTceoZdKJXvn1bAkQ"/>
+</div>
+<!-- Small Golden Filament -->
+<div class="w-20 h-0.5 bg-gradient-to-r from-transparent via-primary-container to-transparent mt-3 opacity-70"></div>
+</div>
+<!-- Swayam's Handwritten Letter Parchment Card with Line-by-Line Staggered Reveal and Gentle Breathing Glow -->
+<section class="relative z-10 mt-6 mb-8 w-full max-w-md mx-auto">
+<!-- Washi Tape Strips -->
+<div class="absolute -top-3 left-6 w-16 h-6 bg-secondary/50 rounded-sm -rotate-6 backdrop-blur-sm shadow-sm z-20 pointer-events-none"></div>
+<div class="absolute -top-3 right-6 w-16 h-6 bg-secondary/50 rounded-sm rotate-6 backdrop-blur-sm shadow-sm z-20 pointer-events-none"></div>
+<!-- Paper Container with subtle organic tilt and gentle breathing glow -->
+<div class="bg-[#FFF6EA] text-[#33261D] rounded-xl p-6 sm:p-7 relative transform rotate-[0.3deg] transition-all duration-500 hover:rotate-0 parchment-glow">
+<!-- Vintage Letter Header Monogram -->
+<div class="flex items-center justify-between pb-4 border-b border-[#E8DFC8]">
+<div class="flex items-center gap-2">
+<span class="text-[#8C6D37] text-[16px]">❧</span>
+<span class="font-label-sm text-label-sm tracking-widest text-[#8C6D37] uppercase font-semibold">Midnight Dispatch · Swayam</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#A89880]">30.10.2026</span>
+</div>
+<!-- Letter Body with Smooth Line-by-Line Staggered Reveal -->
+<div class="pt-5 space-y-4">
+<h2 class="font-headline-sm text-headline-sm text-[#251A00] italic font-serif stagger-line-1">
+          Dear Isha,
+</h2>
+<p class="font-body-lg text-body-lg text-[#3E2E20] leading-relaxed font-serif stagger-line-2">
+          Watching you step into your twenties is the greatest privilege of my life. You bring so much light, grace, and wild laughter into every single day we share.
+</p>
+<p class="font-body-lg text-body-lg text-[#3E2E20] leading-relaxed font-serif stagger-line-3">
+          Thank you for being my anchor, my favorite chaos, and my dream come true. Level 20 is just the beginning of your greatest adventure yet.
+</p>
+<p class="font-body-md text-body-md text-[#59440E] italic font-serif stagger-line-4">
+          Every moment with you feels like discovering a secret constellation meant only for us. Here is to all our chapters ahead.
+</p>
+<div class="pt-4 flex flex-col items-end stagger-line-5">
+<p class="font-headline-sm text-headline-sm text-[#4C242E] italic font-serif leading-snug">
+            Forever yours,
+</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="font-headline-md text-headline-md text-[#251A00] font-serif font-medium tracking-tight">Swayam</span>
+<span class="text-secondary-container text-[18px]">♥</span>
+</div>
+</div>
+</div>
+<!-- Tactile Wax Seal Corner Accent -->
+<div class="absolute -bottom-4 right-6 w-10 h-10 rounded-full bg-primary-container shadow-[0_4px_12px_rgba(106,83,29,0.35)] flex items-center justify-center text-on-primary-container font-serif font-bold text-sm select-none border border-[#FFF0D0]/60">
+        I✦S
+      </div>
+</div>
+</section>
+<!-- The Interactive 3D Gift Box Opening Card -->
+<section class="relative z-10 w-full max-w-md mx-auto my-4 gift-scene" id="gift-card-section">
+<div class="relative rounded-2xl bg-gradient-to-b from-surface-container-high/90 to-surface-container/95 p-6 backdrop-blur-xl shadow-[0_16px_40px_rgba(10,5,20,0.6)] border border-primary/20 overflow-hidden transition-all duration-500 gift-open cursor-pointer" id="gift-container">
+<!-- Golden Accent Light Bar -->
+<div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary-container to-transparent opacity-80"></div>
+<!-- Pulsing Ambient Background Glow -->
+<div class="absolute -top-12 -right-12 w-36 h-36 bg-secondary-container/40 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-12 -left-12 w-36 h-36 bg-primary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Golden Burst Rays from inside the box (active on open) -->
+<div class="gift-burst-rays absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 transition-opacity duration-700"><div class="w-64 h-64 rounded-full bg-gradient-to-tr from-primary-fixed/40 via-primary-container/30 to-secondary/30 blur-2xl animate-pulse"></div><div class="absolute w-44 h-44 rounded-full bg-primary/20 blur-xl ray-glow"></div><div class="absolute inset-0 flex items-center justify-center"><svg class="w-56 h-56 pointer-events-none opacity-80 ray-glow" fill="none" viewbox="0 0 100 100"><line stroke="#FFE6B5" stroke-dasharray="2 4" stroke-width="1" x1="50" x2="50" y1="10" y2="90"></line><line stroke="#FFE6B5" stroke-dasharray="2 4" stroke-width="1" x1="10" x2="90" y1="50" y2="50"></line><line stroke="#F4B6C2" stroke-dasharray="2 5" stroke-width="0.8" x1="22" x2="78" y1="22" y2="78"></line><line stroke="#F4B6C2" stroke-dasharray="2 5" stroke-width="0.8" x1="22" x2="78" y1="78" y2="22"></line></svg></div></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<!-- Top Controls: State Preview and Interactive Chime SFX Toggle -->
+<div class="flex items-center justify-between w-full mb-3 gap-2 flex-wrap">
+<!-- Closed / Opened State Switcher -->
+<div class="flex items-center gap-1.5 p-1 rounded-full bg-surface-container-low/80 border border-primary-container/30 shadow-sm backdrop-blur-sm z-20">
+<button class="px-2.5 py-1 rounded-full text-xs font-label-sm font-semibold tracking-wide transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high active:scale-95" id="btn-toggle-closed" onclick="event.stopPropagation(); if(document.getElementById('gift-container').classList.contains('gift-open')) toggleGiftBox();" type="button">Closed</button>
+<button class="px-2.5 py-1 rounded-full text-xs font-label-sm font-semibold tracking-wide transition-all bg-primary-container text-on-primary-container shadow-[0_0_12px_rgba(232,201,135,0.4)] active:scale-95 flex items-center gap-1" id="btn-toggle-opened" onclick="event.stopPropagation(); triggerGiftFireworks(event); if(!document.getElementById('gift-container').classList.contains('gift-open')) toggleGiftBox();" type="button"><span>Opened</span><span class="text-[10px]">✦</span></button>
+</div>
+<!-- Interactive Web Audio Chime Sound Toggle -->
+<button aria-label="Toggle Celebration Chime Sound" class="px-3 py-1.5 rounded-full text-xs font-label-sm font-semibold tracking-wider flex items-center gap-1.5 transition-all duration-300 z-20 active:scale-95 bg-surface-container-high/90 border border-primary-container/40 text-primary shadow-[0_0_14px_rgba(232,201,135,0.25)] hover:bg-surface-bright" id="sfx-toggle-btn" onclick="event.stopPropagation(); toggleSFX();" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary" id="sfx-toggle-icon">notifications_active</span>
+<span id="sfx-toggle-text">SFX: Chime On</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping" id="sfx-indicator"></span>
+</button>
+</div>
+<div aria-label="Interactive Gift Box" class="relative w-28 h-28 my-2 cursor-pointer select-none group" id="gift-box-trigger" role="button" tabindex="0">
+<!-- Warm glow aura under gift box -->
+<div class="absolute inset-0 rounded-full bg-primary/20 blur-xl group-hover:scale-110 transition-transform"></div>
+<!-- Lid Element (Animated in 3D) -->
+<div class="gift-lid absolute -top-1 left-2 right-2 h-9 rounded-t-xl bg-gradient-to-b from-secondary-fixed to-secondary shadow-[0_4px_16px_rgba(244,182,194,0.4)] flex items-center justify-center z-20 border-b border-[#330F19]/20">
+<!-- Ribbon bow -->
+<div class="w-7 h-4 rounded-full bg-primary-container shadow-sm border border-primary -mt-2"></div>
+<div class="absolute w-3 h-full bg-primary-container"></div>
+</div>
+<!-- Box Base Element -->
+<div class="absolute bottom-2 left-3 right-3 h-16 rounded-b-xl bg-gradient-to-b from-[#7A3F4C] to-[#50242D] border border-secondary/30 shadow-[0_8px_20px_rgba(10,5,20,0.6)] flex items-center justify-center overflow-hidden z-10">
+<!-- Vertical and Horizontal Gold Ribbon Stripes -->
+<div class="absolute w-3.5 h-full bg-gradient-to-b from-primary-container to-primary-fixed shadow-[0_0_8px_rgba(232,201,135,0.6)]"></div>
+<div class="absolute h-3 w-full bg-gradient-to-r from-primary-container via-primary-fixed to-primary-container shadow-[0_0_8px_rgba(232,201,135,0.6)]"></div>
+<span class="material-symbols-outlined text-primary-fixed text-[26px] z-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]">lock_open</span>
+</div>
+<!-- Floating Sparkles around Box -->
+<span class="absolute -top-2 right-0 text-primary-fixed text-xs animate-ping">✦</span>
+<span class="absolute bottom-0 -left-1 text-secondary text-sm animate-bounce">♥</span>
+</div>
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary-fixed mb-1 font-semibold">
+          Final Quest Unlock
+</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-serif mb-2">
+          Your Real Birthday Gift Awaits...
+</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mb-5">
+          This digital universe is just the prologue. Look under your desk / behind the door right now!
+</p>
+<!-- Shimmering Golden CTA -->
+<button class="w-full py-3.5 px-6 rounded-full bg-gradient-to-r from-primary-container via-primary to-primary-container text-on-primary-container font-label-lg text-label-lg font-semibold tracking-wide shadow-[0_0_24px_rgba(232,201,135,0.45)] transition-all duration-300 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 cursor-pointer" id="reveal-gift-btn" type="button">
+<span id="btn-gift-text">Gift Unlocked! 💖 Under Your Desk</span>
+<span class="text-lg" id="btn-gift-icon">✨</span>
+</button>
+<!-- Secret Reward Card Inside Box (Smooth Reveal Animation) -->
+<div class="gift-content-reveal max-h-0 opacity-0 overflow-hidden transition-all duration-700 ease-out w-full mt-4 cursor-pointer" id="secret-reward-card">
+<div class="p-5 rounded-xl bg-surface-container-highest/95 border border-primary-container/40 text-on-surface shadow-[0_8px_24px_rgba(10,5,20,0.6)] text-left relative overflow-hidden transition-all active:scale-[0.98]">
+<!-- Radiant golden back-glow -->
+<div class="absolute -top-10 -right-10 w-24 h-24 bg-primary/20 rounded-full blur-xl"></div>
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
+<p class="font-label-sm text-label-sm text-primary tracking-widest uppercase font-semibold">
+        Secret Keepsake Coordinates ✦
+      </p>
+</div>
+<p class="font-body-md text-body-md text-[#FFF6EA] leading-relaxed font-serif">
+      “Look under your desk / behind the door right now! Swayam hid your physical 20th birthday keepsake! ♥”
+    </p>
+<div class="mt-3 pt-3 border-t border-outline-variant/40 flex items-center justify-between text-xs text-on-surface-variant">
+<span class="flex items-center gap-1 text-secondary"><span class="material-symbols-outlined text-sm">favorite</span> Real World Quest</span>
+<span class="text-primary font-serif italic">Hugs guaranteed upon arrival 🧸✨</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Commemorative Inscription -->
+<div class="relative z-10 text-center my-6 flex flex-col items-center justify-center gap-1 px-4">
+<div class="flex items-center gap-2 opacity-50 mb-1">
+<span class="h-px w-8 bg-outline-variant"></span>
+<span class="text-primary text-[12px]">✦</span>
+<span class="h-px w-8 bg-outline-variant"></span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant tracking-wider uppercase">
+      Isha · 30 October 2026 · Level 20 Edition
+    </p>
+</div>
+<!-- Secondary Interactive Actions -->
+<div class="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-md mx-auto mt-2 mb-4 px-2">
+<!-- Replay Journey -->
+<a class="w-full sm:w-1/2 py-3 px-4 rounded-full bg-surface-container-high/80 text-on-surface font-label-md text-label-md text-center transition-all duration-200 hover:bg-surface-bright active:scale-95 flex items-center justify-center gap-2 shadow-sm" data-path="level-1" href="#">
+<span class="material-symbols-outlined text-[18px] text-secondary">replay</span>
+<span>Replay Journey</span>
+</a>
+<!-- Back to Level Map -->
+<a class="w-full sm:w-1/2 py-3 px-4 rounded-full bg-surface-container-high/80 text-on-surface font-label-md text-label-md text-center transition-all duration-200 hover:bg-surface-bright active:scale-95 flex items-center justify-center gap-2 shadow-sm" data-path="level-map" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary">explore</span>
+<span>Back to Level Map</span>
+</a>
+</div>
+</div>
+<footer class="mt-space-2xl pb-space-lg text-center flex flex-col items-center justify-center gap-1 opacity-80"><p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">Made with love by Swayam <span class="text-primary text-[14px]">✦</span> 30.10.2026</p><p class="font-label-sm text-label-sm text-secondary-fixed-dim tracking-wider uppercase">Isha · Level 20 Edition</p></footer></main>
+<nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-8px_24px_rgba(10,5,20,0.7)]" data-active-classes="text-primary bg-surface-container-high shadow-[0_0_16px_rgba(232,201,135,0.25)]"><div class="h-20 px-margin flex items-center justify-between gap-space-sm max-w-lg mx-auto"><a aria-current="page" class="h-11 px-space-md rounded-full flex items-center justify-center transition-all font-label-md active:scale-95 text-primary bg-surface-container-high shadow-[0_0_16px_rgba(232,201,135,0.25)]" data-path="finale" href="#">Skip</a><div class="flex items-center gap-space-xs"><a aria-label="Journey Map" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="level-map" href="#"><span class="material-symbols-outlined text-[22px]">explore</span></a><a aria-label="Songs of Us" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="songs-of-us" href="#"><span class="material-symbols-outlined text-[22px]">album</span></a></div><a class="h-11 px-space-lg rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg font-semibold flex items-center justify-center gap-1 shadow-[0_0_20px_rgba(232,201,135,0.4)] transition-all hover:bg-primary hover:scale-[1.03] active:scale-95" data-path="photo-gallery" href="#"><span>Next</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></a></div></nav>
+<script>
+  /* -------------------------------------------------------------
+     0. Web Audio API Magical Celebratory Chime Fanfare Synthesizer
+     ------------------------------------------------------------- */
+  let audioCtx = null;
+  let sfxEnabled = true;
+
+  function initAudioContext() {
+    if (!audioCtx) {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (AudioContextClass) {
+        audioCtx = new AudioContextClass();
+      }
+    }
+    if (audioCtx && audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+  }
+
+  // Synthesize a pure, celestial bell tone with soft harmonic decay
+  function playBellTone(freq, time, duration = 1.3, peakGain = 0.22) {
+    if (!audioCtx) return;
+
+    const osc = audioCtx.createOscillator();
+    const overtone = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+    const filter = audioCtx.createBiquadFilter();
+
+    // Fundamental sine wave for warmth
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(freq, time);
+
+    // Second overtone for crystalline glockenspiel sparkle (2.76x frequency)
+    overtone.type = 'triangle';
+    overtone.frequency.setValueAtTime(freq * 2.756, time);
+
+    // Filter to sweeten highs
+    filter.type = 'lowpass';
+    filter.frequency.setValueAtTime(4800, time);
+    filter.frequency.exponentialRampToValueAtTime(1400, time + duration);
+
+    // Envelope: crisp attack, lush exponential decay
+    gainNode.gain.setValueAtTime(0.0001, time);
+    gainNode.gain.exponentialRampToValueAtTime(peakGain, time + 0.022);
+    gainNode.gain.exponentialRampToValueAtTime(peakGain * 0.45, time + 0.18);
+    gainNode.gain.exponentialRampToValueAtTime(0.0001, time + duration);
+
+    const overtoneGain = audioCtx.createGain();
+    overtoneGain.gain.setValueAtTime(0.0001, time);
+    overtoneGain.gain.exponentialRampToValueAtTime(peakGain * 0.28, time + 0.015);
+    overtoneGain.gain.exponentialRampToValueAtTime(0.0001, time + duration * 0.5);
+
+    osc.connect(gainNode);
+    overtone.connect(overtoneGain);
+    overtoneGain.connect(filter);
+    gainNode.connect(filter);
+    filter.connect(audioCtx.destination);
+
+    osc.start(time);
+    overtone.start(time);
+    osc.stop(time + duration);
+    overtone.stop(time + duration);
+  }
+
+  // Play cascading celestial celebratory fanfare in E Major / Stardust Pentatonic (E5, G#5, B5, E6, G#6, B6)
+  function playMagicalCelebrationChime() {
+    if (!sfxEnabled) return;
+    try {
+      initAudioContext();
+      if (!audioCtx) return;
+
+      const now = audioCtx.currentTime;
+      // Celestial arpeggio sequence
+      const chimeNotes = [
+        { freq: 659.25, offset: 0.00, dur: 1.2, gain: 0.22 }, // E5
+        { freq: 830.61, offset: 0.09, dur: 1.3, gain: 0.24 }, // G#5
+        { freq: 987.77, offset: 0.18, dur: 1.4, gain: 0.25 }, // B5
+        { freq: 1318.51, offset: 0.28, dur: 1.8, gain: 0.28 }, // E6
+        { freq: 1661.22, offset: 0.38, dur: 2.0, gain: 0.22 }, // G#6
+        { freq: 1975.53, offset: 0.48, dur: 2.4, gain: 0.26 }  // B6
+      ];
+
+      chimeNotes.forEach((note) => {
+        playBellTone(note.freq, now + note.offset, note.dur, note.gain);
+      });
+
+      // Harmonious root shimmer chord sustaining underneath
+      playBellTone(329.63, now + 0.24, 2.8, 0.15); // Warm E4 base
+    } catch (e) {
+      console.warn("SFX synthesizer notice:", e);
+    }
+  }
+
+  function toggleSFX() {
+    initAudioContext();
+    sfxEnabled = !sfxEnabled;
+    const btn = document.getElementById('sfx-toggle-btn');
+    const icon = document.getElementById('sfx-toggle-icon');
+    const text = document.getElementById('sfx-toggle-text');
+    const indicator = document.getElementById('sfx-indicator');
+
+    if (sfxEnabled) {
+      if (icon) icon.textContent = 'notifications_active';
+      if (text) text.textContent = 'SFX: Chime On';
+      if (indicator) indicator.className = 'w-1.5 h-1.5 rounded-full bg-primary animate-ping';
+      if (btn) {
+        btn.classList.remove('opacity-60', 'border-outline-variant/30', 'text-on-surface-variant');
+        btn.classList.add('border-primary-container/40', 'text-primary', 'shadow-[0_0_14px_rgba(232,201,135,0.25)]');
+      }
+      playMagicalCelebrationChime();
+    } else {
+      if (icon) icon.textContent = 'notifications_off';
+      if (text) text.textContent = 'SFX: Muted';
+      if (indicator) indicator.className = 'w-1.5 h-1.5 rounded-full bg-outline-variant';
+      if (btn) {
+        btn.classList.add('opacity-60', 'border-outline-variant/30', 'text-on-surface-variant');
+        btn.classList.remove('border-primary-container/40', 'text-primary', 'shadow-[0_0_14px_rgba(232,201,135,0.25)]');
+      }
+    }
+  }
+
+  /* -------------------------------------------------------------
+     1. Multi-Color Fireworks & Confetti Animation System
+     ------------------------------------------------------------- */
+  const canvas = document.getElementById('celebrationCanvas');
+  const ctx = canvas.getContext('2d');
+  let width, height;
+
+  function resizeCanvas() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  // Multi-color celebratory & romantic color palette
+  const PALETTE = {
+    gold: ['#FFE6B5', '#E8C987', '#FFDF9B'],
+    rose: ['#F472B6', '#FB7185', '#F4B6C2'],
+    lavender: ['#C084FC', '#A78BFA', '#D2C5FF'],
+    coral: ['#FB923C', '#F43F5E', '#FDA4AF'],
+    stardust: ['#FDF4DC', '#E0E7FF', '#FFFFFF']
+  };
+
+  const ALL_BURST_COLORS = [
+    '#E8C987', '#FFE6B5',
+    '#F472B6', '#FB7185',
+    '#C084FC', '#A78BFA',
+    '#FB923C', '#F43F5E',
+    '#FDF4DC', '#E0E7FF'
+  ];
+
+  const particles = [];
+  const confettiList = [];
+
+  class FireworkSpark {
+    constructor(x, y, color, speedMultiplier = 1, isRadialTrail = false) {
+      this.x = x;
+      this.y = y;
+      this.prevX = x;
+      this.prevY = y;
+      this.color = color;
+      this.isRadialTrail = isRadialTrail;
+
+      const angle = Math.random() * Math.PI * 2;
+      const speed = (Math.random() * 5.2 + 2.2) * speedMultiplier;
+      this.vx = Math.cos(angle) * speed;
+      this.vy = Math.sin(angle) * speed;
+      this.alpha = 1;
+      this.decay = Math.random() * 0.016 + 0.011;
+      this.size = Math.random() * 2.8 + 1.2;
+      this.friction = 0.94;
+      this.gravity = 0.055;
+      this.sparkle = Math.random() > 0.4;
+    }
+    update() {
+      this.prevX = this.x;
+      this.prevY = this.y;
+      this.vx *= this.friction;
+      this.vy = this.vy * this.friction + this.gravity;
+      this.x += this.vx;
+      this.y += this.vy;
+      this.alpha -= this.decay;
+      if (this.sparkle && Math.random() > 0.6) {
+        this.size = Math.max(1, this.size + (Math.random() - 0.5) * 1.5);
+      }
+    }
+    draw(ctx) {
+      ctx.save();
+      const currentAlpha = Math.max(0, this.alpha);
+      ctx.globalAlpha = currentAlpha;
+      ctx.strokeStyle = this.color;
+      ctx.fillStyle = this.color;
+      ctx.lineWidth = this.size;
+      ctx.lineCap = 'round';
+
+      // Draw trailing spark line for layered burst depth
+      ctx.beginPath();
+      ctx.moveTo(this.prevX, this.prevY);
+      ctx.lineTo(this.x, this.y);
+      ctx.stroke();
+
+      // Soft glowing fading ember head
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size * 0.7, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Glitter starburst glint on brightest sparks
+      if (currentAlpha > 0.6 && this.sparkle) {
+        ctx.fillStyle = '#FFFFFF';
+        ctx.fillRect(this.x - 0.75, this.y - 0.75, 1.5, 1.5);
+      }
+      ctx.restore();
+    }
+  }
+
+  class Confetti {
+    constructor(initialY) {
+      this.x = Math.random() * width;
+      this.y = initialY !== undefined ? initialY : Math.random() * -height;
+      this.size = Math.random() * 6.5 + 4;
+      this.color = ALL_BURST_COLORS[Math.floor(Math.random() * ALL_BURST_COLORS.length)];
+      this.rotation = Math.random() * 360;
+      this.rotSpeed = (Math.random() - 0.5) * 4;
+      this.speedY = Math.random() * 1.4 + 0.8;
+      this.speedX = Math.sin(Math.random() * Math.PI) * 0.8;
+      this.isPetal = Math.random() > 0.45;
+    }
+    update() {
+      this.y += this.speedY;
+      this.x += Math.sin(this.y * 0.02) * 0.7 + this.speedX;
+      this.rotation += this.rotSpeed;
+      if (this.y > height + 20) {
+        this.y = -20;
+        this.x = Math.random() * width;
+      }
+    }
+    draw(ctx) {
+      ctx.save();
+      ctx.translate(this.x, this.y);
+      ctx.rotate((this.rotation * Math.PI) / 180);
+      ctx.fillStyle = this.color;
+      ctx.globalAlpha = 0.85;
+      if (this.isPetal) {
+        ctx.beginPath();
+        ctx.ellipse(0, 0, this.size, this.size * 0.6, 0, 0, Math.PI * 2);
+        ctx.fill();
+      } else {
+        ctx.fillRect(-this.size / 2, -this.size / 4, this.size, this.size * 0.5);
+      }
+      ctx.restore();
+    }
+  }
+
+  // Prepopulate confetti
+  for (let i = 0; i < 48; i++) {
+    confettiList.push(new Confetti(Math.random() * height));
+  }
+
+  // Layered multi-color burst with expanding trails & glowing embers
+  function multiColorBurst(x, y, count = 48, speedScale = 1) {
+    const paletteKeys = Object.keys(PALETTE);
+    const primaryTheme = PALETTE[paletteKeys[Math.floor(Math.random() * paletteKeys.length)]];
+    const secondaryTheme = PALETTE[paletteKeys[Math.floor(Math.random() * paletteKeys.length)]];
+
+    for (let i = 0; i < count; i++) {
+      let color;
+      const r = Math.random();
+      if (r < 0.45) {
+        color = primaryTheme[Math.floor(Math.random() * primaryTheme.length)];
+      } else if (r < 0.85) {
+        color = secondaryTheme[Math.floor(Math.random() * secondaryTheme.length)];
+      } else {
+        color = ALL_BURST_COLORS[Math.floor(Math.random() * ALL_BURST_COLORS.length)];
+      }
+      const sparkSpeed = (i % 3 === 0 ? 1.3 : (i % 2 === 0 ? 0.9 : 0.65)) * speedScale;
+      particles.push(new FireworkSpark(x, y, color, sparkSpeed, true));
+    }
+  }
+
+  // Initial celebratory fireworks bursts across the sky in rich multi-colors
+  setTimeout(() => {
+    multiColorBurst(width * 0.25, height * 0.20, 52, 1.1);
+    multiColorBurst(width * 0.75, height * 0.24, 52, 1.0);
+  }, 350);
+
+  setTimeout(() => {
+    multiColorBurst(width * 0.50, height * 0.16, 60, 1.25);
+  }, 1000);
+
+  setTimeout(() => {
+    multiColorBurst(width * 0.35, height * 0.30, 42, 0.95);
+    multiColorBurst(width * 0.68, height * 0.28, 44, 0.95);
+  }, 1800);
+
+  // Periodic ambient multi-hued fireworks
+  setInterval(() => {
+    if (Math.random() > 0.35) {
+      const rx = width * (0.12 + Math.random() * 0.76);
+      const ry = height * (0.10 + Math.random() * 0.32);
+      multiColorBurst(rx, ry, Math.floor(Math.random() * 20 + 36));
+    }
+  }, 2900);
+
+  function animateCelebration() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Update & draw particles
+    for (let i = particles.length - 1; i >= 0; i--) {
+      particles[i].update();
+      particles[i].draw(ctx);
+      if (particles[i].alpha <= 0) {
+        particles.splice(i, 1);
+      }
+    }
+
+    // Update & draw floating confetti
+    confettiList.forEach((c) => {
+      c.update();
+      c.draw(ctx);
+    });
+
+    requestAnimationFrame(animateCelebration);
+  }
+  requestAnimationFrame(animateCelebration);
+
+  /* -------------------------------------------------------------
+     2. Soft Floating Hearts Rising Continuously
+     ------------------------------------------------------------- */
+  const heartsContainer = document.getElementById('heartsContainer');
+  const heartSymbols = ['♥', '💖', '✨', '🌸', '✦', '💫'];
+  const heartColors = ['#F472B6', '#E8C987', '#C084FC', '#FB923C', '#E0E7FF', '#FB7185'];
+
+  function spawnFloatingHeart() {
+    if (!heartsContainer) return;
+    const el = document.createElement('div');
+    const symbol = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+    const color = heartColors[Math.floor(Math.random() * heartColors.length)];
+    const left = Math.random() * 92 + 4;
+    const duration = Math.random() * 7 + 8;
+    const size = Math.random() * 12 + 12;
+
+    el.innerText = symbol;
+    el.style.position = 'absolute';
+    el.style.left = `${left}%`;
+    el.style.bottom = '-30px';
+    el.style.color = color;
+    el.style.fontSize = `${size}px`;
+    el.style.opacity = '0';
+    el.style.pointerEvents = 'none';
+    el.style.animation = `floatUpHeart ${duration}s cubic-bezier(0.25, 1, 0.5, 1) forwards`;
+
+    heartsContainer.appendChild(el);
+    setTimeout(() => {
+      if (el && el.parentNode) {
+        el.parentNode.removeChild(el);
+      }
+    }, duration * 1000);
+  }
+
+  setInterval(spawnFloatingHeart, 1500);
+  for (let i = 0; i < 4; i++) {
+    setTimeout(spawnFloatingHeart, i * 400);
+  }
+
+  /* -------------------------------------------------------------
+     3. Touch / Pointer Multi-Color Sparkle Trail
+     ------------------------------------------------------------- */
+  const trailCanvas = document.getElementById('sparkleTrailCanvas');
+  const tCtx = trailCanvas.getContext('2d');
+  let trailParticles = [];
+
+  function resizeTrailCanvas() {
+    trailCanvas.width = window.innerWidth;
+    trailCanvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resizeTrailCanvas);
+  resizeTrailCanvas();
+
+  function addSparkle(x, y) {
+    for (let i = 0; i < 3; i++) {
+      trailParticles.push({
+        x: x + (Math.random() - 0.5) * 8,
+        y: y + (Math.random() - 0.5) * 8,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2 - 0.6,
+        size: Math.random() * 2.8 + 1.2,
+        alpha: 1,
+        color: ALL_BURST_COLORS[Math.floor(Math.random() * ALL_BURST_COLORS.length)]
+      });
+    }
+  }
+
+  window.addEventListener('pointermove', (e) => {
+    addSparkle(e.clientX, e.clientY);
+  });
+  window.addEventListener('touchmove', (e) => {
+    if (e.touches && e.touches[0]) {
+      addSparkle(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  }, { passive: true });
+
+  function animateTrail() {
+    tCtx.clearRect(0, 0, trailCanvas.width, trailCanvas.height);
+    for (let i = trailParticles.length - 1; i >= 0; i--) {
+      const p = trailParticles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.alpha -= 0.035;
+      if (p.alpha <= 0) {
+        trailParticles.splice(i, 1);
+        continue;
+      }
+      tCtx.save();
+      tCtx.globalAlpha = p.alpha;
+      tCtx.fillStyle = p.color;
+      tCtx.beginPath();
+      const s = p.size;
+      tCtx.moveTo(p.x, p.y - s * 1.5);
+      tCtx.lineTo(p.x + s * 0.4, p.y - s * 0.4);
+      tCtx.lineTo(p.x + s * 1.5, p.y);
+      tCtx.lineTo(p.x + s * 0.4, p.y + s * 0.4);
+      tCtx.lineTo(p.x, p.y + s * 1.5);
+      tCtx.lineTo(p.x - s * 0.4, p.y + s * 0.4);
+      tCtx.lineTo(p.x - s * 1.5, p.y);
+      tCtx.lineTo(p.x - s * 0.4, p.y - s * 0.4);
+      tCtx.closePath();
+      tCtx.fill();
+      tCtx.restore();
+    }
+    requestAnimationFrame(animateTrail);
+  }
+  requestAnimationFrame(animateTrail);
+
+  /* -------------------------------------------------------------
+     4. Interactive 3D Animated Gift Box Opening (Multi-Hue Burst & Chimes)
+     ------------------------------------------------------------- */
+  let isBoxOpen = true;
+
+  function triggerGiftFireworks(event) {
+    // Play synthesized celebratory fanfare chime
+    playMagicalCelebrationChime();
+
+    // Haptic feedback sequence if supported
+    if (navigator.vibrate) {
+      try {
+        navigator.vibrate([35, 60, 45]);
+      } catch (e) {}
+    }
+
+    const container = document.getElementById('gift-container');
+    let originX, originY;
+
+    if (event && event.clientX && event.clientY) {
+      originX = event.clientX;
+      originY = event.clientY;
+    } else if (container) {
+      const rect = container.getBoundingClientRect();
+      originX = rect.left + rect.width / 2;
+      originY = rect.top + 90;
+    } else {
+      originX = width / 2;
+      originY = height / 2;
+    }
+
+    // Trigger explosive multi-color fireworks burst at gift tap coordinate
+    multiColorBurst(originX, originY, 65, 1.35);
+    setTimeout(() => multiColorBurst(originX - 50, originY - 30, 40, 1.1), 70);
+    setTimeout(() => multiColorBurst(originX + 50, originY - 30, 40, 1.1), 140);
+    setTimeout(() => multiColorBurst(originX, originY - 60, 45, 1.25), 210);
+
+    // Dynamic celebratory confetti explosion
+    for (let i = 0; i < 40; i++) {
+      const c = new Confetti(originY);
+      c.x = originX + (Math.random() - 0.5) * 160;
+      c.speedY = -(Math.random() * 6.5 + 3.5);
+      c.speedX = (Math.random() - 0.5) * 7.5;
+      c.color = ALL_BURST_COLORS[Math.floor(Math.random() * ALL_BURST_COLORS.length)];
+      confettiList.push(c);
+    }
+  }
+
+  function toggleGiftBox(event) {
+    const container = document.getElementById('gift-container');
+    const secretCard = document.getElementById('secret-reward-card');
+    const btnText = document.getElementById('btn-gift-text');
+    const btnIcon = document.getElementById('btn-gift-icon');
+    const btn = document.getElementById('reveal-gift-btn');
+
+    // Always trigger fireworks burst, chimes & haptics on interaction
+    triggerGiftFireworks(event);
+
+    isBoxOpen = !isBoxOpen;
+
+    if (isBoxOpen) {
+      container.classList.add('gift-open');
+      if (btnText) btnText.textContent = 'Gift Unlocked! 💖 Under Your Desk';
+      if (btnIcon) btnIcon.textContent = '✨';
+      if (btn) btn.classList.add('brightness-110');
+    } else {
+      container.classList.remove('gift-open');
+      if (btnText) btnText.textContent = 'Open Your Gift';
+      if (btnIcon) btnIcon.textContent = '🎁';
+      if (btn) btn.classList.remove('brightness-110');
+    }
+  }
+
+  // Bind active fireworks event listeners to gift box trigger, container, CTA button and reward card
+  const giftContainer = document.getElementById('gift-container');
+  const triggerEl = document.getElementById('gift-box-trigger');
+  const revealBtn = document.getElementById('reveal-gift-btn');
+  const secretRewardCard = document.getElementById('secret-reward-card');
+
+  if (giftContainer) {
+    giftContainer.addEventListener('click', (e) => {
+      // Avoid conflict if click came directly from toggle preview buttons or sfx toggle
+      if (e.target.closest('#btn-toggle-closed') || e.target.closest('#btn-toggle-opened') || e.target.closest('#sfx-toggle-btn')) return;
+      if (isBoxOpen) {
+        triggerGiftFireworks(e);
+      } else {
+        toggleGiftBox(e);
+      }
+    });
+  }
+
+  if (revealBtn) {
+    revealBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!isBoxOpen) {
+        toggleGiftBox(e);
+      } else {
+        triggerGiftFireworks(e);
+      }
+    });
+  }
+
+  if (triggerEl) {
+    triggerEl.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!isBoxOpen) {
+        toggleGiftBox(e);
+      } else {
+        triggerGiftFireworks(e);
+      }
+    });
+    triggerEl.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleGiftBox();
+      }
+    });
+  }
+
+  if (secretRewardCard) {
+    secretRewardCard.addEventListener('click', (e) => {
+      e.stopPropagation();
+      triggerGiftFireworks(e);
+    });
+  }
+</script></body></html>

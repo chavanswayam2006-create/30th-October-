@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#ffdf9b", "secondary-fixed": "#ffd9df", "secondary": "#f4b6c2", "on-error-container": "#ffdad6", "on-tertiary-fixed-variant": "#4a3d7c", "inverse-on-surface": "#362b4c", "on-background": "#ebddff", "on-primary-fixed": "#251a00", "inverse-surface": "#ebddff", "inverse-primary": "#725b24", "on-secondary-fixed": "#330f19", "background": "#180d2d", "tertiary-fixed": "#e7deff", "surface-dim": "#180d2d", "surface-container-lowest": "#130727", "surface-container-high": "#2f2445", "on-error": "#690005", "on-primary-container": "#6a531d", "primary-fixed-dim": "#e2c381", "surface-tint": "#e2c381", "on-secondary-container": "#e5a8b4", "surface-variant": "#3a2f50", "surface-container": "#251a3a", "outline": "#989081", "on-tertiary-container": "#5a4d8d", "surface-bright": "#3f3355", "primary-container": "#e8c987", "tertiary": "#ede5ff", "on-secondary": "#4c242e", "error": "#ffb4ab", "secondary-fixed-dim": "#f4b6c2", "tertiary-fixed-dim": "#ccbeff", "outline-variant": "#4d463a", "secondary-container": "#693c46", "on-tertiary": "#332664", "on-surface": "#ebddff", "primary": "#ffe6b5", "on-primary-fixed-variant": "#59440e", "on-surface-variant": "#d0c5b5", "surface": "#180d2d", "tertiary-container": "#d2c5ff", "surface-container-low": "#201536", "on-tertiary-fixed": "#1e0e4e", "on-primary": "#3f2e00", "surface-container-highest": "#3a2f50", "on-secondary-fixed-variant": "#663a44", "error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin": "1.25rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1.25rem", "gutter-desktop": "2rem", "margin-desktop": "4rem", "space-md": "1rem", "space-2xl": "4rem", "space-xl": "2.5rem", "margin-tablet": "2.5rem" }, "fontFamily": { "headline-xl-mobile": ["Playfair Display"], "label-sm": ["DM Sans"], "label-md": ["DM Sans"], "body-sm": ["DM Sans"], "headline-md": ["Playfair Display"], "display-lg": ["Playfair Display"], "body-lg": ["DM Sans"], "headline-sm": ["Playfair Display"], "body-xl": ["DM Sans"], "display-lg-mobile": ["Playfair Display"], "label-lg": ["DM Sans"], "headline-xl": ["Playfair Display"], "body-md": ["DM Sans"], "headline-lg": ["Playfair Display"] }, "fontSize": { "headline-xl-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-xl": ["18px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior:none;background-color:#180d2d;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-secondary-container selection:text-secondary"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_16px_rgba(10,5,20,0.6)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Isha Level 20 Crest" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VX4i_7tfm6r5G4YI9gJV3PwRMT7Wm7-dz76h1kufkwSBmYfdkH2aa5_ZZq8nUwkNoBeWX71zuFk1SrdQRrzaahv2Qjb7nF0h3e9im5ZhUWcFZj1cIUVfmRwAAd10zhTO0YH5Q94sAXx39QIh2vrKzmr3B470gL353qx5B3o7PUJnHv0mHohm4e6XG0923FvfXP1Z2bMJSZj4jAbJTS7vYbEflrI6azlvmz3pGnjUTceoZdKJXvn1bAkQ"/><a aria-label="Level Map" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary transition-all duration-300 hover:bg-surface-container-high" data-path="level-map" href="#"><span class="material-symbols-outlined text-[20px]">map</span></a><span class="font-headline-sm text-headline-sm text-primary tracking-tight ml-space-xs hidden min-[370px]:inline">20 Reasons</span></div><div class="flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-low/70 rounded-full"><span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.7)]"></span><span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.7)]"></span><span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(232,201,135,0.7)]"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span></div><div class="flex items-center gap-space-xs"><button aria-label="Lofi Love Track Music Player" class="h-11 px-space-sm rounded-full bg-surface-container-high/80 text-secondary flex items-center gap-1 transition-all hover:bg-surface-bright active:scale-95" type="button"><span class="material-symbols-outlined text-[18px] animate-pulse">music_note</span><span class="font-label-sm text-label-sm tracking-widest hidden sm:inline text-secondary-fixed-dim">LOFI</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_12px_rgba(232,201,135,0.35)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-32 px-margin bg-surface"><div class="flex flex-col w-full max-w-xl mx-auto space-y-space-lg">
+<!-- Milestone Level Header -->
+<header class="flex flex-col items-center text-center space-y-space-sm pt-space-xs">
+<div class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container-high shadow-md">
+<span class="text-primary text-[12px]">✦</span>
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">LEVEL 07 · THE TRIBUTE</span>
+<span class="text-primary text-[12px]">✦</span>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-tight">
+      20 Reasons Why
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm px-space-xs">
+      Twenty little things that make you the most extraordinary person I know. Tap each card to unveil the memory.
+    </p>
+<!-- Progress Tracker HUD -->
+<div class="w-full mt-space-xs p-space-sm rounded-xl bg-surface-container-low shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(232,201,135,0.45)]">
+<span class="material-symbols-outlined text-on-primary-container text-[18px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="flex flex-col text-left min-w-0">
+<span class="font-label-sm text-label-sm text-primary tracking-wider uppercase truncate">Constellation Level</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate" id="progress-summary">20 of 20 Reasons Revealed!</span>
+</div>
+</div>
+<div class="px-space-sm py-1 rounded-full bg-surface-container-highest shrink-0">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">100% UNLOCKED</span>
+</div>
+</div>
+</header>
+<!-- Interactive 4x5 Cards Grid -->
+<div class="grid grid-cols-4 gap-2.5 w-full select-none" id="cards-container">
+<!-- Card 01 (Revealed) -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="1">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl preserve-3d" style="transform-style: preserve-3d;">
+<!-- Back (Revealed View) -->
+<div class="absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#01</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            The way you scrunch your nose when laughing
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 02 (Revealed) -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="2">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#02</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            Your endless empathy for stray cats
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 03 -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="3">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="card-front absolute inset-0 w-full h-full rounded-xl bg-surface-container-high flex flex-col items-center justify-center p-1.5 backface-hidden">
+<span class="text-[10px] text-primary/70 mb-0.5">✦</span>
+<span class="font-headline-sm text-[17px] text-primary font-semibold tracking-wider">03</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant uppercase tracking-widest mt-1">TAP</span>
+</div>
+<div class="card-back absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#03</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            Your midnight tea rituals and soft quiet hums
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 04 -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="4">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="card-front absolute inset-0 w-full h-full rounded-xl bg-surface-container-high flex flex-col items-center justify-center p-1.5 backface-hidden">
+<span class="text-[10px] text-primary/70 mb-0.5">✦</span>
+<span class="font-headline-sm text-[17px] text-primary font-semibold tracking-wider">04</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant uppercase tracking-widest mt-1">TAP</span>
+</div>
+<div class="card-back absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#04</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            How your warm hug instantly silences all my doubts
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 05 -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="5">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="card-front absolute inset-0 w-full h-full rounded-xl bg-surface-container-high flex flex-col items-center justify-center p-1.5 backface-hidden">
+<span class="text-[10px] text-primary/70 mb-0.5">✦</span>
+<span class="font-headline-sm text-[17px] text-primary font-semibold tracking-wider">05</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant uppercase tracking-widest mt-1">TAP</span>
+</div>
+<div class="card-back absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#05</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            The way your eyes dance when seeing bookstore windows
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 06 -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="6">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="card-front absolute inset-0 w-full h-full rounded-xl bg-surface-container-high flex flex-col items-center justify-center p-1.5 backface-hidden">
+<span class="text-[10px] text-primary/70 mb-0.5">✦</span>
+<span class="font-headline-sm text-[17px] text-primary font-semibold tracking-wider">06</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant uppercase tracking-widest mt-1">TAP</span>
+</div>
+<div class="card-back absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#06</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            Singing off-key along to our roadtrip playlists
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 07 (Revealed) -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="7">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#07</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            How you make 3 AM feel like pure magic
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 08 -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="8">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="card-front absolute inset-0 w-full h-full rounded-xl bg-surface-container-high flex flex-col items-center justify-center p-1.5 backface-hidden">
+<span class="text-[10px] text-primary/70 mb-0.5">✦</span>
+<span class="font-headline-sm text-[17px] text-primary font-semibold tracking-wider">08</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant uppercase tracking-widest mt-1">TAP</span>
+</div>
+<div class="card-back absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#08</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            Your unmatched courage when facing the unknown
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 09 -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="9">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="card-front absolute inset-0 w-full h-full rounded-xl bg-surface-container-high flex flex-col items-center justify-center p-1.5 backface-hidden">
+<span class="text-[10px] text-primary/70 mb-0.5">✦</span>
+<span class="font-headline-sm text-[17px] text-primary font-semibold tracking-wider">09</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant uppercase tracking-widest mt-1">TAP</span>
+</div>
+<div class="card-back absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#09</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            How carefully you protect every single souvenir
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 10 -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="10">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="card-front absolute inset-0 w-full h-full rounded-xl bg-surface-container-high flex flex-col items-center justify-center p-1.5 backface-hidden">
+<span class="text-[10px] text-primary/70 mb-0.5">✦</span>
+<span class="font-headline-sm text-[17px] text-primary font-semibold tracking-wider">10</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant uppercase tracking-widest mt-1">TAP</span>
+</div>
+<div class="card-back absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#10</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            Your cozy knit sweaters that smell like sweet vanilla
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 11 -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="11">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="card-front absolute inset-0 w-full h-full rounded-xl bg-surface-container-high flex flex-col items-center justify-center p-1.5 backface-hidden">
+<span class="text-[10px] text-primary/70 mb-0.5">✦</span>
+<span class="font-headline-sm text-[17px] text-primary font-semibold tracking-wider">11</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant uppercase tracking-widest mt-1">TAP</span>
+</div>
+<div class="card-back absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#11</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            The quiet patience you offer me on heavy days
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 12 -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="12">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="card-front absolute inset-0 w-full h-full rounded-xl bg-surface-container-high flex flex-col items-center justify-center p-1.5 backface-hidden">
+<span class="text-[10px] text-primary/70 mb-0.5">✦</span>
+<span class="font-headline-sm text-[17px] text-primary font-semibold tracking-wider">12</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant uppercase tracking-widest mt-1">TAP</span>
+</div>
+<div class="card-back absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#12</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            Your handwritten notes scribbled in page margins
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 13 -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="13">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="card-front absolute inset-0 w-full h-full rounded-xl bg-surface-container-high flex flex-col items-center justify-center p-1.5 backface-hidden">
+<span class="text-[10px] text-primary/70 mb-0.5">✦</span>
+<span class="font-headline-sm text-[17px] text-primary font-semibold tracking-wider">13</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant uppercase tracking-widest mt-1">TAP</span>
+</div>
+<div class="card-back absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#13</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            How your laughter can brighten a dim room
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 14 (Revealed) -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="14">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#14</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            Your fierce determination when pursuing your dreams
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 15 -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="15">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="card-front absolute inset-0 w-full h-full rounded-xl bg-surface-container-high flex flex-col items-center justify-center p-1.5 backface-hidden">
+<span class="text-[10px] text-primary/70 mb-0.5">✦</span>
+<span class="font-headline-sm text-[17px] text-primary font-semibold tracking-wider">15</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant uppercase tracking-widest mt-1">TAP</span>
+</div>
+<div class="card-back absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#15</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            The way your hand fits into mine like destiny
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 16 -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="16">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="card-front absolute inset-0 w-full h-full rounded-xl bg-surface-container-high flex flex-col items-center justify-center p-1.5 backface-hidden">
+<span class="text-[10px] text-primary/70 mb-0.5">✦</span>
+<span class="font-headline-sm text-[17px] text-primary font-semibold tracking-wider">16</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant uppercase tracking-widest mt-1">TAP</span>
+</div>
+<div class="card-back absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#16</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            How passionately you explain things you adore
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 17 -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="17">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="card-front absolute inset-0 w-full h-full rounded-xl bg-surface-container-high flex flex-col items-center justify-center p-1.5 backface-hidden">
+<span class="text-[10px] text-primary/70 mb-0.5">✦</span>
+<span class="font-headline-sm text-[17px] text-primary font-semibold tracking-wider">17</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant uppercase tracking-widest mt-1">TAP</span>
+</div>
+<div class="card-back absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#17</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            Always believing in my dreams before I do
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 18 -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="18">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="card-front absolute inset-0 w-full h-full rounded-xl bg-surface-container-high flex flex-col items-center justify-center p-1.5 backface-hidden">
+<span class="text-[10px] text-primary/70 mb-0.5">✦</span>
+<span class="font-headline-sm text-[17px] text-primary font-semibold tracking-wider">18</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant uppercase tracking-widest mt-1">TAP</span>
+</div>
+<div class="card-back absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#18</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            Your unmatched taste in poetry and cozy films
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 19 -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(10,5,20,0.5)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="19">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="card-front absolute inset-0 w-full h-full rounded-xl bg-surface-container-high flex flex-col items-center justify-center p-1.5 backface-hidden">
+<span class="text-[10px] text-primary/70 mb-0.5">✦</span>
+<span class="font-headline-sm text-[17px] text-primary font-semibold tracking-wider">19</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant uppercase tracking-widest mt-1">TAP</span>
+</div>
+<div class="card-back absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-inner hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">#19</span>
+<span class="material-symbols-outlined text-[12px] text-secondary">favorite</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-on-surface italic text-center px-0.5 line-clamp-4">
+            The way you make ordinary Tuesdays feel golden
+          </p>
+<div class="w-2 h-0.5 mx-auto rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+<!-- Card 20 (Revealed Special Milestone) -->
+<div class="reason-card relative h-28 rounded-xl bg-surface-container cursor-pointer perspective shadow-[0_4px_16px_rgba(232,201,135,0.25)] transition-transform duration-300 hover:scale-[1.03] active:scale-95" data-id="20">
+<div class="card-inner relative w-full h-full transition-transform duration-500 rounded-xl" style="transform-style: preserve-3d;">
+<div class="absolute inset-0 w-full h-full p-2 rounded-xl bg-surface-container-highest flex flex-col justify-between overflow-hidden shadow-[0_0_16px_rgba(232,201,135,0.3)]">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">#20 👑</span>
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline-sm text-[11px] leading-[14px] text-primary italic font-semibold text-center px-0.5 line-clamp-4">
+            Simply because you are you, and nobody else compares.
+          </p>
+<div class="w-3 h-0.5 mx-auto rounded-full bg-primary"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Intimate Story Vignette & Polaroid Fragment -->
+<div class="w-full p-space-md rounded-xl bg-surface-container-low shadow-md flex items-center gap-space-md">
+<div class="relative shrink-0 rotate-[-2deg] transition-transform duration-300 hover:rotate-0">
+<div class="w-20 h-24 p-1.5 rounded-lg bg-tertiary shadow-md flex flex-col">
+<div class="w-full h-16 rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A cinematic candlelit Polaroid photo of a joyful girl with deep brown eyes laughing over a birthday cake, warm vintage film tones, soft champagne sparkles in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClLv-_LhBvGd3VMxudOVrwFdwwVYMDOE7RVc-NMZdgPnHuSgKssTeYwtHLARN2UeIUvKNpA_97ymPO9W-Bd1D6HTUnVdevhGqz1AU3BFFwvutZxA7PZan3kWAXeNrPkX2upKTjy2_SdK1tCpLo6Wz76q0KkOiXDh25J7HRtgE4mZnRMNFn1mgBCaKlK0ivtCzj3Df9Sn8NHFyop49HjTh7WPJnE7QkQ0UwJwDU78F8jVA5UkGA2z25"/>
+</div>
+<span class="font-body-sm text-[9px] text-on-surface font-semibold text-center mt-1">October '26</span>
+</div>
+<!-- Semi-translucent washi tape stamp -->
+<div class="absolute -top-1 left-2 w-7 h-2.5 bg-secondary-fixed/50 backdrop-blur-sm -rotate-12 rounded-sm shadow-sm"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase tracking-wider">Note from Swayam</span>
+<p class="font-headline-sm text-headline-sm text-primary italic mt-0.5 leading-snug">
+        "Every single reason is forever."
+      </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+        I could write twenty thousand more and still barely scratch the surface of how grateful I am for you.
+      </p>
+</div>
+</div>
+<!-- Unlocked Milestone Celebration Banner -->
+<div class="relative overflow-hidden w-full p-space-md rounded-xl bg-surface-container-high shadow-[0_0_24px_rgba(232,201,135,0.15)] flex flex-col items-center text-center space-y-space-xs">
+<div class="inline-flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wider uppercase">Milestone Achieved</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary px-space-xs">
+      ✨ The 20th Reason has been unlocked! The Grand Finale Sanctuary is now open.
+    </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+      You have cleared Level 07. Swayam's ultimate surprise is ready behind the gilded doors.
+    </p>
+<!-- Glowing Pill CTA Button -->
+<div class="pt-space-xs w-full max-w-xs flex flex-col items-center gap-space-xs">
+<a class="w-full h-12 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(232,201,135,0.45)] transition-all duration-300 hover:bg-primary hover:scale-[1.03] active:scale-95" data-path="finale" href="#">
+<span>Unlock The Grand Finale</span>
+<span class="text-[16px]">👑</span>
+</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors py-1" data-path="photo-gallery" href="#">
+        Revisit Level 06 Polaroid Mosaic
+      </a>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interaction: Flip Cards on tap and update counter
+  (function() {
+    const cards = document.querySelectorAll('.reason-card');
+    cards.forEach(card => {
+      card.addEventListener('click', function() {
+        const front = this.querySelector('.card-front');
+        const back = this.querySelector('.card-back');
+        if (front && back) {
+          front.classList.toggle('hidden');
+          back.classList.toggle('hidden');
+          this.classList.toggle('shadow-[0_0_16px_rgba(232,201,135,0.25)]');
+        }
+      });
+    });
+  })();
+</script><footer class="mt-space-2xl pb-space-lg text-center flex flex-col items-center justify-center gap-1 opacity-80"><p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">Made with love by Swayam <span class="text-primary text-[14px]">✦</span> 30.10.2026</p><p class="font-label-sm text-label-sm text-secondary-fixed-dim tracking-wider uppercase">Isha · Level 20 Edition</p></footer></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-8px_24px_rgba(10,5,20,0.7)]" data-active-classes="text-primary bg-surface-container-high shadow-[0_0_16px_rgba(232,201,135,0.25)]"><div class="h-20 px-margin flex items-center justify-between gap-space-sm max-w-lg mx-auto"><a class="h-11 px-space-md rounded-full flex items-center justify-center text-secondary transition-all hover:text-secondary-fixed font-label-md text-label-md active:scale-95" data-path="finale" href="#">Skip</a><div class="flex items-center gap-space-xs"><a aria-label="Journey Map" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="level-map" href="#"><span class="material-symbols-outlined text-[22px]">explore</span></a><a aria-label="Songs of Us" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="songs-of-us" href="#"><span class="material-symbols-outlined text-[22px]">album</span></a></div><a class="h-11 px-space-lg rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg font-semibold flex items-center justify-center gap-1 shadow-[0_0_20px_rgba(232,201,135,0.4)] transition-all hover:bg-primary hover:scale-[1.03] active:scale-95" data-path="photo-gallery" href="#"><span>Next</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></a></div></nav></body></html>
