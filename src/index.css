@@ -208,6 +208,15 @@
   z-index: 1;
 }
 
+/* Video Lightbox fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
 /* Reduced Motion Override */
 @media (prefers-reduced-motion: reduce) {
   .dreamy-bg-ambient,

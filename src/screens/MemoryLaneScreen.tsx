@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Shell } from '../components/Shell';
 import { PolaroidFrame } from '../components/PolaroidFrame';
@@ -7,9 +7,148 @@ import { soundService } from '../services/sound';
 import { saveProgress, loadProgress } from '../services/storage';
 import content from '../content/content.json';
 
+/* ── video clips mapped to milestones ── */
+const MEMORY_VIDEOS = [
+  { src: 'media/videos/memory-lane-1.mp4', label: 'Our Moment #1' },
+  { src: 'media/videos/memory-lane-2.mp4', label: 'Our Moment #2' },
+  { src: 'media/videos/memory-lane-3.mp4', label: 'Our Moment #3' },
+  { src: 'media/videos/memory-lane-4.mp4', label: 'Our Moment #4' },
+  { src: 'media/videos/memory-lane-5.mp4', label: 'Our Moment #5' },
+];
+
+/* ── Fullscreen Video Lightbox ── */
+const VideoLightbox: React.FC<{
+  src: string;
+  label: string;
+  onClose: () => void;
+}> = ({ src, label, onClose }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const backdropRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Play with sound when lightbox opens
+    const v = videoRef.current;
+    if (v) {
+      v.currentTime = 0;
+      v.muted = false;
+      v.play().catch(() => {});
+    }
+    // Lock body scroll
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
+
+  const handleBackdropClick = (e: React.MouseEvent) => {
+    if (e.target === backdropRef.current) onClose();
+  };
+
+  return (
+    <div
+      ref={backdropRef}
+      onClick={handleBackdropClick}
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-md animate-fadeIn"
+      style={{ animation: 'fadeIn 0.3s ease-out' }}
+    >
+      {/* Close Button */}
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 z-50 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors active:scale-90"
+        aria-label="Close"
+      >
+        <Icon name="close" size={22} />
+      </button>
+
+      {/* Label */}
+      <div className="absolute top-4 left-4 z-50 px-3 py-1 rounded-full bg-white/10 border border-white/20">
+        <span className="text-xs font-sans font-medium text-white/80 tracking-wide">
+          {label}
+        </span>
+      </div>
+
+      {/* Video Container — fills the screen with proper aspect ratio */}
+      <div className="relative w-full h-full max-w-[95vw] max-h-[90vh] flex items-center justify-center p-4">
+        <video
+          ref={videoRef}
+          src={src}
+          controls
+          playsInline
+          autoPlay
+          className="w-full h-full object-contain rounded-2xl shadow-2xl"
+          style={{ maxHeight: '85vh' }}
+        />
+      </div>
+    </div>
+  );
+};
+
+/* ── Inline Video Thumbnail Card ── */
+const VideoThumbnailCard: React.FC<{
+  src: string;
+  label: string;
+  tilt: number;
+  onExpand: () => void;
+}> = ({ src, label, tilt, onExpand }) => {
+  const thumbRef = useRef<HTMLVideoElement>(null);
+
+  return (
+    <div
+      className="polaroid-card group relative cursor-pointer"
+      style={{ transform: `rotate(${tilt}deg)` }}
+      onClick={() => {
+        soundService.vibrate([15]);
+        soundService.playClickTone('tap');
+        onExpand();
+      }}
+    >
+      {/* Card wrapper styled like Polaroid */}
+      <div className="relative bg-surface-container-high rounded-2xl overflow-hidden border border-outline-variant/30 shadow-[0_4px_20px_rgba(0,0,0,0.3),0_0_30px_rgba(232,201,135,0.1)] transition-all duration-300 group-hover:shadow-[0_8px_32px_rgba(232,201,135,0.3)] group-active:scale-[0.97]">
+        {/* Video thumbnail — muted autoplay loop for preview */}
+        <div className="relative aspect-[9/16] max-h-[280px] overflow-hidden">
+          <video
+            ref={thumbRef}
+            src={src}
+            muted
+            autoPlay
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          />
+
+          {/* Play overlay */}
+          <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
+            <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center shadow-[0_0_20px_rgba(232,201,135,0.4)] group-hover:scale-110 transition-transform">
+              <Icon name="play_arrow" size={28} className="text-white ml-0.5" />
+            </div>
+          </div>
+
+          {/* Tap to expand hint */}
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-black/40 backdrop-blur-sm border border-white/10">
+            <span className="text-[10px] font-sans text-white/80 tracking-wide uppercase">
+              Tap to watch
+            </span>
+          </div>
+        </div>
+
+        {/* Label bar */}
+        <div className="px-3 py-2.5 flex items-center gap-2">
+          <Icon name="movie" size={14} className="text-primary shrink-0" />
+          <span className="text-xs font-sans text-on-surface-variant truncate">
+            {label}
+          </span>
+          <Icon name="fullscreen" size={14} className="text-primary/60 ml-auto shrink-0" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/* ── Main Screen ── */
 export const MemoryLaneScreen: React.FC = () => {
   const navigate = useNavigate();
   const progress = loadProgress();
+  const [expandedVideo, setExpandedVideo] = useState<number | null>(null);
 
   const handleNext = () => {
     soundService.vibrate([25, 40]);
@@ -22,6 +161,8 @@ export const MemoryLaneScreen: React.FC = () => {
     }
     navigate('/photo-gallery');
   };
+
+  const closeLightbox = useCallback(() => setExpandedVideo(null), []);
 
   const tilts = [-1, 1.5, -1.5, 2, -1];
 
@@ -79,6 +220,7 @@ export const MemoryLaneScreen: React.FC = () => {
           <div className="space-y-12">
             {content.memoryLane.milestones.map((m, idx) => {
               const isToday = idx === content.memoryLane.milestones.length - 1;
+              const video = MEMORY_VIDEOS[idx];
 
               return (
                 <article key={m.id} className="relative flex items-start gap-4 sm:gap-5 pl-2">
@@ -95,8 +237,9 @@ export const MemoryLaneScreen: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Polaroid Card */}
-                  <div className="flex-1 min-w-0">
+                  {/* Milestone Content */}
+                  <div className="flex-1 min-w-0 space-y-3">
+                    {/* Polaroid Photo Card */}
                     <PolaroidFrame
                       slotName={`Memory #${m.id}`}
                       src={`media/photos/${m.photoSlot}.webp`}
@@ -111,6 +254,16 @@ export const MemoryLaneScreen: React.FC = () => {
                         soundService.playClickTone('tap');
                       }}
                     />
+
+                    {/* Video Clip Card */}
+                    {video && (
+                      <VideoThumbnailCard
+                        src={video.src}
+                        label={video.label}
+                        tilt={tilts[(idx + 2) % tilts.length]}
+                        onExpand={() => setExpandedVideo(idx)}
+                      />
+                    )}
                   </div>
                 </article>
               );
@@ -129,6 +282,15 @@ export const MemoryLaneScreen: React.FC = () => {
           </button>
         </section>
       </div>
+
+      {/* Fullscreen Video Lightbox */}
+      {expandedVideo !== null && MEMORY_VIDEOS[expandedVideo] && (
+        <VideoLightbox
+          src={MEMORY_VIDEOS[expandedVideo].src}
+          label={MEMORY_VIDEOS[expandedVideo].label}
+          onClose={closeLightbox}
+        />
+      )}
     </Shell>
   );
 };
