@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Shell } from '../components/Shell';
 import { PolaroidFrame } from '../components/PolaroidFrame';
@@ -7,10 +7,138 @@ import { soundService } from '../services/sound';
 import { saveProgress, loadProgress } from '../services/storage';
 import content from '../content/content.json';
 
+/* ── Real video clips for the gallery ── */
+const GALLERY_VIDEOS = [
+  { src: 'media/videos/memory-lane-1.mp4', label: 'Our Moment #1' },
+  { src: 'media/videos/memory-lane-2.mp4', label: 'Our Moment #2' },
+  { src: 'media/videos/memory-lane-3.mp4', label: 'Our Moment #3' },
+  { src: 'media/videos/memory-lane-4.mp4', label: 'Our Moment #4' },
+  { src: 'media/videos/memory-lane-5.mp4', label: 'Our Moment #5' },
+];
+
+/* ── Fullscreen Video Lightbox ── */
+const VideoLightbox: React.FC<{
+  src: string;
+  label: string;
+  onClose: () => void;
+}> = ({ src, label, onClose }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const backdropRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (v) {
+      v.currentTime = 0;
+      v.muted = false;
+      v.play().catch(() => {});
+    }
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
+
+  const handleBackdropClick = (e: React.MouseEvent) => {
+    if (e.target === backdropRef.current) onClose();
+  };
+
+  return (
+    <div
+      ref={backdropRef}
+      onClick={handleBackdropClick}
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-md animate-fadeIn"
+    >
+      {/* Close */}
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 z-50 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors active:scale-90"
+        aria-label="Close"
+      >
+        <Icon name="close" size={22} />
+      </button>
+
+      {/* Label */}
+      <div className="absolute top-4 left-4 z-50 px-3 py-1 rounded-full bg-white/10 border border-white/20">
+        <span className="text-xs font-sans font-medium text-white/80 tracking-wide">{label}</span>
+      </div>
+
+      {/* Video */}
+      <div className="relative w-full h-full max-w-[95vw] max-h-[90vh] flex items-center justify-center p-4">
+        <video
+          ref={videoRef}
+          src={src}
+          controls
+          playsInline
+          autoPlay
+          className="w-full h-full object-contain rounded-2xl shadow-2xl"
+          style={{ maxHeight: '85vh' }}
+        />
+      </div>
+    </div>
+  );
+};
+
+/* ── Inline Video Thumbnail Card ── */
+const VideoThumbnailCard: React.FC<{
+  src: string;
+  label: string;
+  tilt: number;
+  onExpand: () => void;
+}> = ({ src, label, tilt, onExpand }) => {
+  return (
+    <div
+      className="polaroid-card group relative cursor-pointer"
+      style={{ transform: `rotate(${tilt}deg)` }}
+      onClick={() => {
+        soundService.vibrate([15]);
+        soundService.playClickTone('tap');
+        onExpand();
+      }}
+    >
+      <div className="relative bg-surface-container-high rounded-2xl overflow-hidden border border-outline-variant/30 shadow-[0_4px_20px_rgba(0,0,0,0.3),0_0_30px_rgba(232,201,135,0.1)] transition-all duration-300 group-hover:shadow-[0_8px_32px_rgba(232,201,135,0.3)] group-active:scale-[0.97]">
+        {/* Video thumbnail */}
+        <div className="relative aspect-[9/16] max-h-[260px] overflow-hidden">
+          <video
+            src={src}
+            muted
+            autoPlay
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          />
+
+          {/* Play overlay */}
+          <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
+            <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center shadow-[0_0_20px_rgba(232,201,135,0.4)] group-hover:scale-110 transition-transform">
+              <Icon name="play_arrow" size={28} className="text-white ml-0.5" />
+            </div>
+          </div>
+
+          {/* Tap hint */}
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-black/40 backdrop-blur-sm border border-white/10">
+            <span className="text-[10px] font-sans text-white/80 tracking-wide uppercase">
+              Tap to watch
+            </span>
+          </div>
+        </div>
+
+        {/* Label bar */}
+        <div className="px-3 py-2.5 flex items-center gap-2">
+          <Icon name="movie" size={14} className="text-primary shrink-0" />
+          <span className="text-xs font-sans text-on-surface-variant truncate">{label}</span>
+          <Icon name="fullscreen" size={14} className="text-primary/60 ml-auto shrink-0" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/* ── Main Gallery Screen ── */
 export const GalleryScreen: React.FC = () => {
   const navigate = useNavigate();
   const progress = loadProgress();
   const [activeModal, setActiveModal] = useState<number | null>(null);
+  const [expandedVideo, setExpandedVideo] = useState<number | null>(null);
   const [discovered, setDiscovered] = useState<Set<number>>(new Set([1, 2, 3]));
 
   const polaroids = content.gallery.polaroids;
@@ -34,6 +162,8 @@ export const GalleryScreen: React.FC = () => {
     }
     navigate('/our-cinema');
   };
+
+  const closeLightbox = useCallback(() => setExpandedVideo(null), []);
 
   const selectedItem = activeModal !== null ? polaroids[activeModal] : null;
 
@@ -92,6 +222,39 @@ export const GalleryScreen: React.FC = () => {
             </div>
           ))}
         </div>
+
+        {/* ── Our Video Moments Section ── */}
+        <section className="mt-14 w-full px-2">
+          {/* Section header */}
+          <div className="flex flex-col items-center text-center mb-6">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/90 shadow-md border border-secondary/20 mb-3">
+              <Icon name="movie" size={12} className="text-secondary" />
+              <span className="text-[11px] font-sans uppercase tracking-widest text-secondary font-bold">
+                VIDEO REEL
+              </span>
+              <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
+            </div>
+            <h2 className="font-serif text-2xl sm:text-3xl text-primary tracking-tight font-medium">
+              Our Video Moments
+            </h2>
+            <p className="font-sans text-xs text-on-surface-variant max-w-xs mt-1">
+              Tap any clip to watch it fullscreen with sound
+            </p>
+          </div>
+
+          {/* Video Grid */}
+          <div className="grid grid-cols-2 gap-4">
+            {GALLERY_VIDEOS.map((vid, idx) => (
+              <VideoThumbnailCard
+                key={idx}
+                src={vid.src}
+                label={vid.label}
+                tilt={tilts[idx % tilts.length] * 0.5}
+                onExpand={() => setExpandedVideo(idx)}
+              />
+            ))}
+          </div>
+        </section>
 
         {/* Next Stage Gateway */}
         <section className="mt-12 text-center flex flex-col items-center">
@@ -182,6 +345,15 @@ export const GalleryScreen: React.FC = () => {
           </div>
         )}
       </div>
+
+      {/* Fullscreen Video Lightbox */}
+      {expandedVideo !== null && GALLERY_VIDEOS[expandedVideo] && (
+        <VideoLightbox
+          src={GALLERY_VIDEOS[expandedVideo].src}
+          label={GALLERY_VIDEOS[expandedVideo].label}
+          onClose={closeLightbox}
+        />
+      )}
     </Shell>
   );
 };
